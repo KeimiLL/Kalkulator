@@ -34,6 +34,8 @@ namespace Kalkulator {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,18 +50,32 @@ namespace Kalkulator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(120, 133);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(105, 52);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// Kalkulator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(364, 380);
+			this->Controls->Add(this->button1);
 			this->Name = L"Kalkulator";
 			this->Text = L"Kalkulator";
+			this->Load += gcnew System::EventHandler(this, &Kalkulator::Kalkulator_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
