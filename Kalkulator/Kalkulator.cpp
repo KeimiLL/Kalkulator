@@ -7,6 +7,7 @@ using namespace System::Windows::Forms;
 [STAThreadAttribute]
 void Main(array<String^>^ args) {
     std::cout << "Wypisujemy do konsoli";
+    std::cout << "VaLiMy?";
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
     //WinformCDemo is your project name
