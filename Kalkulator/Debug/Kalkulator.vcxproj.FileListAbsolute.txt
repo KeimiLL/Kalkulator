@@ -1,0 +1,3 @@
+C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.vcxprojAssemblyReference.cache
+C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.Kalkulator.resources
+C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.vcxproj.GenerateResource.cache
