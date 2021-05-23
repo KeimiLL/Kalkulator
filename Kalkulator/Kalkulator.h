@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace Kalkulator {
 
@@ -41,9 +41,9 @@ namespace Kalkulator {
 
 
 
-	private: System::Windows::Forms::ToolStripMenuItem^ iloczynyWektorówToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ wyjœcieToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ wyjÅ›cieToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ edycjaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ pomocToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
@@ -51,47 +51,133 @@ namespace Kalkulator {
 	private: System::Windows::Forms::ToolStripMenuItem^ standardowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ naukowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ walutowyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ iloczynyWektorÃ³wToolStripMenuItem1;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ btnAC;
+	private: System::Windows::Forms::Button^ btnBackspace;
+
+
+
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button7;
-	private: System::Windows::Forms::Button^ button8;
-	private: System::Windows::Forms::Button^ button9;
-	private: System::Windows::Forms::Button^ button10;
-	private: System::Windows::Forms::Button^ button11;
-	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button14;
-	private: System::Windows::Forms::Button^ button15;
-	private: System::Windows::Forms::Button^ button16;
-	private: System::Windows::Forms::Button^ button17;
-	private: System::Windows::Forms::Button^ button18;
-	private: System::Windows::Forms::Button^ button19;
-	private: System::Windows::Forms::Button^ button20;
-	private: System::Windows::Forms::Button^ button21;
-	private: System::Windows::Forms::Button^ button22;
-	private: System::Windows::Forms::Button^ button23;
-	private: System::Windows::Forms::Button^ button24;
-	private: System::Windows::Forms::Button^ button25;
-	private: System::Windows::Forms::Button^ button26;
-	private: System::Windows::Forms::Button^ button27;
-	private: System::Windows::Forms::Button^ button28;
-	private: System::Windows::Forms::Button^ button29;
-	private: System::Windows::Forms::Button^ button30;
-	private: System::Windows::Forms::Button^ button31;
-	private: System::Windows::Forms::Button^ button32;
-	private: System::Windows::Forms::Button^ button33;
-	private: System::Windows::Forms::Button^ button34;
-	private: System::Windows::Forms::Button^ button35;
-	private: System::Windows::Forms::Button^ button36;
-	private: System::Windows::Forms::Button^ button37;
-	private: System::Windows::Forms::Button^ button38;
-	private: System::Windows::Forms::Button^ button39;
-	private: System::Windows::Forms::Button^ button40;
+	private: System::Windows::Forms::Button^ btnC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ btnDivide;
+
+	private: System::Windows::Forms::Button^ btnMultiply;
+	private: System::Windows::Forms::Button^ btn9;
+	private: System::Windows::Forms::Button^ btn8;
+	private: System::Windows::Forms::Button^ btnSubstract;
+
+	private: System::Windows::Forms::Button^ btn3;
+
+	private: System::Windows::Forms::Button^ btn2;
+	private: System::Windows::Forms::Button^ btnAdd;
+
+
+	private: System::Windows::Forms::Button^ btn6;
+
+	private: System::Windows::Forms::Button^ btn5;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ btn7;
+	private: System::Windows::Forms::Button^ btn4;
+
+
+
+
+
+	private: System::Windows::Forms::Button^ btn1;
+private: System::Windows::Forms::Button^ btn0;
+private: System::Windows::Forms::Button^ btnDot;
+private: System::Windows::Forms::Button^ btnEquals;
+private: System::Windows::Forms::Button^ btnExp;
+
+private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::Button^ button4;
+
+private: System::Windows::Forms::Button^ btnE;
+
+private: System::Windows::Forms::Button^ btnAbs;
+
+private: System::Windows::Forms::Button^ button9;
+private: System::Windows::Forms::Button^ button10;
+
+private: System::Windows::Forms::Button^ button12;
+private: System::Windows::Forms::Button^ button13;
+
+private: System::Windows::Forms::Button^ button15;
+private: System::Windows::Forms::Button^ button16;
+
+
+private: System::Windows::Forms::Button^ btnSqrt;
+private: System::Windows::Forms::Button^ btnPi;
+private: System::Windows::Forms::Button^ btnLog;
+private: System::Windows::Forms::Button^ btnLn;
+private: System::Windows::Forms::Button^ btnFact;
+private: System::Windows::Forms::Button^ btnPercent;
+private: System::Windows::Forms::Button^ btnOpposite;
+private: System::Windows::Forms::Button^ btnSquared;
+private: System::Windows::Forms::Button^ btnCubed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	protected:
 
@@ -110,57 +196,57 @@ namespace Kalkulator {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->iloczynyWektorówToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->wyjœcieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->pomocToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
-			this->button16 = (gcnew System::Windows::Forms::Button());
-			this->button17 = (gcnew System::Windows::Forms::Button());
-			this->button18 = (gcnew System::Windows::Forms::Button());
-			this->button19 = (gcnew System::Windows::Forms::Button());
-			this->button20 = (gcnew System::Windows::Forms::Button());
-			this->button21 = (gcnew System::Windows::Forms::Button());
-			this->button22 = (gcnew System::Windows::Forms::Button());
-			this->button23 = (gcnew System::Windows::Forms::Button());
-			this->button24 = (gcnew System::Windows::Forms::Button());
-			this->button25 = (gcnew System::Windows::Forms::Button());
-			this->button26 = (gcnew System::Windows::Forms::Button());
-			this->button27 = (gcnew System::Windows::Forms::Button());
-			this->button28 = (gcnew System::Windows::Forms::Button());
-			this->button29 = (gcnew System::Windows::Forms::Button());
-			this->button30 = (gcnew System::Windows::Forms::Button());
-			this->button31 = (gcnew System::Windows::Forms::Button());
-			this->button32 = (gcnew System::Windows::Forms::Button());
-			this->button33 = (gcnew System::Windows::Forms::Button());
-			this->button34 = (gcnew System::Windows::Forms::Button());
-			this->button35 = (gcnew System::Windows::Forms::Button());
-			this->button36 = (gcnew System::Windows::Forms::Button());
-			this->button37 = (gcnew System::Windows::Forms::Button());
-			this->button38 = (gcnew System::Windows::Forms::Button());
-			this->button39 = (gcnew System::Windows::Forms::Button());
-			this->button40 = (gcnew System::Windows::Forms::Button());
+			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->wyjÅ›cieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->trybyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->standardowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->naukowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->walutowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->iloczynyWektorÃ³wToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->pomocToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->btnAC = (gcnew System::Windows::Forms::Button());
+			this->btnBackspace = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->btnC = (gcnew System::Windows::Forms::Button());
+			this->btnDivide = (gcnew System::Windows::Forms::Button());
+			this->btnMultiply = (gcnew System::Windows::Forms::Button());
+			this->btn9 = (gcnew System::Windows::Forms::Button());
+			this->btn8 = (gcnew System::Windows::Forms::Button());
+			this->btnSubstract = (gcnew System::Windows::Forms::Button());
+			this->btn3 = (gcnew System::Windows::Forms::Button());
+			this->btn2 = (gcnew System::Windows::Forms::Button());
+			this->btnAdd = (gcnew System::Windows::Forms::Button());
+			this->btn6 = (gcnew System::Windows::Forms::Button());
+			this->btn5 = (gcnew System::Windows::Forms::Button());
+			this->btn7 = (gcnew System::Windows::Forms::Button());
+			this->btn4 = (gcnew System::Windows::Forms::Button());
+			this->btn1 = (gcnew System::Windows::Forms::Button());
+			this->btn0 = (gcnew System::Windows::Forms::Button());
+			this->btnDot = (gcnew System::Windows::Forms::Button());
+			this->btnEquals = (gcnew System::Windows::Forms::Button());
+			this->btnExp = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->btnE = (gcnew System::Windows::Forms::Button());
+			this->btnAbs = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button13 = (gcnew System::Windows::Forms::Button());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->btnSqrt = (gcnew System::Windows::Forms::Button());
+			this->btnPi = (gcnew System::Windows::Forms::Button());
+			this->btnLog = (gcnew System::Windows::Forms::Button());
+			this->btnLn = (gcnew System::Windows::Forms::Button());
+			this->btnFact = (gcnew System::Windows::Forms::Button());
+			this->btnPercent = (gcnew System::Windows::Forms::Button());
+			this->btnOpposite = (gcnew System::Windows::Forms::Button());
+			this->btnSquared = (gcnew System::Windows::Forms::Button());
+			this->btnCubed = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -172,49 +258,83 @@ namespace Kalkulator {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1049, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1049, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// fileToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->iloczynyWektorówToolStripMenuItem,
-					this->historiaToolStripMenuItem1, this->historiaToolStripMenuItem, this->wyjœcieToolStripMenuItem
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->historiaToolStripMenuItem1,
+					this->historiaToolStripMenuItem, this->wyjÅ›cieToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
-			this->fileToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(44, 24);
 			this->fileToolStripMenuItem->Text = L"Plik";
 			this->fileToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::fileToolStripMenuItem_Click);
+			// 
+			// historiaToolStripMenuItem1
+			// 
+			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem1->Text = L"Historia";
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			// 
-			// iloczynyWektorówToolStripMenuItem
+			// wyjÅ›cieToolStripMenuItem
 			// 
-			this->iloczynyWektorówToolStripMenuItem->Name = L"iloczynyWektorówToolStripMenuItem";
-			this->iloczynyWektorówToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->iloczynyWektorówToolStripMenuItem->Text = L"Iloczyny wektorów";
+			this->wyjÅ›cieToolStripMenuItem->Name = L"wyjÅ›cieToolStripMenuItem";
+			this->wyjÅ›cieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->wyjÅ›cieToolStripMenuItem->Text = L"WyjÅ›cie";
 			// 
 			// edycjaToolStripMenuItem
 			// 
 			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
-			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
-			// wyjœcieToolStripMenuItem
+			// trybyToolStripMenuItem
 			// 
-			this->wyjœcieToolStripMenuItem->Name = L"wyjœcieToolStripMenuItem";
-			this->wyjœcieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->wyjœcieToolStripMenuItem->Text = L"Wyjœcie";
+			this->trybyToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->standardowyToolStripMenuItem,
+					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->iloczynyWektorÃ³wToolStripMenuItem1
+			});
+			this->trybyToolStripMenuItem->Name = L"trybyToolStripMenuItem";
+			this->trybyToolStripMenuItem->Size = System::Drawing::Size(64, 24);
+			this->trybyToolStripMenuItem->Text = L"Widok";
+			// 
+			// standardowyToolStripMenuItem
+			// 
+			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->standardowyToolStripMenuItem->Text = L"Standardowy";
+			// 
+			// naukowyToolStripMenuItem
+			// 
+			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->naukowyToolStripMenuItem->Text = L"Naukowy";
+			// 
+			// walutowyToolStripMenuItem
+			// 
+			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->walutowyToolStripMenuItem->Text = L"Walutowy";
+			// 
+			// iloczynyWektorÃ³wToolStripMenuItem1
+			// 
+			this->iloczynyWektorÃ³wToolStripMenuItem1->Name = L"iloczynyWektorÃ³wToolStripMenuItem1";
+			this->iloczynyWektorÃ³wToolStripMenuItem1->Size = System::Drawing::Size(200, 24);
+			this->iloczynyWektorÃ³wToolStripMenuItem1->Text = L"Iloczyny wektorÃ³w";
 			// 
 			// pomocToolStripMenuItem
 			// 
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// textBox1
@@ -225,565 +345,532 @@ namespace Kalkulator {
 			this->textBox1->Size = System::Drawing::Size(277, 40);
 			this->textBox1->TabIndex = 1;
 			// 
-			// historiaToolStripMenuItem1
+			// btnAC
 			// 
-			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
-			this->historiaToolStripMenuItem1->Text = L"Historia";
-			// 
-			// button1
-			// 
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnAC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button1->Location = System::Drawing::Point(12, 73);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(70, 70);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"btn1";
-			this->button1->UseVisualStyleBackColor = true;
+			this->btnAC->Location = System::Drawing::Point(81, 73);
+			this->btnAC->Name = L"btnAC";
+			this->btnAC->Size = System::Drawing::Size(70, 70);
+			this->btnAC->TabIndex = 2;
+			this->btnAC->Text = L"AC";
+			this->btnAC->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// btnBackspace
 			// 
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button2->Location = System::Drawing::Point(81, 73);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(70, 70);
-			this->button2->TabIndex = 3;
-			this->button2->Text = L"btn1";
-			this->button2->UseVisualStyleBackColor = true;
+			this->btnBackspace->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnBackspace->Font = (gcnew System::Drawing::Font(L"Wingdings", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(2)));
+			this->btnBackspace->Location = System::Drawing::Point(12, 73);
+			this->btnBackspace->Name = L"btnBackspace";
+			this->btnBackspace->Size = System::Drawing::Size(70, 70);
+			this->btnBackspace->TabIndex = 7;
+			this->btnBackspace->Text = L"ïƒ•";
+			this->btnBackspace->UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button3->Location = System::Drawing::Point(219, 73);
+			this->button3->Location = System::Drawing::Point(12, 349);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(70, 70);
 			this->button3->TabIndex = 5;
-			this->button3->Text = L"btn1";
+			this->button3->Text = L"+/-";
 			this->button3->UseVisualStyleBackColor = true;
+			// 
+			// btnC
+			// 
+			this->btnC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnC->Location = System::Drawing::Point(150, 73);
+			this->btnC->Name = L"btnC";
+			this->btnC->Size = System::Drawing::Size(70, 70);
+			this->btnC->TabIndex = 4;
+			this->btnC->Text = L"C";
+			this->btnC->UseVisualStyleBackColor = true;
+			// 
+			// btnDivide
+			// 
+			this->btnDivide->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnDivide->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnDivide->Location = System::Drawing::Point(219, 73);
+			this->btnDivide->Name = L"btnDivide";
+			this->btnDivide->Size = System::Drawing::Size(70, 70);
+			this->btnDivide->TabIndex = 42;
+			this->btnDivide->Text = L"Ã·";
+			this->btnDivide->UseVisualStyleBackColor = true;
+			// 
+			// btnMultiply
+			// 
+			this->btnMultiply->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMultiply->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnMultiply->Location = System::Drawing::Point(219, 142);
+			this->btnMultiply->Name = L"btnMultiply";
+			this->btnMultiply->Size = System::Drawing::Size(70, 70);
+			this->btnMultiply->TabIndex = 46;
+			this->btnMultiply->Text = L"Ã—";
+			this->btnMultiply->UseVisualStyleBackColor = true;
+			// 
+			// btn9
+			// 
+			this->btn9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn9->Location = System::Drawing::Point(150, 142);
+			this->btn9->Name = L"btn9";
+			this->btn9->Size = System::Drawing::Size(70, 70);
+			this->btn9->TabIndex = 44;
+			this->btn9->Text = L"9";
+			this->btn9->UseVisualStyleBackColor = true;
+			// 
+			// btn8
+			// 
+			this->btn8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn8->Location = System::Drawing::Point(81, 142);
+			this->btn8->Name = L"btn8";
+			this->btn8->Size = System::Drawing::Size(70, 70);
+			this->btn8->TabIndex = 43;
+			this->btn8->Text = L"8";
+			this->btn8->UseVisualStyleBackColor = true;
+			// 
+			// btnSubstract
+			// 
+			this->btnSubstract->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSubstract->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnSubstract->Location = System::Drawing::Point(219, 211);
+			this->btnSubstract->Name = L"btnSubstract";
+			this->btnSubstract->Size = System::Drawing::Size(70, 70);
+			this->btnSubstract->TabIndex = 54;
+			this->btnSubstract->Text = L"-";
+			this->btnSubstract->UseVisualStyleBackColor = true;
+			// 
+			// btn3
+			// 
+			this->btn3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn3->Location = System::Drawing::Point(150, 280);
+			this->btn3->Name = L"btn3";
+			this->btn3->Size = System::Drawing::Size(70, 70);
+			this->btn3->TabIndex = 52;
+			this->btn3->Text = L"3";
+			this->btn3->UseVisualStyleBackColor = true;
+			// 
+			// btn2
+			// 
+			this->btn2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn2->Location = System::Drawing::Point(81, 280);
+			this->btn2->Name = L"btn2";
+			this->btn2->Size = System::Drawing::Size(70, 70);
+			this->btn2->TabIndex = 51;
+			this->btn2->Text = L"2";
+			this->btn2->UseVisualStyleBackColor = true;
+			// 
+			// btnAdd
+			// 
+			this->btnAdd->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAdd->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnAdd->Location = System::Drawing::Point(219, 280);
+			this->btnAdd->Name = L"btnAdd";
+			this->btnAdd->Size = System::Drawing::Size(70, 70);
+			this->btnAdd->TabIndex = 50;
+			this->btnAdd->Text = L"+";
+			this->btnAdd->UseVisualStyleBackColor = true;
+			// 
+			// btn6
+			// 
+			this->btn6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn6->Location = System::Drawing::Point(150, 211);
+			this->btn6->Name = L"btn6";
+			this->btn6->Size = System::Drawing::Size(70, 70);
+			this->btn6->TabIndex = 48;
+			this->btn6->Text = L"6";
+			this->btn6->UseVisualStyleBackColor = true;
+			// 
+			// btn5
+			// 
+			this->btn5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn5->Location = System::Drawing::Point(81, 211);
+			this->btn5->Name = L"btn5";
+			this->btn5->Size = System::Drawing::Size(70, 70);
+			this->btn5->TabIndex = 47;
+			this->btn5->Text = L"5";
+			this->btn5->UseVisualStyleBackColor = true;
+			// 
+			// btn7
+			// 
+			this->btn7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn7->Location = System::Drawing::Point(12, 142);
+			this->btn7->Name = L"btn7";
+			this->btn7->Size = System::Drawing::Size(70, 70);
+			this->btn7->TabIndex = 75;
+			this->btn7->Text = L"7";
+			this->btn7->UseVisualStyleBackColor = true;
+			// 
+			// btn4
+			// 
+			this->btn4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn4->Location = System::Drawing::Point(12, 211);
+			this->btn4->Name = L"btn4";
+			this->btn4->Size = System::Drawing::Size(70, 70);
+			this->btn4->TabIndex = 76;
+			this->btn4->Text = L"4";
+			this->btn4->UseVisualStyleBackColor = true;
+			// 
+			// btn1
+			// 
+			this->btn1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn1->Location = System::Drawing::Point(12, 280);
+			this->btn1->Name = L"btn1";
+			this->btn1->Size = System::Drawing::Size(70, 70);
+			this->btn1->TabIndex = 81;
+			this->btn1->Text = L"1";
+			this->btn1->UseVisualStyleBackColor = true;
+			// 
+			// btn0
+			// 
+			this->btn0->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btn0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btn0->Location = System::Drawing::Point(81, 349);
+			this->btn0->Name = L"btn0";
+			this->btn0->Size = System::Drawing::Size(70, 70);
+			this->btn0->TabIndex = 82;
+			this->btn0->Text = L"0";
+			this->btn0->UseVisualStyleBackColor = true;
+			// 
+			// btnDot
+			// 
+			this->btnDot->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnDot->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnDot->Location = System::Drawing::Point(150, 349);
+			this->btnDot->Name = L"btnDot";
+			this->btnDot->Size = System::Drawing::Size(70, 70);
+			this->btnDot->TabIndex = 83;
+			this->btnDot->Text = L".";
+			this->btnDot->UseVisualStyleBackColor = true;
+			// 
+			// btnEquals
+			// 
+			this->btnEquals->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnEquals->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnEquals->Location = System::Drawing::Point(219, 349);
+			this->btnEquals->Name = L"btnEquals";
+			this->btnEquals->Size = System::Drawing::Size(70, 70);
+			this->btnEquals->TabIndex = 84;
+			this->btnEquals->Text = L"=";
+			this->btnEquals->UseVisualStyleBackColor = true;
+			// 
+			// btnExp
+			// 
+			this->btnExp->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnExp->Location = System::Drawing::Point(314, 280);
+			this->btnExp->Name = L"btnExp";
+			this->btnExp->Size = System::Drawing::Size(70, 70);
+			this->btnExp->TabIndex = 104;
+			this->btnExp->Text = L"exp";
+			this->btnExp->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->button2->Location = System::Drawing::Point(452, 349);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(70, 70);
+			this->button2->TabIndex = 103;
+			this->button2->Text = L".";
+			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// button4
 			// 
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button4->Location = System::Drawing::Point(150, 73);
+			this->button4->Location = System::Drawing::Point(383, 349);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(70, 70);
-			this->button4->TabIndex = 4;
-			this->button4->Text = L"btn1";
+			this->button4->TabIndex = 102;
+			this->button4->Text = L"0";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
-			// button5
+			// btnE
 			// 
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnE->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnE->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button5->Location = System::Drawing::Point(219, 142);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(70, 70);
-			this->button5->TabIndex = 9;
-			this->button5->Text = L"btn1";
-			this->button5->UseVisualStyleBackColor = true;
+			this->btnE->Location = System::Drawing::Point(383, 73);
+			this->btnE->Name = L"btnE";
+			this->btnE->Size = System::Drawing::Size(70, 70);
+			this->btnE->TabIndex = 100;
+			this->btnE->Text = L"e";
+			this->btnE->UseVisualStyleBackColor = true;
+			this->btnE->Click += gcnew System::EventHandler(this, &Kalkulator::button6_Click);
 			// 
-			// button6
+			// btnAbs
 			// 
-			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button6->Location = System::Drawing::Point(150, 142);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(70, 70);
-			this->button6->TabIndex = 8;
-			this->button6->Text = L"btn1";
-			this->button6->UseVisualStyleBackColor = true;
-			// 
-			// button7
-			// 
-			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button7->Location = System::Drawing::Point(81, 142);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(70, 70);
-			this->button7->TabIndex = 7;
-			this->button7->Text = L"btn1";
-			this->button7->UseVisualStyleBackColor = true;
-			// 
-			// button8
-			// 
-			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button8->Location = System::Drawing::Point(12, 142);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(70, 70);
-			this->button8->TabIndex = 6;
-			this->button8->Text = L"btn1";
-			this->button8->UseVisualStyleBackColor = true;
+			this->btnAbs->Location = System::Drawing::Point(521, 280);
+			this->btnAbs->Name = L"btnAbs";
+			this->btnAbs->Size = System::Drawing::Size(70, 70);
+			this->btnAbs->TabIndex = 99;
+			this->btnAbs->Text = L"|x|";
+			this->btnAbs->UseVisualStyleBackColor = true;
 			// 
 			// button9
 			// 
 			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button9->Location = System::Drawing::Point(219, 280);
+			this->button9->Location = System::Drawing::Point(452, 280);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(70, 70);
-			this->button9->TabIndex = 17;
-			this->button9->Text = L"btn1";
+			this->button9->TabIndex = 97;
+			this->button9->Text = L"3";
 			this->button9->UseVisualStyleBackColor = true;
 			// 
 			// button10
 			// 
 			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button10->Location = System::Drawing::Point(150, 280);
+			this->button10->Location = System::Drawing::Point(383, 280);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(70, 70);
-			this->button10->TabIndex = 16;
-			this->button10->Text = L"btn1";
+			this->button10->TabIndex = 96;
+			this->button10->Text = L"2";
 			this->button10->UseVisualStyleBackColor = true;
-			// 
-			// button11
-			// 
-			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button11->Location = System::Drawing::Point(81, 280);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(70, 70);
-			this->button11->TabIndex = 15;
-			this->button11->Text = L"btn1";
-			this->button11->UseVisualStyleBackColor = true;
 			// 
 			// button12
 			// 
 			this->button12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button12->Location = System::Drawing::Point(12, 280);
+			this->button12->Location = System::Drawing::Point(452, 211);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(70, 70);
-			this->button12->TabIndex = 14;
-			this->button12->Text = L"btn1";
+			this->button12->TabIndex = 94;
+			this->button12->Text = L"6";
 			this->button12->UseVisualStyleBackColor = true;
 			// 
 			// button13
 			// 
 			this->button13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button13->Location = System::Drawing::Point(219, 211);
+			this->button13->Location = System::Drawing::Point(383, 211);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(70, 70);
-			this->button13->TabIndex = 13;
-			this->button13->Text = L"btn1";
+			this->button13->TabIndex = 93;
+			this->button13->Text = L"5";
 			this->button13->UseVisualStyleBackColor = true;
-			// 
-			// button14
-			// 
-			this->button14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button14->Location = System::Drawing::Point(150, 211);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(70, 70);
-			this->button14->TabIndex = 12;
-			this->button14->Text = L"btn1";
-			this->button14->UseVisualStyleBackColor = true;
 			// 
 			// button15
 			// 
 			this->button15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button15->Location = System::Drawing::Point(81, 211);
+			this->button15->Location = System::Drawing::Point(452, 142);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(70, 70);
-			this->button15->TabIndex = 11;
-			this->button15->Text = L"btn1";
+			this->button15->TabIndex = 91;
+			this->button15->Text = L"9";
 			this->button15->UseVisualStyleBackColor = true;
 			// 
 			// button16
 			// 
 			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button16->Location = System::Drawing::Point(12, 211);
+			this->button16->Location = System::Drawing::Point(383, 142);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(70, 70);
-			this->button16->TabIndex = 10;
-			this->button16->Text = L"btn1";
+			this->button16->TabIndex = 90;
+			this->button16->Text = L"8";
 			this->button16->UseVisualStyleBackColor = true;
 			// 
-			// button17
+			// btnSqrt
 			// 
-			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnSqrt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSqrt->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button17->Location = System::Drawing::Point(219, 349);
-			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(70, 70);
-			this->button17->TabIndex = 21;
-			this->button17->Text = L"btn1";
-			this->button17->UseVisualStyleBackColor = true;
+			this->btnSqrt->Location = System::Drawing::Point(452, 73);
+			this->btnSqrt->Name = L"btnSqrt";
+			this->btnSqrt->Size = System::Drawing::Size(70, 70);
+			this->btnSqrt->TabIndex = 86;
+			this->btnSqrt->Text = L"âˆš";
+			this->btnSqrt->UseVisualStyleBackColor = true;
 			// 
-			// button18
+			// btnPi
 			// 
-			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnPi->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnPi->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button18->Location = System::Drawing::Point(150, 349);
-			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(70, 70);
-			this->button18->TabIndex = 20;
-			this->button18->Text = L"btn1";
-			this->button18->UseVisualStyleBackColor = true;
+			this->btnPi->Location = System::Drawing::Point(314, 73);
+			this->btnPi->Name = L"btnPi";
+			this->btnPi->Size = System::Drawing::Size(70, 70);
+			this->btnPi->TabIndex = 88;
+			this->btnPi->Text = L"Ï€";
+			this->btnPi->UseVisualStyleBackColor = true;
 			// 
-			// button19
+			// btnLog
 			// 
-			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnLog->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnLog->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button19->Location = System::Drawing::Point(81, 349);
-			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(70, 70);
-			this->button19->TabIndex = 19;
-			this->button19->Text = L"btn1";
-			this->button19->UseVisualStyleBackColor = true;
+			this->btnLog->Location = System::Drawing::Point(314, 142);
+			this->btnLog->Name = L"btnLog";
+			this->btnLog->Size = System::Drawing::Size(70, 70);
+			this->btnLog->TabIndex = 85;
+			this->btnLog->Text = L"log";
+			this->btnLog->UseVisualStyleBackColor = true;
 			// 
-			// button20
+			// btnLn
 			// 
-			this->button20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnLn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnLn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button20->Location = System::Drawing::Point(12, 349);
-			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(70, 70);
-			this->button20->TabIndex = 18;
-			this->button20->Text = L"btn1";
-			this->button20->UseVisualStyleBackColor = true;
+			this->btnLn->Location = System::Drawing::Point(314, 211);
+			this->btnLn->Name = L"btnLn";
+			this->btnLn->Size = System::Drawing::Size(70, 70);
+			this->btnLn->TabIndex = 105;
+			this->btnLn->Text = L"ln";
+			this->btnLn->UseVisualStyleBackColor = true;
 			// 
-			// button21
+			// btnFact
 			// 
-			this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnFact->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnFact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button21->Location = System::Drawing::Point(534, 349);
-			this->button21->Name = L"button21";
-			this->button21->Size = System::Drawing::Size(70, 70);
-			this->button21->TabIndex = 41;
-			this->button21->Text = L"btn1";
-			this->button21->UseVisualStyleBackColor = true;
+			this->btnFact->Location = System::Drawing::Point(314, 349);
+			this->btnFact->Name = L"btnFact";
+			this->btnFact->Size = System::Drawing::Size(70, 70);
+			this->btnFact->TabIndex = 106;
+			this->btnFact->Text = L"n!";
+			this->btnFact->UseVisualStyleBackColor = true;
 			// 
-			// button22
+			// btnPercent
 			// 
-			this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnPercent->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnPercent->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button22->Location = System::Drawing::Point(465, 349);
-			this->button22->Name = L"button22";
-			this->button22->Size = System::Drawing::Size(70, 70);
-			this->button22->TabIndex = 40;
-			this->button22->Text = L"btn1";
-			this->button22->UseVisualStyleBackColor = true;
+			this->btnPercent->Location = System::Drawing::Point(521, 349);
+			this->btnPercent->Name = L"btnPercent";
+			this->btnPercent->Size = System::Drawing::Size(70, 70);
+			this->btnPercent->TabIndex = 107;
+			this->btnPercent->Text = L"%";
+			this->btnPercent->UseVisualStyleBackColor = true;
 			// 
-			// button23
+			// btnOpposite
 			// 
-			this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnOpposite->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnOpposite->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button23->Location = System::Drawing::Point(396, 349);
-			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(70, 70);
-			this->button23->TabIndex = 39;
-			this->button23->Text = L"btn1";
-			this->button23->UseVisualStyleBackColor = true;
+			this->btnOpposite->Location = System::Drawing::Point(521, 211);
+			this->btnOpposite->Name = L"btnOpposite";
+			this->btnOpposite->Size = System::Drawing::Size(70, 70);
+			this->btnOpposite->TabIndex = 108;
+			this->btnOpposite->Text = L"1/x";
+			this->btnOpposite->UseVisualStyleBackColor = true;
 			// 
-			// button24
+			// btnSquared
 			// 
-			this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnSquared->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSquared->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button24->Location = System::Drawing::Point(327, 349);
-			this->button24->Name = L"button24";
-			this->button24->Size = System::Drawing::Size(70, 70);
-			this->button24->TabIndex = 38;
-			this->button24->Text = L"btn1";
-			this->button24->UseVisualStyleBackColor = true;
+			this->btnSquared->Location = System::Drawing::Point(521, 73);
+			this->btnSquared->Name = L"btnSquared";
+			this->btnSquared->Size = System::Drawing::Size(70, 70);
+			this->btnSquared->TabIndex = 110;
+			this->btnSquared->Text = L"x^2";
+			this->btnSquared->UseVisualStyleBackColor = true;
 			// 
-			// button25
+			// btnCubed
 			// 
-			this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnCubed->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnCubed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button25->Location = System::Drawing::Point(534, 280);
-			this->button25->Name = L"button25";
-			this->button25->Size = System::Drawing::Size(70, 70);
-			this->button25->TabIndex = 37;
-			this->button25->Text = L"btn1";
-			this->button25->UseVisualStyleBackColor = true;
-			// 
-			// button26
-			// 
-			this->button26->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button26->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button26->Location = System::Drawing::Point(465, 280);
-			this->button26->Name = L"button26";
-			this->button26->Size = System::Drawing::Size(70, 70);
-			this->button26->TabIndex = 36;
-			this->button26->Text = L"btn1";
-			this->button26->UseVisualStyleBackColor = true;
-			// 
-			// button27
-			// 
-			this->button27->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button27->Location = System::Drawing::Point(396, 280);
-			this->button27->Name = L"button27";
-			this->button27->Size = System::Drawing::Size(70, 70);
-			this->button27->TabIndex = 35;
-			this->button27->Text = L"btn1";
-			this->button27->UseVisualStyleBackColor = true;
-			// 
-			// button28
-			// 
-			this->button28->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button28->Location = System::Drawing::Point(327, 280);
-			this->button28->Name = L"button28";
-			this->button28->Size = System::Drawing::Size(70, 70);
-			this->button28->TabIndex = 34;
-			this->button28->Text = L"btn1";
-			this->button28->UseVisualStyleBackColor = true;
-			// 
-			// button29
-			// 
-			this->button29->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button29->Location = System::Drawing::Point(534, 211);
-			this->button29->Name = L"button29";
-			this->button29->Size = System::Drawing::Size(70, 70);
-			this->button29->TabIndex = 33;
-			this->button29->Text = L"btn1";
-			this->button29->UseVisualStyleBackColor = true;
-			// 
-			// button30
-			// 
-			this->button30->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button30->Location = System::Drawing::Point(465, 211);
-			this->button30->Name = L"button30";
-			this->button30->Size = System::Drawing::Size(70, 70);
-			this->button30->TabIndex = 32;
-			this->button30->Text = L"btn1";
-			this->button30->UseVisualStyleBackColor = true;
-			// 
-			// button31
-			// 
-			this->button31->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button31->Location = System::Drawing::Point(396, 211);
-			this->button31->Name = L"button31";
-			this->button31->Size = System::Drawing::Size(70, 70);
-			this->button31->TabIndex = 31;
-			this->button31->Text = L"btn1";
-			this->button31->UseVisualStyleBackColor = true;
-			// 
-			// button32
-			// 
-			this->button32->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button32->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button32->Location = System::Drawing::Point(327, 211);
-			this->button32->Name = L"button32";
-			this->button32->Size = System::Drawing::Size(70, 70);
-			this->button32->TabIndex = 30;
-			this->button32->Text = L"btn1";
-			this->button32->UseVisualStyleBackColor = true;
-			// 
-			// button33
-			// 
-			this->button33->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button33->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button33->Location = System::Drawing::Point(534, 142);
-			this->button33->Name = L"button33";
-			this->button33->Size = System::Drawing::Size(70, 70);
-			this->button33->TabIndex = 29;
-			this->button33->Text = L"btn1";
-			this->button33->UseVisualStyleBackColor = true;
-			// 
-			// button34
-			// 
-			this->button34->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button34->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button34->Location = System::Drawing::Point(465, 142);
-			this->button34->Name = L"button34";
-			this->button34->Size = System::Drawing::Size(70, 70);
-			this->button34->TabIndex = 28;
-			this->button34->Text = L"btn1";
-			this->button34->UseVisualStyleBackColor = true;
-			// 
-			// button35
-			// 
-			this->button35->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button35->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button35->Location = System::Drawing::Point(396, 142);
-			this->button35->Name = L"button35";
-			this->button35->Size = System::Drawing::Size(70, 70);
-			this->button35->TabIndex = 27;
-			this->button35->Text = L"btn1";
-			this->button35->UseVisualStyleBackColor = true;
-			// 
-			// button36
-			// 
-			this->button36->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button36->Location = System::Drawing::Point(327, 142);
-			this->button36->Name = L"button36";
-			this->button36->Size = System::Drawing::Size(70, 70);
-			this->button36->TabIndex = 26;
-			this->button36->Text = L"btn1";
-			this->button36->UseVisualStyleBackColor = true;
-			// 
-			// button37
-			// 
-			this->button37->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button37->Location = System::Drawing::Point(534, 73);
-			this->button37->Name = L"button37";
-			this->button37->Size = System::Drawing::Size(70, 70);
-			this->button37->TabIndex = 25;
-			this->button37->Text = L"btn1";
-			this->button37->UseVisualStyleBackColor = true;
-			// 
-			// button38
-			// 
-			this->button38->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button38->Location = System::Drawing::Point(465, 73);
-			this->button38->Name = L"button38";
-			this->button38->Size = System::Drawing::Size(70, 70);
-			this->button38->TabIndex = 24;
-			this->button38->Text = L"btn1";
-			this->button38->UseVisualStyleBackColor = true;
-			// 
-			// button39
-			// 
-			this->button39->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button39->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button39->Location = System::Drawing::Point(396, 73);
-			this->button39->Name = L"button39";
-			this->button39->Size = System::Drawing::Size(70, 70);
-			this->button39->TabIndex = 23;
-			this->button39->Text = L"btn1";
-			this->button39->UseVisualStyleBackColor = true;
-			// 
-			// button40
-			// 
-			this->button40->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->button40->Location = System::Drawing::Point(327, 73);
-			this->button40->Name = L"button40";
-			this->button40->Size = System::Drawing::Size(70, 70);
-			this->button40->TabIndex = 22;
-			this->button40->Text = L"btn1";
-			this->button40->UseVisualStyleBackColor = true;
-			// 
-			// trybyToolStripMenuItem
-			// 
-			this->trybyToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->standardowyToolStripMenuItem,
-					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem
-			});
-			this->trybyToolStripMenuItem->Name = L"trybyToolStripMenuItem";
-			this->trybyToolStripMenuItem->Size = System::Drawing::Size(53, 20);
-			this->trybyToolStripMenuItem->Text = L"Widok";
-			// 
-			// standardowyToolStripMenuItem
-			// 
-			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->standardowyToolStripMenuItem->Text = L"Standardowy";
-			// 
-			// naukowyToolStripMenuItem
-			// 
-			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->naukowyToolStripMenuItem->Text = L"Naukowy";
-			// 
-			// walutowyToolStripMenuItem
-			// 
-			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->walutowyToolStripMenuItem->Text = L"Walutowy";
+			this->btnCubed->Location = System::Drawing::Point(521, 142);
+			this->btnCubed->Name = L"btnCubed";
+			this->btnCubed->Size = System::Drawing::Size(70, 70);
+			this->btnCubed->TabIndex = 111;
+			this->btnCubed->Text = L"x^3";
+			this->btnCubed->UseVisualStyleBackColor = true;
 			// 
 			// Kalkulator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1049, 530);
-			this->Controls->Add(this->button21);
-			this->Controls->Add(this->button22);
-			this->Controls->Add(this->button23);
-			this->Controls->Add(this->button24);
-			this->Controls->Add(this->button25);
-			this->Controls->Add(this->button26);
-			this->Controls->Add(this->button27);
-			this->Controls->Add(this->button28);
-			this->Controls->Add(this->button29);
-			this->Controls->Add(this->button30);
-			this->Controls->Add(this->button31);
-			this->Controls->Add(this->button32);
-			this->Controls->Add(this->button33);
-			this->Controls->Add(this->button34);
-			this->Controls->Add(this->button35);
-			this->Controls->Add(this->button36);
-			this->Controls->Add(this->button37);
-			this->Controls->Add(this->button38);
-			this->Controls->Add(this->button39);
-			this->Controls->Add(this->button40);
-			this->Controls->Add(this->button17);
-			this->Controls->Add(this->button18);
-			this->Controls->Add(this->button19);
-			this->Controls->Add(this->button20);
+			this->Controls->Add(this->btnCubed);
+			this->Controls->Add(this->btnSquared);
+			this->Controls->Add(this->btnOpposite);
+			this->Controls->Add(this->btnPercent);
+			this->Controls->Add(this->btnFact);
+			this->Controls->Add(this->btnLn);
+			this->Controls->Add(this->btnExp);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button4);
+			this->Controls->Add(this->btnE);
+			this->Controls->Add(this->btnAbs);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button10);
-			this->Controls->Add(this->button11);
 			this->Controls->Add(this->button12);
 			this->Controls->Add(this->button13);
-			this->Controls->Add(this->button14);
 			this->Controls->Add(this->button15);
 			this->Controls->Add(this->button16);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->button8);
+			this->Controls->Add(this->btnSqrt);
+			this->Controls->Add(this->btnPi);
+			this->Controls->Add(this->btnLog);
+			this->Controls->Add(this->btnEquals);
+			this->Controls->Add(this->btnDot);
+			this->Controls->Add(this->btn0);
+			this->Controls->Add(this->btn1);
+			this->Controls->Add(this->btn4);
+			this->Controls->Add(this->btn7);
+			this->Controls->Add(this->btnSubstract);
+			this->Controls->Add(this->btn3);
+			this->Controls->Add(this->btn2);
+			this->Controls->Add(this->btnAdd);
+			this->Controls->Add(this->btn6);
+			this->Controls->Add(this->btn5);
+			this->Controls->Add(this->btnMultiply);
+			this->Controls->Add(this->btn9);
+			this->Controls->Add(this->btn8);
+			this->Controls->Add(this->btnDivide);
 			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->btnC);
+			this->Controls->Add(this->btnBackspace);
+			this->Controls->Add(this->btnAC);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
@@ -801,5 +888,7 @@ namespace Kalkulator {
 	}
 	private: System::Void fileToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
