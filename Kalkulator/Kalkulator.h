@@ -36,7 +36,7 @@ namespace Kalkulator {
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
-	private: System::Windows::Forms::ToolStripMenuItem^ fileToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ plikToolStripMenuItem;
 
 
 
@@ -47,7 +47,7 @@ namespace Kalkulator {
 	private: System::Windows::Forms::ToolStripMenuItem^ edycjaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ pomocToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
-	private: System::Windows::Forms::ToolStripMenuItem^ trybyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ widokToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ standardowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ naukowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ walutowyToolStripMenuItem;
@@ -164,6 +164,9 @@ private: System::Windows::Forms::Button^ btnInverse;
 
 private: System::Windows::Forms::Button^ btnSquared;
 private: System::Windows::Forms::Button^ btnCubed;
+private: System::Windows::Forms::ToolStripMenuItem^ zamianaJednostekToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ objaśnieniaToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 
 
 
@@ -207,18 +210,22 @@ private: System::Windows::Forms::Button^ btnCubed;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Kalkulator::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->plikToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->wyjścieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->trybyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->widokToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->standardowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->naukowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->walutowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->zamianaJednostekToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->iloczynyWektorówToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->pomocToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->objaśnieniaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->oProgramieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->btnBackspace = (gcnew System::Windows::Forms::Button());
 			this->btnAC = (gcnew System::Windows::Forms::Button());
@@ -266,8 +273,8 @@ private: System::Windows::Forms::Button^ btnCubed;
 			// menuStrip1
 			// 
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-				this->fileToolStripMenuItem,
-					this->edycjaToolStripMenuItem, this->trybyToolStripMenuItem, this->pomocToolStripMenuItem
+				this->plikToolStripMenuItem,
+					this->edycjaToolStripMenuItem, this->widokToolStripMenuItem, this->pomocToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -275,33 +282,33 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// fileToolStripMenuItem
+			// plikToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->plikToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->historiaToolStripMenuItem1,
 					this->historiaToolStripMenuItem, this->wyjścieToolStripMenuItem
 			});
-			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
-			this->fileToolStripMenuItem->Size = System::Drawing::Size(44, 24);
-			this->fileToolStripMenuItem->Text = L"Plik";
-			this->fileToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::fileToolStripMenuItem_Click);
+			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
+			this->plikToolStripMenuItem->Text = L"Plik";
+			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem1
 			// 
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 24);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(180, 24);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			// 
 			// edycjaToolStripMenuItem
@@ -310,45 +317,67 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
-			// trybyToolStripMenuItem
+			// widokToolStripMenuItem
 			// 
-			this->trybyToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->widokToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->standardowyToolStripMenuItem,
-					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
+					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
-			this->trybyToolStripMenuItem->Name = L"trybyToolStripMenuItem";
-			this->trybyToolStripMenuItem->Size = System::Drawing::Size(64, 24);
-			this->trybyToolStripMenuItem->Text = L"Widok";
+			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
+			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(200, 24);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
+			// 
+			// zamianaJednostekToolStripMenuItem
+			// 
+			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(200, 24);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			// 
 			// pomocToolStripMenuItem
 			// 
+			this->pomocToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->objaśnieniaToolStripMenuItem,
+					this->oProgramieToolStripMenuItem
+			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
 			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
+			// 
+			// objaśnieniaToolStripMenuItem
+			// 
+			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(180, 24);
+			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
+			// 
+			// oProgramieToolStripMenuItem
+			// 
+			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(180, 24);
+			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// textBox1
 			// 
@@ -381,6 +410,7 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->btnAC->TabIndex = 2;
 			this->btnAC->Text = L"AC";
 			this->btnAC->UseVisualStyleBackColor = true;
+			this->btnAC->Click += gcnew System::EventHandler(this, &Kalkulator::btnAC_Click);
 			// 
 			// btnC
 			// 
@@ -755,41 +785,17 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->btnExp->Text = L"exp";
 			this->btnExp->UseVisualStyleBackColor = true;
 			// 
-			// btnOct
+			// btnTg
 			// 
-			this->btnOct->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnOct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnTg->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnTg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnOct->Location = System::Drawing::Point(452, 349);
-			this->btnOct->Name = L"btnOct";
-			this->btnOct->Size = System::Drawing::Size(70, 70);
-			this->btnOct->TabIndex = 103;
-			this->btnOct->Text = L"Oct";
-			this->btnOct->UseVisualStyleBackColor = true;
-			// 
-			// btnMod
-			// 
-			this->btnMod->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnMod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->btnMod->Location = System::Drawing::Point(383, 349);
-			this->btnMod->Name = L"btnMod";
-			this->btnMod->Size = System::Drawing::Size(70, 70);
-			this->btnMod->TabIndex = 102;
-			this->btnMod->Text = L"mod";
-			this->btnMod->UseVisualStyleBackColor = true;
-			// 
-			// btnAbs
-			// 
-			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->btnAbs->Location = System::Drawing::Point(521, 280);
-			this->btnAbs->Name = L"btnAbs";
-			this->btnAbs->Size = System::Drawing::Size(70, 70);
-			this->btnAbs->TabIndex = 99;
-			this->btnAbs->Text = L"|x|";
-			this->btnAbs->UseVisualStyleBackColor = true;
+			this->btnTg->Location = System::Drawing::Point(383, 280);
+			this->btnTg->Name = L"btnTg";
+			this->btnTg->Size = System::Drawing::Size(70, 70);
+			this->btnTg->TabIndex = 96;
+			this->btnTg->Text = L"tg";
+			this->btnTg->UseVisualStyleBackColor = true;
 			// 
 			// btnHex
 			// 
@@ -803,17 +809,17 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->btnHex->Text = L"Hex";
 			this->btnHex->UseVisualStyleBackColor = true;
 			// 
-			// btnTg
+			// btnAbs
 			// 
-			this->btnTg->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnTg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnTg->Location = System::Drawing::Point(383, 280);
-			this->btnTg->Name = L"btnTg";
-			this->btnTg->Size = System::Drawing::Size(70, 70);
-			this->btnTg->TabIndex = 96;
-			this->btnTg->Text = L"tg";
-			this->btnTg->UseVisualStyleBackColor = true;
+			this->btnAbs->Location = System::Drawing::Point(521, 280);
+			this->btnAbs->Name = L"btnAbs";
+			this->btnAbs->Size = System::Drawing::Size(70, 70);
+			this->btnAbs->TabIndex = 99;
+			this->btnAbs->Text = L"|x|";
+			this->btnAbs->UseVisualStyleBackColor = true;
 			// 
 			// btnFact
 			// 
@@ -826,6 +832,30 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->btnFact->TabIndex = 106;
 			this->btnFact->Text = L"n!";
 			this->btnFact->UseVisualStyleBackColor = true;
+			// 
+			// btnMod
+			// 
+			this->btnMod->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnMod->Location = System::Drawing::Point(383, 349);
+			this->btnMod->Name = L"btnMod";
+			this->btnMod->Size = System::Drawing::Size(70, 70);
+			this->btnMod->TabIndex = 102;
+			this->btnMod->Text = L"mod";
+			this->btnMod->UseVisualStyleBackColor = true;
+			// 
+			// btnOct
+			// 
+			this->btnOct->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnOct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->btnOct->Location = System::Drawing::Point(452, 349);
+			this->btnOct->Name = L"btnOct";
+			this->btnOct->Size = System::Drawing::Size(70, 70);
+			this->btnOct->TabIndex = 103;
+			this->btnOct->Text = L"Oct";
+			this->btnOct->UseVisualStyleBackColor = true;
 			// 
 			// btnPercent
 			// 
@@ -886,6 +916,7 @@ private: System::Windows::Forms::Button^ btnCubed;
 			this->Controls->Add(this->btnAC);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Kalkulator";
 			this->Text = L"Kalkulator";
@@ -899,9 +930,11 @@ private: System::Windows::Forms::Button^ btnCubed;
 #pragma endregion
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void fileToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
