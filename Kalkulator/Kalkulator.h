@@ -297,20 +297,21 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			// historiaToolStripMenuItem1
 			// 
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(224, 26);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(144, 26);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(144, 26);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
+			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
 			// edycjaToolStripMenuItem
 			// 
@@ -331,31 +332,33 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(218, 26);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
+			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(218, 26);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
+			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(218, 26);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(218, 26);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(224, 26);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(218, 26);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			// 
 			// pomocToolStripMenuItem
@@ -371,13 +374,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(177, 26);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(177, 26);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// textBox1
@@ -388,7 +391,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(368, 48);
 			this->textBox1->TabIndex = 1;
 			this->textBox1->Text = L"0";
@@ -459,6 +461,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn7->TabIndex = 75;
 			this->btn7->Text = L"7";
 			this->btn7->UseVisualStyleBackColor = true;
+			this->btn7->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn8
 			// 
@@ -472,6 +475,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn8->TabIndex = 43;
 			this->btn8->Text = L"8";
 			this->btn8->UseVisualStyleBackColor = true;
+			this->btn8->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn9
 			// 
@@ -485,6 +489,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn9->TabIndex = 44;
 			this->btn9->Text = L"9";
 			this->btn9->UseVisualStyleBackColor = true;
+			this->btn9->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnMultiply
 			// 
@@ -511,6 +516,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn4->TabIndex = 76;
 			this->btn4->Text = L"4";
 			this->btn4->UseVisualStyleBackColor = true;
+			this->btn4->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn5
 			// 
@@ -524,6 +530,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn5->TabIndex = 47;
 			this->btn5->Text = L"5";
 			this->btn5->UseVisualStyleBackColor = true;
+			this->btn5->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn6
 			// 
@@ -537,6 +544,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn6->TabIndex = 48;
 			this->btn6->Text = L"6";
 			this->btn6->UseVisualStyleBackColor = true;
+			this->btn6->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnSubstract
 			// 
@@ -563,6 +571,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn1->TabIndex = 81;
 			this->btn1->Text = L"1";
 			this->btn1->UseVisualStyleBackColor = true;
+			this->btn1->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn2
 			// 
@@ -576,6 +585,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn2->TabIndex = 51;
 			this->btn2->Text = L"2";
 			this->btn2->UseVisualStyleBackColor = true;
+			this->btn2->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn3
 			// 
@@ -589,6 +599,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn3->TabIndex = 52;
 			this->btn3->Text = L"3";
 			this->btn3->UseVisualStyleBackColor = true;
+			this->btn3->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnAdd
 			// 
@@ -628,6 +639,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 			this->btn0->TabIndex = 82;
 			this->btn0->Text = L"0";
 			this->btn0->UseVisualStyleBackColor = true;
+			this->btn0->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnDot
 			// 
@@ -976,13 +988,50 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 
 		}
 #pragma endregion
+		//zmienne
+		double firstVariable;
+		double secondVariable;
+		double result;
+		double a;
+		String^ Operator;
+		float celsius, kelvin, fahrenheit;
+		char Operation;
+	//okienka
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
+		Kalkulator::Width = 420;
+		Kalkulator::Height = 600;
+		historiaToolStripMenuItem1->Visible = false;
+	}
+	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		Kalkulator::Width = 820;
+		Kalkulator::Height = 600;
+	}
+	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		Kalkulator::Width = 420;
+		Kalkulator::Height = 600;
 	}
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+	//klik
+
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void wyjścieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		Application::Exit();
+	}
+
+	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
+		Button^ Numbers = safe_cast<Button^>(sender);
+		if (textBox1->Text == "0")
+		{
+			textBox1->Text = Numbers->Text;
+		}
+		else
+		{
+			textBox1->Text = textBox1->Text + Numbers->Text;
+		}
 }
 };
 }
