@@ -998,17 +998,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
 		char Operation;
 	//okienka
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
-		Kalkulator::Width = 420;
-		Kalkulator::Height = 600;
+		Kalkulator::Width = 320;
+		Kalkulator::Height = 500;
 		historiaToolStripMenuItem1->Visible = false;
 	}
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		Kalkulator::Width = 820;
-		Kalkulator::Height = 600;
+		Kalkulator::Width = 620;
+		Kalkulator::Height = 500;
 	}
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		Kalkulator::Width = 420;
-		Kalkulator::Height = 600;
+		Kalkulator::Width = 320;
+		Kalkulator::Height = 500;
 	}
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
