@@ -1073,7 +1073,7 @@ private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^
 		textBox1->Text = System::Convert::ToString(result);
 		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
 	}
-	else if (Operator == "*")
+	else if (Operator == "×")
 	{
 		result = firstVariable * secondVariable;
 		textBox1->Text = System::Convert::ToString(result);
