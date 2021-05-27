@@ -1,6 +1,0 @@
-C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.vcxprojAssemblyReference.cache
-C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.Kalkulator.resources
-C:\Users\alvix\OneDrive\Desktop\Studia - Informatyka\Sem II\Programowanie II\Projekt Prog II - nasz\Kalkulator\Kalkulator\Debug\Kalkulator.vcxproj.GenerateResource.cache
-C:\Users\detym\OneDrive - Moe, Inc\Desktop\D\Uni\Semestr 2\Prog\Projekt\Kalkulator\Kalkulator\Debug\Kalkulator.vcxprojAssemblyReference.cache
-C:\Users\detym\OneDrive - Moe, Inc\Desktop\D\Uni\Semestr 2\Prog\Projekt\Kalkulator\Kalkulator\Debug\Kalkulator.Kalkulator.resources
-C:\Users\detym\OneDrive - Moe, Inc\Desktop\D\Uni\Semestr 2\Prog\Projekt\Kalkulator\Kalkulator\Debug\Kalkulator.vcxproj.GenerateResource.cache
