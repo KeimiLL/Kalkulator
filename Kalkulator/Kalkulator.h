@@ -37,174 +37,72 @@ namespace Kalkulator {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ plikToolStripMenuItem;
-
-
-
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ wyjścieToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ edycjaToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ pomocToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ widokToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ standardowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ naukowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ walutowyToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ zamianaJednostekToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ iloczynyWektorówToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ pomocToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ objaśnieniaToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
+
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ btnAC;
 	private: System::Windows::Forms::Button^ btnBackspace;
-	private: System::Windows::Forms::Button^ btnSigned;
-
-
-
-
+	private: System::Windows::Forms::Button^ btnAC;
 	private: System::Windows::Forms::Button^ btnC;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ btnDivide;
-
-	private: System::Windows::Forms::Button^ btnMultiply;
-	private: System::Windows::Forms::Button^ btn9;
-	private: System::Windows::Forms::Button^ btn8;
-	private: System::Windows::Forms::Button^ btnSubstract;
-
-	private: System::Windows::Forms::Button^ btn3;
-
-	private: System::Windows::Forms::Button^ btn2;
-	private: System::Windows::Forms::Button^ btnAdd;
-
-
-	private: System::Windows::Forms::Button^ btn6;
-
-	private: System::Windows::Forms::Button^ btn5;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ btn7;
+	private: System::Windows::Forms::Button^ btn8;
+	private: System::Windows::Forms::Button^ btn9;
+	private: System::Windows::Forms::Button^ btnMultiply;
 	private: System::Windows::Forms::Button^ btn4;
-
-
-
-
-
+	private: System::Windows::Forms::Button^ btn5;
+	private: System::Windows::Forms::Button^ btn6;
+	private: System::Windows::Forms::Button^ btnSubstract;
 	private: System::Windows::Forms::Button^ btn1;
-private: System::Windows::Forms::Button^ btn0;
-private: System::Windows::Forms::Button^ btnDot;
-private: System::Windows::Forms::Button^ btnEquals;
-private: System::Windows::Forms::Button^ btnExp;
-private: System::Windows::Forms::Button^ btnOct;
+	private: System::Windows::Forms::Button^ btn2;
+	private: System::Windows::Forms::Button^ btn3;
+	private: System::Windows::Forms::Button^ btnAdd;
+	private: System::Windows::Forms::Button^ btnSigned;
+	private: System::Windows::Forms::Button^ btn0;
+	private: System::Windows::Forms::Button^ btnDot;
+	private: System::Windows::Forms::Button^ btnEquals;
 
+	private: System::Windows::Forms::Button^ btnPi;
+	private: System::Windows::Forms::Button^ btnE;
+	private: System::Windows::Forms::Button^ btnSqrt;
+	private: System::Windows::Forms::Button^ btnSquared;
+	private: System::Windows::Forms::Button^ btnLog;
+	private: System::Windows::Forms::Button^ btnAbs;
+	private: System::Windows::Forms::Button^ btnSin;
+	private: System::Windows::Forms::Button^ btnDec;
+	private: System::Windows::Forms::Button^ btnCubed;
+	private: System::Windows::Forms::Button^ btnCos;
+	private: System::Windows::Forms::Button^ btnBin;
+	private: System::Windows::Forms::Button^ btnInverse;
+	private: System::Windows::Forms::Button^ btnExp;
+	private: System::Windows::Forms::Button^ btnTg;
+	private: System::Windows::Forms::Button^ btnHex;
+	private: System::Windows::Forms::Button^ btnPercent;
+	private: System::Windows::Forms::Button^ btnFact;
+	private: System::Windows::Forms::Button^ btnMod;
+	private: System::Windows::Forms::Button^ btnOct;
+	private: System::Windows::Forms::Button^ btnPerMille;
 
-private: System::Windows::Forms::Button^ btnMod;
-
-
-
-private: System::Windows::Forms::Button^ btnE;
-
-private: System::Windows::Forms::Button^ btnAbs;
-private: System::Windows::Forms::Button^ btnHex;
-
-
-private: System::Windows::Forms::Button^ btnTg;
-private: System::Windows::Forms::Button^ btnBin;
-
-
-
-
-
-private: System::Windows::Forms::Button^ btnCos;
-private: System::Windows::Forms::Button^ btnDec;
-
-
-
-private: System::Windows::Forms::Button^ btnSin;
-
-
-
-private: System::Windows::Forms::Button^ btnSqrt;
-private: System::Windows::Forms::Button^ btnPi;
-private: System::Windows::Forms::Button^ btnLog;
-private: System::Windows::Forms::Button^ btnLn;
-private: System::Windows::Forms::Button^ btnFact;
-private: System::Windows::Forms::Button^ btnPercent;
-private: System::Windows::Forms::Button^ btnInverse;
-
-private: System::Windows::Forms::Button^ btnSquared;
-private: System::Windows::Forms::Button^ btnCubed;
-private: System::Windows::Forms::ToolStripMenuItem^ zamianaJednostekToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ objaśnieniaToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
-private: System::Windows::Forms::Label^ ShowOperat;
-private: System::Windows::Forms::ListBox^ listBox1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ showOperator;
+	private: System::Windows::Forms::ListBox^ historiaBox;
 	protected:
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -216,8 +114,8 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Kalkulator::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->plikToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->wyjścieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->widokToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -258,20 +156,20 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnSin = (gcnew System::Windows::Forms::Button());
 			this->btnDec = (gcnew System::Windows::Forms::Button());
 			this->btnCubed = (gcnew System::Windows::Forms::Button());
-			this->btnLn = (gcnew System::Windows::Forms::Button());
+			this->btnAbs = (gcnew System::Windows::Forms::Button());
 			this->btnCos = (gcnew System::Windows::Forms::Button());
 			this->btnBin = (gcnew System::Windows::Forms::Button());
 			this->btnInverse = (gcnew System::Windows::Forms::Button());
 			this->btnExp = (gcnew System::Windows::Forms::Button());
 			this->btnTg = (gcnew System::Windows::Forms::Button());
 			this->btnHex = (gcnew System::Windows::Forms::Button());
-			this->btnAbs = (gcnew System::Windows::Forms::Button());
+			this->btnPercent = (gcnew System::Windows::Forms::Button());
 			this->btnFact = (gcnew System::Windows::Forms::Button());
 			this->btnMod = (gcnew System::Windows::Forms::Button());
 			this->btnOct = (gcnew System::Windows::Forms::Button());
-			this->btnPercent = (gcnew System::Windows::Forms::Button());
-			this->ShowOperat = (gcnew System::Windows::Forms::Label());
-			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->btnPerMille = (gcnew System::Windows::Forms::Button());
+			this->showOperator = (gcnew System::Windows::Forms::Label());
+			this->historiaBox = (gcnew System::Windows::Forms::ListBox());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -285,44 +183,48 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 24);
+			this->menuStrip1->Size = System::Drawing::Size(605, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// plikToolStripMenuItem
 			// 
 			this->plikToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->historiaToolStripMenuItem1,
-					this->historiaToolStripMenuItem, this->wyjścieToolStripMenuItem
+				this->historiaToolStripMenuItem,
+					this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
 			});
 			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
-			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
-			// 
-			// historiaToolStripMenuItem1
-			// 
-			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(115, 22);
-			this->historiaToolStripMenuItem1->Text = L"Historia";
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
+			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
+			// 
+			// historiaToolStripMenuItem1
+			// 
+			this->historiaToolStripMenuItem1->Checked = true;
+			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 24);
+			this->historiaToolStripMenuItem1->Text = L"Historia";
+			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(180, 24);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
 			// edycjaToolStripMenuItem
 			// 
 			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
-			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
 			// widokToolStripMenuItem
@@ -332,39 +234,39 @@ private: System::Windows::Forms::ListBox^ listBox1;
 					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
 			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
-			this->widokToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(174, 22);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			// 
 			// pomocToolStripMenuItem
@@ -374,19 +276,19 @@ private: System::Windows::Forms::ListBox^ listBox1;
 					this->oProgramieToolStripMenuItem
 			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// textBox1
@@ -412,6 +314,7 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnBackspace->TabIndex = 7;
 			this->btnBackspace->Text = L"";
 			this->btnBackspace->UseVisualStyleBackColor = true;
+			this->btnBackspace->Click += gcnew System::EventHandler(this, &Kalkulator::btnBackspace_Click);
 			// 
 			// btnAC
 			// 
@@ -671,6 +574,7 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnPi->TabIndex = 88;
 			this->btnPi->Text = L"π";
 			this->btnPi->UseVisualStyleBackColor = true;
+			this->btnPi->Click += gcnew System::EventHandler(this, &Kalkulator::btnPi_Click);
 			// 
 			// btnE
 			// 
@@ -683,7 +587,7 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnE->TabIndex = 100;
 			this->btnE->Text = L"e";
 			this->btnE->UseVisualStyleBackColor = true;
-			this->btnE->Click += gcnew System::EventHandler(this, &Kalkulator::button6_Click);
+			this->btnE->Click += gcnew System::EventHandler(this, &Kalkulator::btnE_Click);
 			// 
 			// btnSqrt
 			// 
@@ -720,6 +624,7 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnLog->TabIndex = 85;
 			this->btnLog->Text = L"log";
 			this->btnLog->UseVisualStyleBackColor = true;
+			this->btnLog->Click += gcnew System::EventHandler(this, &Kalkulator::btnLog_Click);
 			// 
 			// btnSin
 			// 
@@ -757,17 +662,17 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnCubed->Text = L"x^3";
 			this->btnCubed->UseVisualStyleBackColor = true;
 			// 
-			// btnLn
+			// btnAbs
 			// 
-			this->btnLn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnLn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnLn->Location = System::Drawing::Point(314, 211);
-			this->btnLn->Name = L"btnLn";
-			this->btnLn->Size = System::Drawing::Size(70, 70);
-			this->btnLn->TabIndex = 105;
-			this->btnLn->Text = L"ln";
-			this->btnLn->UseVisualStyleBackColor = true;
+			this->btnAbs->Location = System::Drawing::Point(314, 211);
+			this->btnAbs->Name = L"btnAbs";
+			this->btnAbs->Size = System::Drawing::Size(70, 70);
+			this->btnAbs->TabIndex = 99;
+			this->btnAbs->Text = L"|x|";
+			this->btnAbs->UseVisualStyleBackColor = true;
 			// 
 			// btnCos
 			// 
@@ -841,17 +746,17 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnHex->Text = L"Hex";
 			this->btnHex->UseVisualStyleBackColor = true;
 			// 
-			// btnAbs
+			// btnPercent
 			// 
-			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnPercent->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnPercent->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnAbs->Location = System::Drawing::Point(521, 280);
-			this->btnAbs->Name = L"btnAbs";
-			this->btnAbs->Size = System::Drawing::Size(70, 70);
-			this->btnAbs->TabIndex = 99;
-			this->btnAbs->Text = L"|x|";
-			this->btnAbs->UseVisualStyleBackColor = true;
+			this->btnPercent->Location = System::Drawing::Point(521, 280);
+			this->btnPercent->Name = L"btnPercent";
+			this->btnPercent->Size = System::Drawing::Size(70, 70);
+			this->btnPercent->TabIndex = 107;
+			this->btnPercent->Text = L"%";
+			this->btnPercent->UseVisualStyleBackColor = true;
 			// 
 			// btnFact
 			// 
@@ -889,49 +794,48 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->btnOct->Text = L"Oct";
 			this->btnOct->UseVisualStyleBackColor = true;
 			// 
-			// btnPercent
+			// btnPerMille
 			// 
-			this->btnPercent->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnPercent->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnPerMille->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnPerMille->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnPercent->Location = System::Drawing::Point(521, 349);
-			this->btnPercent->Name = L"btnPercent";
-			this->btnPercent->Size = System::Drawing::Size(70, 70);
-			this->btnPercent->TabIndex = 107;
-			this->btnPercent->Text = L"%";
-			this->btnPercent->UseVisualStyleBackColor = true;
+			this->btnPerMille->Location = System::Drawing::Point(521, 349);
+			this->btnPerMille->Name = L"btnPerMille";
+			this->btnPerMille->Size = System::Drawing::Size(70, 70);
+			this->btnPerMille->TabIndex = 105;
+			this->btnPerMille->Text = L"‰";
+			this->btnPerMille->UseVisualStyleBackColor = true;
 			// 
-			// ShowOperat
+			// showOperator
 			// 
-			this->ShowOperat->AutoSize = true;
-			this->ShowOperat->BackColor = System::Drawing::Color::White;
-			this->ShowOperat->Location = System::Drawing::Point(20, 35);
-			this->ShowOperat->Name = L"ShowOperat";
-			this->ShowOperat->Size = System::Drawing::Size(0, 13);
-			this->ShowOperat->TabIndex = 112;
+			this->showOperator->AutoSize = true;
+			this->showOperator->BackColor = System::Drawing::Color::White;
+			this->showOperator->Location = System::Drawing::Point(20, 35);
+			this->showOperator->Name = L"showOperator";
+			this->showOperator->Size = System::Drawing::Size(0, 13);
+			this->showOperator->TabIndex = 112;
 			// 
-			// listBox1
+			// historiaBox
 			// 
-			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(12, 440);
-			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(277, 147);
-			this->listBox1->TabIndex = 113;
-			//this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Kalkulator::listBox1_SelectedIndexChanged);
+			this->historiaBox->FormattingEnabled = true;
+			this->historiaBox->Location = System::Drawing::Point(12, 440);
+			this->historiaBox->Name = L"historiaBox";
+			this->historiaBox->Size = System::Drawing::Size(277, 147);
+			this->historiaBox->TabIndex = 113;
 			// 
 			// Kalkulator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(605, 606);
-			this->Controls->Add(this->listBox1);
-			this->Controls->Add(this->ShowOperat);
+			this->Controls->Add(this->historiaBox);
+			this->Controls->Add(this->showOperator);
 			this->Controls->Add(this->btnCubed);
 			this->Controls->Add(this->btnSquared);
 			this->Controls->Add(this->btnInverse);
 			this->Controls->Add(this->btnPercent);
 			this->Controls->Add(this->btnFact);
-			this->Controls->Add(this->btnLn);
+			this->Controls->Add(this->btnPerMille);
 			this->Controls->Add(this->btnExp);
 			this->Controls->Add(this->btnOct);
 			this->Controls->Add(this->btnMod);
@@ -971,6 +875,7 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Kalkulator";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Kalkulator";
 			this->Load += gcnew System::EventHandler(this, &Kalkulator::Kalkulator_Load);
 			this->menuStrip1->ResumeLayout(false);
@@ -980,42 +885,93 @@ private: System::Windows::Forms::ListBox^ listBox1;
 
 		}
 #pragma endregion
-		//zmienne
+		// zmienne 'globalne'
 		double firstVariable;
 		double secondVariable;
 		double result;
 		double a;
 		String^ Operator;
-		float celsius, kelvin, fahrenheit;
 		char Operation;
-	//okienka
+
+		// ładowanie okienek z odpowiednimi parametrami
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 320;
-		Kalkulator::Height = 650;
+		Kalkulator::Height = 470;
 		historiaToolStripMenuItem1->Visible = false;
 	}
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 620;
-		Kalkulator::Height = 700;
+		Kalkulator::Height = 470;
+		historiaToolStripMenuItem1->Visible = false;
+		historiaToolStripMenuItem->Visible = true;
 	}
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 320;
-		Kalkulator::Height = 700;
+		Kalkulator::Height = 470;
+		historiaToolStripMenuItem1->Visible = false;
+		historiaToolStripMenuItem->Visible = true;
 	}
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	//klik
 
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		   // działania po kliknięciu w strip menu
+	private: System::Void historiaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Pierwszy przycisk "Historia" - odpowiada za wyświetlanie historii po kliknięciu
+		if (historiaToolStripMenuItem1->Checked == true)
+		{
+			historiaBox->Visible = true;
+			historiaToolStripMenuItem->Visible = false;
+			historiaToolStripMenuItem1->Visible = true;
+			Kalkulator::Height = 650;
+		}
 	}
-	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
-		textBox1->Clear();
+
+	private: System::Void historiaToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Drugi przycisk "Historia" - odpowiada za ukrywanie historii po kliknięciu;
+		// ponadto ma właściwość "checked", która wyświetla zaznaczony box obok nazwy,
+		// jeśli historia jest aktualnie wyświetlana
+		historiaBox->Visible = false;
+		historiaToolStripMenuItem1->Visible = false;
+		historiaToolStripMenuItem->Visible = true;
+		Kalkulator::Height = 470;
 	}
+
 	private: System::Void wyjścieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Wyjście z aplikacji - zamknięcie wszystkich(?) okien
 		Application::Exit();
 	}
 
+	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Backspace - usuwa ostatni znak z pola obszaru roboczego
+		if (textBox1->Text->Length > 0)
+		{
+			textBox1->Text = textBox1->Text->Remove(textBox1->Text->Length - 1, 1);
+		}
+	}
+
+	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
+		// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0, ponadto
+		// czyści historię oraz zawartość etykiety "showOperator".
+		if (textBox1->Text != "0") textBox1->Clear();
+		textBox1->Text = "0";
+		historiaBox->Items->Clear();
+		showOperator->Text = "";
+	}
+
+	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
+		// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
+		if (textBox1->Text != "0") textBox1->Clear();
+		textBox1->Text = "0";
+	}
+
+
+	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
+		// e - liczba Eulera, do 31 miejsc po przecinku
+		textBox1->Text = ("2.7182818284590452353602874713527");
+	}
+
 	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Opis działania w przypadku naciśnięcia przycisku 'numerycznego'
 		Button^ Numbers = safe_cast<Button^>(sender);
 		if (textBox1->Text == "0")
 		{
@@ -1026,11 +982,9 @@ private: System::Windows::Forms::ListBox^ listBox1;
 			textBox1->Text = textBox1->Text + Numbers->Text;
 		}
 	}
-	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
-		textBox1->Clear();
-	}
-	private: System::Void btnDot_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	private: System::Void btnDot_Click(System::Object^ sender, System::EventArgs^ e) {
+		// . - dodawanie przecinka do liczb, aby wyświetlały się jako zmiennoprzecinkowe
 		if (!textBox1->Text->Contains("."))
 		{
 			textBox1->Text = textBox1->Text + ".";
@@ -1038,69 +992,104 @@ private: System::Windows::Forms::ListBox^ listBox1;
 	}
 	private: System::Void Aritm_Operators(System::Object^ sender, System::EventArgs^ e) {
 
-		Button ^ op = safe_cast<Button^>(sender);
+		Button^ op = safe_cast<Button^>(sender);
 
 		firstVariable = Double::Parse(textBox1->Text);
 		textBox1->Text = "";
 		Operator = op->Text;
-		ShowOperat->Text = System::Convert::ToString(firstVariable) + " " + Operator;
+		showOperator->Text = System::Convert::ToString(firstVariable) + " " + Operator;
 	}
-	
-private: System::Void btnSigned_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	if (textBox1->Text->Contains("-"))
-	{
-		textBox1->Text = textBox1->Text->Remove(0, 1);
+	private: System::Void btnSigned_Click(System::Object^ sender, System::EventArgs^ e) {
+		//+/-
+		if (textBox1->Text->Contains("-"))
+		{
+			textBox1->Text = textBox1->Text->Remove(0, 1);
+		}
+		else
+		{
+			textBox1->Text = "-" + textBox1->Text;
+		}
 	}
-	else
-	{
-		textBox1->Text = "-" + textBox1->Text;
+
+
+	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
+		textBox1->Text = ("3.1415926535897932384626433832795");
 	}
+	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
+		//log
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		a = Math::Log(a);
+		textBox1->Text = System::Convert::ToString(a);
+	}
+
+	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
+		// deklaracja operatorów 'arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "="
+		secondVariable = Double::Parse(textBox1->Text);
+
+		if (Operator == "+")
+		{
+			result = firstVariable + secondVariable;
+			textBox1->Text = System::Convert::ToString(result);
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				/*+ " "
+				+ System::Convert::ToString(secondVariable)
+				+ " = "
+				+ System::Convert::ToString(result)*/);
+		}
+		else if (Operator == "-")
+		{
+			result = firstVariable - secondVariable;
+			textBox1->Text = System::Convert::ToString(result);
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				+ " "
+				+ System::Convert::ToString(secondVariable)
+				+ " = "
+				+ System::Convert::ToString(result));
+		}
+		else if (Operator == "×")
+		{
+			result = firstVariable * secondVariable;
+			textBox1->Text = System::Convert::ToString(result);
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				+ " "
+				+ System::Convert::ToString(secondVariable)
+				+ " = "
+				+ System::Convert::ToString(result));
+		}
+		else if (Operator == "÷")
+		{
+			result = firstVariable / secondVariable;
+			textBox1->Text = System::Convert::ToString(result);
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				+ " "
+				+ System::Convert::ToString(secondVariable)
+				+ " = "
+				+ System::Convert::ToString(result));
+		}
+		else if (Operator == "mod")
+		{
+			int first, second, result;
+			first = Convert::ToInt32(firstVariable);
+			second = Convert::ToInt32(secondVariable);
+			result = first % second;
+			textBox1->Text = System::Convert::ToString(result);
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				+ " "
+				+ System::Convert::ToString(secondVariable)
+				+ " = "
+				+ System::Convert::ToString(result));
+		}
+		else if (Operator == "exp")
+		{
+			result = (firstVariable, (1 / secondVariable));
+			textBox1->Text = System::Convert::ToString(Math::Exp((result)));
+			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
+				+ " = "
+				+ System::Convert::ToString(result));
+		}
+	}
+	};
 }
-private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
-	ShowOperat->Text = "";
-	secondVariable = Double::Parse(textBox1->Text);
-
-	if (Operator == "+")
-	{
-		result = firstVariable + secondVariable;
-		textBox1->Text = System::Convert::ToString(result);
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-	else if (Operator == "-")
-	{
-		result = firstVariable - secondVariable;
-		textBox1->Text = System::Convert::ToString(result);
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-	else if (Operator == "×")
-	{
-		result = firstVariable * secondVariable;
-		textBox1->Text = System::Convert::ToString(result);
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-	else if (Operator == "÷")
-	{
-		result = firstVariable / secondVariable;
-		textBox1->Text = System::Convert::ToString(result);
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-	else if (Operator == "mod")
-	{
-		int first, second, result;
-		first = Convert::ToInt32(firstVariable);
-		second = Convert::ToInt32(secondVariable);
-		result = first % second;
-		textBox1->Text = System::Convert::ToString(result);
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-	else if (Operator == "exp")
-	{
-		result = (firstVariable, (1 / secondVariable));
-		textBox1->Text = System::Convert::ToString(Math::Exp((result)));
-		listBox1->Items->Add(System::Convert::ToString(ShowOperat->Text));
-	}
-}
-
-};
-	}
