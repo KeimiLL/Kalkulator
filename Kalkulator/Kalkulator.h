@@ -201,7 +201,7 @@ namespace Kalkulator {
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 24);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -210,14 +210,14 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 24);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(180, 24);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
@@ -600,6 +600,7 @@ namespace Kalkulator {
 			this->btnSqrt->TabIndex = 86;
 			this->btnSqrt->Text = L"√";
 			this->btnSqrt->UseVisualStyleBackColor = true;
+			this->btnSqrt->Click += gcnew System::EventHandler(this, &Kalkulator::btnSqrt_Click);
 			// 
 			// btnSquared
 			// 
@@ -610,8 +611,9 @@ namespace Kalkulator {
 			this->btnSquared->Name = L"btnSquared";
 			this->btnSquared->Size = System::Drawing::Size(70, 70);
 			this->btnSquared->TabIndex = 110;
-			this->btnSquared->Text = L"x^2";
+			this->btnSquared->Text = L"x²";
 			this->btnSquared->UseVisualStyleBackColor = true;
+			this->btnSquared->Click += gcnew System::EventHandler(this, &Kalkulator::btnSquared_Click);
 			// 
 			// btnLog
 			// 
@@ -637,6 +639,7 @@ namespace Kalkulator {
 			this->btnSin->TabIndex = 90;
 			this->btnSin->Text = L"sin";
 			this->btnSin->UseVisualStyleBackColor = true;
+			this->btnSin->Click += gcnew System::EventHandler(this, &Kalkulator::btnSin_Click);
 			// 
 			// btnDec
 			// 
@@ -649,6 +652,7 @@ namespace Kalkulator {
 			this->btnDec->TabIndex = 91;
 			this->btnDec->Text = L"Dec";
 			this->btnDec->UseVisualStyleBackColor = true;
+			this->btnDec->Click += gcnew System::EventHandler(this, &Kalkulator::btnDec_Click);
 			// 
 			// btnCubed
 			// 
@@ -659,8 +663,9 @@ namespace Kalkulator {
 			this->btnCubed->Name = L"btnCubed";
 			this->btnCubed->Size = System::Drawing::Size(70, 70);
 			this->btnCubed->TabIndex = 111;
-			this->btnCubed->Text = L"x^3";
+			this->btnCubed->Text = L"x³ ";
 			this->btnCubed->UseVisualStyleBackColor = true;
+			this->btnCubed->Click += gcnew System::EventHandler(this, &Kalkulator::btnCubed_Click);
 			// 
 			// btnAbs
 			// 
@@ -673,6 +678,7 @@ namespace Kalkulator {
 			this->btnAbs->TabIndex = 99;
 			this->btnAbs->Text = L"|x|";
 			this->btnAbs->UseVisualStyleBackColor = true;
+			this->btnAbs->Click += gcnew System::EventHandler(this, &Kalkulator::btnAbs_Click);
 			// 
 			// btnCos
 			// 
@@ -685,6 +691,7 @@ namespace Kalkulator {
 			this->btnCos->TabIndex = 93;
 			this->btnCos->Text = L"cos";
 			this->btnCos->UseVisualStyleBackColor = true;
+			this->btnCos->Click += gcnew System::EventHandler(this, &Kalkulator::btnCos_Click);
 			// 
 			// btnBin
 			// 
@@ -697,6 +704,7 @@ namespace Kalkulator {
 			this->btnBin->TabIndex = 94;
 			this->btnBin->Text = L"Bin";
 			this->btnBin->UseVisualStyleBackColor = true;
+			this->btnBin->Click += gcnew System::EventHandler(this, &Kalkulator::btnBin_Click);
 			// 
 			// btnInverse
 			// 
@@ -721,6 +729,7 @@ namespace Kalkulator {
 			this->btnExp->TabIndex = 104;
 			this->btnExp->Text = L"exp";
 			this->btnExp->UseVisualStyleBackColor = true;
+			this->btnExp->Click += gcnew System::EventHandler(this, &Kalkulator::btnExp_Click);
 			// 
 			// btnTg
 			// 
@@ -733,6 +742,7 @@ namespace Kalkulator {
 			this->btnTg->TabIndex = 96;
 			this->btnTg->Text = L"tg";
 			this->btnTg->UseVisualStyleBackColor = true;
+			this->btnTg->Click += gcnew System::EventHandler(this, &Kalkulator::btnTg_Click);
 			// 
 			// btnHex
 			// 
@@ -745,6 +755,7 @@ namespace Kalkulator {
 			this->btnHex->TabIndex = 97;
 			this->btnHex->Text = L"Hex";
 			this->btnHex->UseVisualStyleBackColor = true;
+			this->btnHex->Click += gcnew System::EventHandler(this, &Kalkulator::btnHex_Click);
 			// 
 			// btnPercent
 			// 
@@ -757,6 +768,7 @@ namespace Kalkulator {
 			this->btnPercent->TabIndex = 107;
 			this->btnPercent->Text = L"%";
 			this->btnPercent->UseVisualStyleBackColor = true;
+			this->btnPercent->Click += gcnew System::EventHandler(this, &Kalkulator::btnPercent_Click);
 			// 
 			// btnFact
 			// 
@@ -769,6 +781,7 @@ namespace Kalkulator {
 			this->btnFact->TabIndex = 106;
 			this->btnFact->Text = L"n!";
 			this->btnFact->UseVisualStyleBackColor = true;
+			this->btnFact->Click += gcnew System::EventHandler(this, &Kalkulator::btnFact_Click);
 			// 
 			// btnMod
 			// 
@@ -781,6 +794,7 @@ namespace Kalkulator {
 			this->btnMod->TabIndex = 102;
 			this->btnMod->Text = L"mod";
 			this->btnMod->UseVisualStyleBackColor = true;
+			this->btnMod->Click += gcnew System::EventHandler(this, &Kalkulator::btnMod_Click);
 			// 
 			// btnOct
 			// 
@@ -793,6 +807,7 @@ namespace Kalkulator {
 			this->btnOct->TabIndex = 103;
 			this->btnOct->Text = L"Oct";
 			this->btnOct->UseVisualStyleBackColor = true;
+			this->btnOct->Click += gcnew System::EventHandler(this, &Kalkulator::btnOct_Click);
 			// 
 			// btnPerMille
 			// 
@@ -805,6 +820,7 @@ namespace Kalkulator {
 			this->btnPerMille->TabIndex = 105;
 			this->btnPerMille->Text = L"‰";
 			this->btnPerMille->UseVisualStyleBackColor = true;
+			this->btnPerMille->Click += gcnew System::EventHandler(this, &Kalkulator::btnPerMille_Click);
 			// 
 			// showOperator
 			// 
@@ -1024,6 +1040,72 @@ namespace Kalkulator {
 		a = Math::Log(a);
 		textBox1->Text = System::Convert::ToString(a);
 	}
+	private: System::Void btnSqrt_Click(System::Object^ sender, System::EventArgs^ e) {
+		//sqrt
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		a = Math::Sqrt(a);
+		textBox1->Text = System::Convert::ToString(a);
+	}
+	private: System::Void btnSin_Click(System::Object^ sender, System::EventArgs^ e) {
+		//sin
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		a = Math::Sin(a);
+		textBox1->Text = System::Convert::ToString(a);
+	}
+	private: System::Void btnCos_Click(System::Object^ sender, System::EventArgs^ e) {
+		//cos
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("cos" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		a = Math::Cos(a);
+		textBox1->Text = System::Convert::ToString(a);
+	}
+	private: System::Void btnTg_Click(System::Object^ sender, System::EventArgs^ e) {
+		//tg
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("tg" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		a = Math::Tan(a);
+		textBox1->Text = System::Convert::ToString(a);
+	}
+	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Dec
+		int a = int ::Parse(textBox1->Text);
+		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(System::Convert::ToString(textBox1->Text));
+	}
+	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Bin
+		int a = int ::Parse(textBox1->Text);
+		textBox1->Text = System::Convert::ToString(a, 2);
+		showOperator->Text = "";
+	}
+	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Hex
+		int a = int ::Parse(textBox1->Text);
+		textBox1->Text = System::Convert::ToString(a, 16);
+		showOperator->Text = "";
+	}
+	private: System::Void btnOct_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Oct
+		int a = int ::Parse(textBox1->Text);
+		textBox1->Text = System::Convert::ToString(a, 8);
+		showOperator->Text = "";
+	}
+	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
+		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
+		textBox1->Text = Convert::ToString(a);
+	}
+	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
+		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
+		textBox1->Text = Convert::ToString(a);
+			showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+	}
 
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
 		// deklaracja operatorów 'arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "="
@@ -1091,5 +1173,18 @@ namespace Kalkulator {
 				+ System::Convert::ToString(result));
 		}
 	}
-	};
+
+private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnMod_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }
