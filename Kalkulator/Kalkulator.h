@@ -1,7 +1,5 @@
 ﻿#pragma once
 #include <iostream>
-#include <string>
-#include <msclr\marshal_cppstd.h>
 
 namespace Kalkulator {
 
@@ -667,7 +665,7 @@ namespace Kalkulator {
 			this->btnCubed->Name = L"btnCubed";
 			this->btnCubed->Size = System::Drawing::Size(70, 70);
 			this->btnCubed->TabIndex = 111;
-			this->btnCubed->Text = L"x³ ";
+			this->btnCubed->Text = L"x³";
 			this->btnCubed->UseVisualStyleBackColor = true;
 			this->btnCubed->Click += gcnew System::EventHandler(this, &Kalkulator::btnCubed_Click);
 			// 
@@ -931,6 +929,12 @@ namespace Kalkulator {
 		historiaToolStripMenuItem1->Visible = false;
 		historiaToolStripMenuItem->Visible = true;
 	}
+
+	private: System::Void writeToTextBox1(String^ text) {
+		// funkcja writeTotextBox - wpisuje podany tekst do textBox1
+		textBox1->Text = (text);
+	}
+
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
@@ -965,7 +969,7 @@ namespace Kalkulator {
 		// Backspace - usuwa ostatni znak z pola obszaru roboczego
 		if (textBox1->Text->Length > 0)
 		{
-			textBox1->Text = textBox1->Text->Remove(textBox1->Text->Length - 1, 1);
+			writeToTextBox1(textBox1->Text->Remove(textBox1->Text->Length - 1, 1));
 		}
 	}
 
@@ -973,7 +977,7 @@ namespace Kalkulator {
 		// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0,
 		// ponadto czyści historię oraz zawartość etykiety "showOperator".
 		if (textBox1->Text != "0") textBox1->Clear();
-		textBox1->Text = "0";
+		writeToTextBox1("0");
 		historiaBox->Items->Clear();
 		showOperator->Text = "";
 	}
@@ -981,13 +985,17 @@ namespace Kalkulator {
 	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
 		// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
 		if (textBox1->Text != "0") textBox1->Clear();
-		textBox1->Text = "0";
+		writeToTextBox1("0");
 	}
-
 
 	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
 		// e - liczba Eulera, do 10 miejsc po przecinku
-		textBox1->Text = ("2,7182818284");
+		writeToTextBox1("2,71828182845904523536");
+	}
+
+	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
+		// pi - stała, do 10 miejsc po przecinku
+		writeToTextBox1("3,14159265358979311600");
 	}
 
 	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -995,11 +1003,11 @@ namespace Kalkulator {
 		Button^ Numbers = safe_cast<Button^>(sender);
 		if (textBox1->Text == "0")
 		{
-			textBox1->Text = Numbers->Text;
+			writeToTextBox1(Numbers->Text);
 		}
 		else
 		{
-			textBox1->Text = textBox1->Text + Numbers->Text;
+			writeToTextBox1(textBox1->Text + Numbers->Text);
 		}
 	}
 
@@ -1015,7 +1023,7 @@ namespace Kalkulator {
 		Button^ op = safe_cast<Button^>(sender);
 
 		firstVariable = Double::Parse(textBox1->Text);
-		textBox1->Text = "";
+		writeToTextBox1("");
 		Operator = op->Text;
 		showOperator->Text = System::Convert::ToString(firstVariable) + " " + Operator;
 	}
@@ -1028,19 +1036,10 @@ namespace Kalkulator {
 		}
 		else
 		{
-			textBox1->Text = "-" + textBox1->Text;
+			writeToTextBox1("-" + textBox1->Text);
 		}
 	}
 
-	private: System::Void writeToTextBox1 (String^ text) {
-		// funkcja writeTotextBox - wpisuje podany tekst do textBox1
-		textBox1->Text = (text);
-	}
-
-	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
-		// pi - stała, do 10 miejsc po przecinku
-		writeToTextBox1("3,1415926535");
-	}
 	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
 		// log
 		a = Double::Parse(textBox1->Text);
