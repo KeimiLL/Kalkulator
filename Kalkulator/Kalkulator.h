@@ -1,4 +1,7 @@
 ﻿#pragma once
+#include <iostream>
+#include <string>
+#include <msclr\marshal_cppstd.h>
 
 namespace Kalkulator {
 
@@ -70,7 +73,8 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Button^ btnAdd;
 	private: System::Windows::Forms::Button^ btnSigned;
 	private: System::Windows::Forms::Button^ btn0;
-	private: System::Windows::Forms::Button^ btnDot;
+	private: System::Windows::Forms::Button^ btnComma;
+
 	private: System::Windows::Forms::Button^ btnEquals;
 
 	private: System::Windows::Forms::Button^ btnPi;
@@ -146,7 +150,7 @@ namespace Kalkulator {
 			this->btnAdd = (gcnew System::Windows::Forms::Button());
 			this->btnSigned = (gcnew System::Windows::Forms::Button());
 			this->btn0 = (gcnew System::Windows::Forms::Button());
-			this->btnDot = (gcnew System::Windows::Forms::Button());
+			this->btnComma = (gcnew System::Windows::Forms::Button());
 			this->btnEquals = (gcnew System::Windows::Forms::Button());
 			this->btnPi = (gcnew System::Windows::Forms::Button());
 			this->btnE = (gcnew System::Windows::Forms::Button());
@@ -537,18 +541,18 @@ namespace Kalkulator {
 			this->btn0->UseVisualStyleBackColor = true;
 			this->btn0->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
-			// btnDot
+			// btnComma
 			// 
-			this->btnDot->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnDot->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnComma->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnComma->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnDot->Location = System::Drawing::Point(150, 349);
-			this->btnDot->Name = L"btnDot";
-			this->btnDot->Size = System::Drawing::Size(70, 70);
-			this->btnDot->TabIndex = 83;
-			this->btnDot->Text = L".";
-			this->btnDot->UseVisualStyleBackColor = true;
-			this->btnDot->Click += gcnew System::EventHandler(this, &Kalkulator::btnDot_Click);
+			this->btnComma->Location = System::Drawing::Point(150, 349);
+			this->btnComma->Name = L"btnComma";
+			this->btnComma->Size = System::Drawing::Size(70, 70);
+			this->btnComma->TabIndex = 83;
+			this->btnComma->Text = L",";
+			this->btnComma->UseVisualStyleBackColor = true;
+			this->btnComma->Click += gcnew System::EventHandler(this, &Kalkulator::btnComma_Click);
 			// 
 			// btnEquals
 			// 
@@ -867,7 +871,7 @@ namespace Kalkulator {
 			this->Controls->Add(this->btnPi);
 			this->Controls->Add(this->btnLog);
 			this->Controls->Add(this->btnEquals);
-			this->Controls->Add(this->btnDot);
+			this->Controls->Add(this->btnComma);
 			this->Controls->Add(this->btn0);
 			this->Controls->Add(this->btn1);
 			this->Controls->Add(this->btn4);
@@ -966,8 +970,8 @@ namespace Kalkulator {
 	}
 
 	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
-		// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0, ponadto
-		// czyści historię oraz zawartość etykiety "showOperator".
+		// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0,
+		// ponadto czyści historię oraz zawartość etykiety "showOperator".
 		if (textBox1->Text != "0") textBox1->Clear();
 		textBox1->Text = "0";
 		historiaBox->Items->Clear();
@@ -982,8 +986,8 @@ namespace Kalkulator {
 
 
 	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
-		// e - liczba Eulera, do 31 miejsc po przecinku
-		textBox1->Text = ("2.7182818284590452353602874713527");
+		// e - liczba Eulera, do 10 miejsc po przecinku
+		textBox1->Text = ("2,7182818284");
 	}
 
 	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -999,11 +1003,11 @@ namespace Kalkulator {
 		}
 	}
 
-	private: System::Void btnDot_Click(System::Object^ sender, System::EventArgs^ e) {
-		// . - dodawanie przecinka do liczb, aby wyświetlały się jako zmiennoprzecinkowe
-		if (!textBox1->Text->Contains("."))
+	private: System::Void btnComma_Click(System::Object^ sender, System::EventArgs^ e) {
+		// , - dodawanie przecinka do liczb, aby wyświetlały się jako zmiennoprzecinkowe
+		if (!textBox1->Text->Contains(","))
 		{
-			textBox1->Text = textBox1->Text + ".";
+			textBox1->Text += ",";
 		}
 	}
 	private: System::Void Aritm_Operators(System::Object^ sender, System::EventArgs^ e) {
@@ -1028,83 +1032,91 @@ namespace Kalkulator {
 		}
 	}
 
+	private: System::Void writeToTextBox1 (String^ text) {
+		// funkcja writeTotextBox - wpisuje podany tekst do textBox1
+		textBox1->Text = (text);
+	}
 
 	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
-		textBox1->Text = ("3.1415926535897932384626433832795");
+		// pi - stała, do 10 miejsc po przecinku
+		writeToTextBox1("3,1415926535");
 	}
 	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
 		//log
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
 		a = Math::Log(a);
-		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnSqrt_Click(System::Object^ sender, System::EventArgs^ e) {
 		//sqrt
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
 		a = Math::Sqrt(a);
-		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnSin_Click(System::Object^ sender, System::EventArgs^ e) {
 		//sin
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
 		a = Math::Sin(a);
-		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnCos_Click(System::Object^ sender, System::EventArgs^ e) {
 		//cos
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("cos" + "(" + textBox1->Text + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
 		a = Math::Cos(a);
-		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnTg_Click(System::Object^ sender, System::EventArgs^ e) {
 		//tg
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("tg" + "(" + textBox1->Text + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
 		a = Math::Tan(a);
-		textBox1->Text = System::Convert::ToString(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
+	private: System::Void convert(int system_type, String^ system_name) {
+		// funkcja Convert, żeby usprawnić działanie przycisków konwertujących
+		// konwertuje liczby zapisane w systemie 10 na odpowiedni system i 
+		// zapisuje wszystko w historii.
+		int b = int::Parse(textBox1->Text);
+		writeToTextBox1(System::Convert::ToString(b, system_type));
+		showOperator->Text = "";
+		historiaBox->Items->Add("dec " + b + " = " + system_name + textBox1->Text);
+	}
+
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Dec
-		int a = int ::Parse(textBox1->Text);
-		textBox1->Text = System::Convert::ToString(a);
-		historiaBox->Items->Add(System::Convert::ToString(textBox1->Text));
+		// Dec - konwertuje liczbę zapisaną w systemie 10 na system 10 XD
+		convert(10, "dec ");
 	}
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Bin
-		int a = int ::Parse(textBox1->Text);
-		textBox1->Text = System::Convert::ToString(a, 2);
-		showOperator->Text = "";
-	}
-	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Hex
-		int a = int ::Parse(textBox1->Text);
-		textBox1->Text = System::Convert::ToString(a, 16);
-		showOperator->Text = "";
+		// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2
+		convert(2, "bin ");
 	}
 	private: System::Void btnOct_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Oct
-		int a = int ::Parse(textBox1->Text);
-		textBox1->Text = System::Convert::ToString(a, 8);
-		showOperator->Text = "";
+		//Oct - konwertuje liczbę zapisaną w systemie 10 na system 8
+		convert(8, "oct ");
 	}
+	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
+		//Hex - konwertuje liczbę zapisaną w systemie 10 na system 16
+		convert(16, "hex ");
+	}
+
 	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
 		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
-		textBox1->Text = Convert::ToString(a);
+		writeToTextBox1(Convert::ToString(a));
 	}
 	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
 		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
-		textBox1->Text = Convert::ToString(a);
-			showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
-		historiaBox->Items->Add(System::Convert::ToString(showOperator->Text));
+		writeToTextBox1(Convert::ToString(a));
+		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
+		historiaBox->Items->Add(showOperator->Text);
 	}
 
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1114,63 +1126,47 @@ namespace Kalkulator {
 		if (Operator == "+")
 		{
 			result = firstVariable + secondVariable;
-			textBox1->Text = System::Convert::ToString(result);
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				/*+ " "
-				+ System::Convert::ToString(secondVariable)
-				+ " = "
-				+ System::Convert::ToString(result)*/);
+			writeToTextBox1(System::Convert::ToString(result));
+			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "-")
 		{
 			result = firstVariable - secondVariable;
 			textBox1->Text = System::Convert::ToString(result);
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				+ " "
-				+ System::Convert::ToString(secondVariable)
-				+ " = "
-				+ System::Convert::ToString(result));
+			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "×")
 		{
 			result = firstVariable * secondVariable;
 			textBox1->Text = System::Convert::ToString(result);
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				+ " "
-				+ System::Convert::ToString(secondVariable)
-				+ " = "
-				+ System::Convert::ToString(result));
+			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "÷")
 		{
 			result = firstVariable / secondVariable;
 			textBox1->Text = System::Convert::ToString(result);
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				+ " "
-				+ System::Convert::ToString(secondVariable)
-				+ " = "
-				+ System::Convert::ToString(result));
+			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "mod")
 		{
-			int first, second, result;
+			int first, second, res;
 			first = Convert::ToInt32(firstVariable);
 			second = Convert::ToInt32(secondVariable);
-			result = first % second;
-			textBox1->Text = System::Convert::ToString(result);
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				+ " "
-				+ System::Convert::ToString(secondVariable)
-				+ " = "
-				+ System::Convert::ToString(result));
+			res = first % second;
+			textBox1->Text = System::Convert::ToString(res);
+			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + res);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "exp")
 		{
 			result = (firstVariable, (1 / secondVariable));
 			textBox1->Text = System::Convert::ToString(Math::Exp((result)));
-			historiaBox->Items->Add(System::Convert::ToString(showOperator->Text)
-				+ " = "
-				+ System::Convert::ToString(result));
+			historiaBox->Items->Add(showOperator->Text + " = " + result);
+			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 	}
 
