@@ -798,7 +798,7 @@ namespace Kalkulator {
 			this->btnMod->TabIndex = 102;
 			this->btnMod->Text = L"mod";
 			this->btnMod->UseVisualStyleBackColor = true;
-			this->btnMod->Click += gcnew System::EventHandler(this, &Kalkulator::btnMod_Click);
+			this->btnMod->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btnOct
 			// 
@@ -1042,7 +1042,7 @@ namespace Kalkulator {
 		writeToTextBox1("3,1415926535");
 	}
 	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
-		//log
+		// log
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
 		a = Math::Log(a);
@@ -1050,7 +1050,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnSqrt_Click(System::Object^ sender, System::EventArgs^ e) {
-		//sqrt
+		// sqrt
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
 		a = Math::Sqrt(a);
@@ -1058,7 +1058,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnSin_Click(System::Object^ sender, System::EventArgs^ e) {
-		//sin
+		// sin
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
 		a = Math::Sin(a);
@@ -1066,7 +1066,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnCos_Click(System::Object^ sender, System::EventArgs^ e) {
-		//cos
+		// cos
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("cos" + "(" + textBox1->Text + ")");
 		a = Math::Cos(a);
@@ -1074,7 +1074,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnTg_Click(System::Object^ sender, System::EventArgs^ e) {
-		//tg
+		// tg
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("tg" + "(" + textBox1->Text + ")");
 		a = Math::Tan(a);
@@ -1090,7 +1090,6 @@ namespace Kalkulator {
 		showOperator->Text = "";
 		historiaBox->Items->Add("dec " + b + " = " + system_name + textBox1->Text);
 	}
-
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Dec - konwertuje liczbę zapisaną w systemie 10 na system 10 XD
 		convert(10, "dec ");
@@ -1100,11 +1099,11 @@ namespace Kalkulator {
 		convert(2, "bin ");
 	}
 	private: System::Void btnOct_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Oct - konwertuje liczbę zapisaną w systemie 10 na system 8
+		// Oct - konwertuje liczbę zapisaną w systemie 10 na system 8
 		convert(8, "oct ");
 	}
 	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Hex - konwertuje liczbę zapisaną w systemie 10 na system 16
+		// Hex - konwertuje liczbę zapisaną w systemie 10 na system 16
 		convert(16, "hex ");
 	}
 
@@ -1117,6 +1116,14 @@ namespace Kalkulator {
 		writeToTextBox1(Convert::ToString(a));
 		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
 		historiaBox->Items->Add(showOperator->Text);
+	}
+	private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
+		// exp
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("exp" + "(" + textBox1->Text + ")");
+		a = Math::Exp(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
 	}
 
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1133,21 +1140,21 @@ namespace Kalkulator {
 		else if (Operator == "-")
 		{
 			result = firstVariable - secondVariable;
-			textBox1->Text = System::Convert::ToString(result);
+			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "×")
 		{
 			result = firstVariable * secondVariable;
-			textBox1->Text = System::Convert::ToString(result);
+			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 		else if (Operator == "÷")
 		{
 			result = firstVariable / secondVariable;
-			textBox1->Text = System::Convert::ToString(result);
+			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
@@ -1157,30 +1164,19 @@ namespace Kalkulator {
 			first = Convert::ToInt32(firstVariable);
 			second = Convert::ToInt32(secondVariable);
 			res = first % second;
-			textBox1->Text = System::Convert::ToString(res);
-			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + res);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
-		}
-		else if (Operator == "exp")
-		{
-			result = (firstVariable, (1 / secondVariable));
-			textBox1->Text = System::Convert::ToString(Math::Exp((result)));
-			historiaBox->Items->Add(showOperator->Text + " = " + result);
+			writeToTextBox1(System::Convert::ToString(res));
+			historiaBox->Items->Add(first + " mod " + second + " = " + res);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 		}
 	}
 
 private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void btnMod_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
