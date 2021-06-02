@@ -719,6 +719,7 @@ namespace Kalkulator {
 			this->btnInverse->TabIndex = 108;
 			this->btnInverse->Text = L"1/x";
 			this->btnInverse->UseVisualStyleBackColor = true;
+			this->btnInverse->Click += gcnew System::EventHandler(this, &Kalkulator::btnInverse_Click);
 			// 
 			// btnExp
 			// 
@@ -1109,24 +1110,70 @@ namespace Kalkulator {
 	}
 
 	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
+		// squered
 		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
 		writeToTextBox1(Convert::ToString(a));
+		showOperator->Text = System::Convert::ToString(textBox1->Text + "^2 = ");
 	}
 	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
+		// cubed
 		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
 		writeToTextBox1(Convert::ToString(a));
-		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
+		showOperator->Text = System::Convert::ToString(textBox1->Text + "^3 = ");
 		historiaBox->Items->Add(showOperator->Text);
 	}
 	private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
 		// exp
 		a = Double::Parse(textBox1->Text);
-		showOperator->Text = System::Convert::ToString("exp" + "(" + textBox1->Text + ")");
+		showOperator->Text = System::Convert::ToString("exp" + "(" + textBox1->Text + ") = ");
 		a = Math::Exp(a);
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		writeToTextBox1(System::Convert::ToString(a));
 	}
-
+	private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
+		// abs
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("|" + "" + textBox1->Text + "| = ");
+		a = Math::Abs(a);
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
+	}
+	private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
+		// fact	
+		int f;
+		a = Double::Parse(textBox1->Text);
+		a = Convert::ToInt32(a);
+		f = Convert::ToInt32(a);
+		showOperator->Text = System::Convert::ToString("" + textBox1->Text + "! = ");
+		for (int i = 1; i < f; i++)
+			a *= i;
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
+		   }
+	private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
+		// permille
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString(textBox1->Text + "‰ = ");
+		a = a / 1000.0;
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
+	}
+	private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
+		// percent
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString(textBox1->Text + "% = ");
+		a = a / 100.0;
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
+	}
+	private: System::Void btnInverse_Click(System::Object^ sender, System::EventArgs^ e) {
+		// 1/x
+		a = Double::Parse(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("1/" + textBox1->Text + " = ");
+		a = 1.0 / a;
+		historiaBox->Items->Add(showOperator->Text + " = " + a);
+		writeToTextBox1(System::Convert::ToString(a));
+}
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
 		// deklaracja operatorów 'arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "="
 		secondVariable = Double::Parse(textBox1->Text);
@@ -1176,14 +1223,5 @@ namespace Kalkulator {
 			Operator = "";
 		}
 	}
-
-private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }
