@@ -984,8 +984,10 @@ namespace Kalkulator {
 
 	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
 		// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
+		// ponadto czyści zawartość etykiety "showOperator".
 		if (textBox1->Text != "0") textBox1->Clear();
 		writeToTextBox1("0");
+		showOperator->Text = "";
 	}
 
 	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1135,6 +1137,8 @@ namespace Kalkulator {
 			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
+			Operator = "";
+
 		}
 		else if (Operator == "-")
 		{
@@ -1142,6 +1146,7 @@ namespace Kalkulator {
 			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
+			Operator = "";
 		}
 		else if (Operator == "×")
 		{
@@ -1149,6 +1154,7 @@ namespace Kalkulator {
 			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
+			Operator = "";
 		}
 		else if (Operator == "÷")
 		{
@@ -1156,6 +1162,7 @@ namespace Kalkulator {
 			writeToTextBox1(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
+			Operator = "";
 		}
 		else if (Operator == "mod")
 		{
@@ -1166,6 +1173,7 @@ namespace Kalkulator {
 			writeToTextBox1(System::Convert::ToString(res));
 			historiaBox->Items->Add(first + " mod " + second + " = " + res);
 			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
+			Operator = "";
 		}
 	}
 
