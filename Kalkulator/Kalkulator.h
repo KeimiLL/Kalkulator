@@ -920,15 +920,11 @@ namespace Kalkulator {
 	}
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 620;
-		Kalkulator::Height = 470;
-		historiaToolStripMenuItem1->Visible = false;
-		historiaToolStripMenuItem->Visible = true;
+		historiaBox->Width = 579;
 	}
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 320;
-		Kalkulator::Height = 470;
-		historiaToolStripMenuItem1->Visible = false;
-		historiaToolStripMenuItem->Visible = true;
+		historiaBox->Width = 277;
 	}
 
 	private: System::Void writeToTextBox1(String^ text) {
@@ -948,6 +944,8 @@ namespace Kalkulator {
 			historiaToolStripMenuItem->Visible = false;
 			historiaToolStripMenuItem1->Visible = true;
 			Kalkulator::Height = 650;
+			if (Kalkulator::Width == 320) historiaBox->Width = 277;
+			else historiaBox->Width = 579;
 		}
 	}
 
@@ -1035,7 +1033,7 @@ namespace Kalkulator {
 		//+/-
 		if (textBox1->Text->Contains("-"))
 		{
-			textBox1->Text = textBox1->Text->Remove(0, 1);
+			writeToTextBox1(textBox1->Text->Remove(0, 1));
 		}
 		else
 		{
@@ -1093,7 +1091,8 @@ namespace Kalkulator {
 		historiaBox->Items->Add("dec " + b + " = " + system_name + textBox1->Text);
 	}
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Dec - konwertuje liczbę zapisaną w systemie 10 na system 10 XD
+		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10
+		// dodać dec to bin
 		convert(10, "dec ");
 	}
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1110,17 +1109,20 @@ namespace Kalkulator {
 	}
 
 	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
-		// squered
-		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
+		// squared
+		double b = Convert::ToDouble(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
+		a = Math::Pow(b, 2);
 		writeToTextBox1(Convert::ToString(a));
-		showOperator->Text = System::Convert::ToString(textBox1->Text + "^2 = ");
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
 	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
 		// cubed
-		a = Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text) * Convert::ToDouble(textBox1->Text);
+		double b = Convert::ToDouble(textBox1->Text);
+		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
+		a = Math::Pow(b, 3);
 		writeToTextBox1(Convert::ToString(a));
-		showOperator->Text = System::Convert::ToString(textBox1->Text + "^3 = ");
-		historiaBox->Items->Add(showOperator->Text);
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
 	private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
 		// exp
@@ -1139,11 +1141,9 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
-		// fact	
-		int f;
-		a = Double::Parse(textBox1->Text);
-		a = Convert::ToInt32(a);
-		f = Convert::ToInt32(a);
+		// fact
+		a = Convert::ToInt32(Double::Parse(textBox1->Text));
+		int f = Convert::ToInt32(a);
 		showOperator->Text = System::Convert::ToString("" + textBox1->Text + "! = ");
 		for (int i = 1; i < f; i++)
 			a *= i;
@@ -1154,7 +1154,7 @@ namespace Kalkulator {
 		// permille
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "‰ = ");
-		a = a / 1000.0;
+		a /= 1000.0;
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		writeToTextBox1(System::Convert::ToString(a));
 	}
@@ -1162,7 +1162,7 @@ namespace Kalkulator {
 		// percent
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "% = ");
-		a = a / 100.0;
+		a /= 100.0;
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		writeToTextBox1(System::Convert::ToString(a));
 	}
