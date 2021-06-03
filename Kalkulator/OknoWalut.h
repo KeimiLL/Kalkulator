@@ -62,6 +62,7 @@ namespace Kalkulator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(OknoWalut::typeid));
 			this->comboBox_from = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox_to = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -180,6 +181,7 @@ namespace Kalkulator {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->comboBox_to);
 			this->Controls->Add(this->comboBox_from);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"OknoWalut";

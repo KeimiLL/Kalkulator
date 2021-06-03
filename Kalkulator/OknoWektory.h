@@ -72,6 +72,7 @@ namespace Kalkulator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(OknoWektory::typeid));
 			this->text_v1 = (gcnew System::Windows::Forms::TextBox());
 			this->text_w3 = (gcnew System::Windows::Forms::TextBox());
 			this->text_w2 = (gcnew System::Windows::Forms::TextBox());
@@ -323,6 +324,7 @@ namespace Kalkulator {
 			this->Controls->Add(this->text_w2);
 			this->Controls->Add(this->text_w3);
 			this->Controls->Add(this->text_v1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"OknoWektory";
