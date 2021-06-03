@@ -112,7 +112,7 @@ namespace Kalkulator {
 			this->text_w3->Multiline = true;
 			this->text_w3->Name = L"text_w3";
 			this->text_w3->Size = System::Drawing::Size(34, 33);
-			this->text_w3->TabIndex = 1;
+			this->text_w3->TabIndex = 5;
 			// 
 			// text_w2
 			// 
@@ -122,7 +122,7 @@ namespace Kalkulator {
 			this->text_w2->Multiline = true;
 			this->text_w2->Name = L"text_w2";
 			this->text_w2->Size = System::Drawing::Size(34, 33);
-			this->text_w2->TabIndex = 2;
+			this->text_w2->TabIndex = 4;
 			// 
 			// text_w1
 			// 
@@ -142,7 +142,7 @@ namespace Kalkulator {
 			this->text_v3->Multiline = true;
 			this->text_v3->Name = L"text_v3";
 			this->text_v3->Size = System::Drawing::Size(34, 33);
-			this->text_v3->TabIndex = 4;
+			this->text_v3->TabIndex = 2;
 			// 
 			// text_v2
 			// 
@@ -152,7 +152,7 @@ namespace Kalkulator {
 			this->text_v2->Multiline = true;
 			this->text_v2->Name = L"text_v2";
 			this->text_v2->Size = System::Drawing::Size(34, 33);
-			this->text_v2->TabIndex = 5;
+			this->text_v2->TabIndex = 1;
 			// 
 			// wektor_v
 			// 
@@ -275,10 +275,11 @@ namespace Kalkulator {
 			this->Oblicz_btn->Location = System::Drawing::Point(139, 151);
 			this->Oblicz_btn->Name = L"Oblicz_btn";
 			this->Oblicz_btn->Size = System::Drawing::Size(100, 34);
-			this->Oblicz_btn->TabIndex = 17;
+			this->Oblicz_btn->TabIndex = 6;
 			this->Oblicz_btn->Text = L"Oblicz";
 			this->Oblicz_btn->UseVisualStyleBackColor = true;
 			this->Oblicz_btn->Click += gcnew System::EventHandler(this, &OknoWektory::Oblicz_btn_Click);
+			this->Oblicz_btn->Enter += gcnew System::EventHandler(this, &OknoWektory::Oblicz_btn_Click);
 			// 
 			// Ilocz_wekt
 			// 
