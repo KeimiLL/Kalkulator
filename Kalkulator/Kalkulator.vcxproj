@@ -122,12 +122,16 @@
   <ItemGroup>
     <ClCompile Include="Kalkulator.cpp" />
     <ClCompile Include="OknoWalut.cpp" />
+    <ClCompile Include="OknoWektory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kalkulator.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OknoWalut.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="OknoWektory.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -137,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OknoWalut.resx">
       <DependentUpon>OknoWalut.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OknoWektory.resx">
+      <DependentUpon>OknoWektory.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

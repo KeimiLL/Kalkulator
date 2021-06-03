@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "OknoWalut.h"
+#include "OknoWektory.h"
 #include <iostream>
 
 namespace Kalkulator {
@@ -272,6 +273,7 @@ namespace Kalkulator {
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
 			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
+			this->iloczynyWektorówToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::iloczynyWektorówToolStripMenuItem1_Click);
 			// 
 			// pomocToolStripMenuItem
 			// 
@@ -286,13 +288,13 @@ namespace Kalkulator {
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// textBox1
@@ -1229,6 +1231,10 @@ private: System::Void walutowyToolStripMenuItem_Click(System::Object^ sender, Sy
 	OknoWalut^ Waluty = gcnew OknoWalut();
 	Waluty->Show();
 
+}
+private: System::Void iloczynyWektorówToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
+	OknoWektory^ Wektory = gcnew OknoWektory();
+	Wektory->Show();
 }
 };
 }
