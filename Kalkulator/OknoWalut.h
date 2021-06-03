@@ -75,6 +75,7 @@ namespace Kalkulator {
 			// 
 			// comboBox_from
 			// 
+			this->comboBox_from->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_from->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->comboBox_from->FormattingEnabled = true;
@@ -89,6 +90,7 @@ namespace Kalkulator {
 			// 
 			// comboBox_to
 			// 
+			this->comboBox_to->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_to->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->comboBox_to->FormattingEnabled = true;
@@ -194,72 +196,123 @@ namespace Kalkulator {
 #pragma endregion
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		double i = Double::Parse(amount_txt->Text);
+
+		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
+			display_txt->Text = "B³¹d. Wybierz inn¹ walutê.";
+
 		//PLN
-		if (comboBox_from->SelectedItem == "EUR (euro)" && comboBox_to->SelectedItem == "PLN (z³oty)") 
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 4.46 + "\t z³";
-		else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)" && comboBox_to->SelectedItem == "PLN (z³oty)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 3.68 + "\t z³";
-		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)" && comboBox_to->SelectedItem == "PLN (z³oty)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 2.82 + "\t z³";
-		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)" && comboBox_to->SelectedItem == "PLN (z³oty)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 4.07 + "\t z³";
-		else if (comboBox_from->SelectedItem == "GBP (funt szterling)" && comboBox_to->SelectedItem == "PLN (z³oty)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 5.19 + "\t z³";
+		else if (comboBox_to->SelectedItem == "PLN (z³oty)") {
+			if (comboBox_from->SelectedItem == "EUR (euro)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 4.46)->Replace('.', ',') + "\t PLN";
+			else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 3.68)->Replace('.', ',') + "\t PLN";
+			else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 2.82)->Replace('.', ',') + "\t PLN";
+			else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 4.07)->Replace('.', ',') + "\t PLN";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 5.19)->Replace('.', ',') + "\t PLN";
+		}
+		
 		//EUR
-		else if (comboBox_from->SelectedItem == "PLN (z³oty)" && comboBox_to->SelectedItem == "EUR (euro)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.22 + "\t €";
-		else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)" && comboBox_to->SelectedItem == "EUR (euro)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.82 + "\t €";
-		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)" && comboBox_to->SelectedItem == "EUR (euro)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.63 + "\t €";
-		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)" && comboBox_to->SelectedItem == "EUR (euro)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.91 + "\t €";
-		else if (comboBox_from->SelectedItem == "GBP (funt szterling)" && comboBox_to->SelectedItem == "EUR (euro)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.16 + "\t €";
+		else if (comboBox_to->SelectedItem == "EUR (euro)") {
+			if (comboBox_from->SelectedItem == "PLN (z³oty)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.22)->Replace('.', ',') + "\t EUR";
+			else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.82)->Replace('.', ',') + "\t EUR";
+			else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.63)->Replace('.', ',') + "\t EUR";
+			else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.91)->Replace('.', ',') + "\t EUR";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.16)->Replace('.', ',') + "\t EUR";
+		}
+		
 		//USD
-		else if (comboBox_from->SelectedItem == "PLN (z³oty)" && comboBox_to->SelectedItem == "USD (dolar amerykañski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.27 + "\t $";
-		else if (comboBox_from->SelectedItem == "EUR (euro)" && comboBox_to->SelectedItem == "USD (dolar amerykañski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.21 + "\t $";
-		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)" && comboBox_to->SelectedItem == "USD (dolar amerykañski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.77 + "\t $";
-		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)" && comboBox_to->SelectedItem == "USD (dolar amerykañski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.10 + "\t $";
-		else if (comboBox_from->SelectedItem == "GBP (funt szterling)" && comboBox_to->SelectedItem == "USD (dolar amerykañski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.14 + "\t $";
+		else if (comboBox_to->SelectedItem == "USD (dolar amerykañski)") {
+			if (comboBox_from->SelectedItem == "PLN (z³oty)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.27)->Replace('.', ',') + "\t USD";
+			else if (comboBox_from->SelectedItem == "EUR (euro)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.21)->Replace('.', ',') + "\t USD";
+			else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.77)->Replace('.', ',') + "\t USD";
+			else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.10)->Replace('.', ',') + "\t USD";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.14)->Replace('.', ',') + "\t USD";
+		}
+
 		//AUD
-		else if (comboBox_from->SelectedItem == "PLN (z³oty)" && comboBox_to->SelectedItem == "AUD (dolar australijski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.35 + "\t $";
-		else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)" && comboBox_to->SelectedItem == "AUD (dolar australijski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.31 + "\t $";
-		else if (comboBox_from->SelectedItem == "EUR (euro)" && comboBox_to->SelectedItem == "AUD (dolar australijski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.58 + "\t $";
-		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)" && comboBox_to->SelectedItem == "AUD (dolar australijski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.44 + "\t $";
-		else if (comboBox_from->SelectedItem == "GBP (funt szterling)" && comboBox_to->SelectedItem == "AUD (dolar australijski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.84 + "\t $";
+		else if (comboBox_to->SelectedItem == "AUD (dolar australijski)") {
+			if (comboBox_from->SelectedItem == "PLN (z³oty)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.35)->Replace('.', ',') + "\t AUD";
+			else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.31)->Replace('.', ',') + "\t AUD";
+			else if (comboBox_from->SelectedItem == "EUR (euro)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.58)->Replace('.', ',') + "\t AUD";
+			else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.44)->Replace('.', ',') + "\t AUD";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.84)->Replace('.', ',') + "\t AUD";
+		}
+
 		//CHF
-		else if (comboBox_from->SelectedItem == "PLN (z³oty)" && comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.25 + "\t fr";
-		else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)" && comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.91 + "\t fr";
-		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)" && comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.69 + "\t fr";
-		else if (comboBox_from->SelectedItem == "EUR (euro)" && comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.10 + "\t fr";
-		else if (comboBox_from->SelectedItem == "GBP (funt szterling)" && comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 1.28 + "\t fr";
+		else if (comboBox_to->SelectedItem == "CHF (frank szwajcarski)") {
+			if (comboBox_from->SelectedItem == "PLN (z³oty)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.25)->Replace('.', ',') + "\t CHF";
+			else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.91)->Replace('.', ',') + "\t CHF";
+			else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.69)->Replace('.', ',') + "\t CHF";
+			else if (comboBox_from->SelectedItem == "EUR (euro)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.10)->Replace('.', ',') + "\t CHF";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 1.28)->Replace('.', ',') + "\t CHF";
+		}
+
 		//GBP
-		else if (comboBox_from->SelectedItem == "PLN (z³oty)" && comboBox_to->SelectedItem == "GBP (funt szterling)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.19 + "\t GBP";
-		else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)" && comboBox_to->SelectedItem == "GBP (funt szterling)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.71 + "\t GBP";
-		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)" && comboBox_to->SelectedItem == "GBP (funt szterling)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.54 + "\t GBP";
-		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)" && comboBox_to->SelectedItem == "GBP (funt szterling)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.78 + "\t GBP";
-		else if (comboBox_from->SelectedItem == "EUR (euro)" && comboBox_to->SelectedItem == "GBP (funt szterling)")
-			display_txt->Text = "Przeliczona wartoœæ: " + i * 0.86 + "\t GBP";
+		else if (comboBox_to->SelectedItem == "GBP (funt szterling)") {
+			if (comboBox_from->SelectedItem == "PLN (z³oty)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.19)->Replace('.', ',') + "\t GBP";
+			else if (comboBox_from->SelectedItem == "USD (dolar amerykañski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.71)->Replace('.', ',') + "\t GBP";
+			else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.54)->Replace('.', ',') + "\t GBP";
+			else if (comboBox_from->SelectedItem == "EUR (euro)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.78)->Replace('.', ',') + "\t GBP";
+			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+				display_txt->Text = "Przeliczona wartoœæ: "
+				+ String::Format("{0:0.00}", i * 0.86)->Replace('.', ',') + "\t GBP";
+		}
 	}
 };
 }
