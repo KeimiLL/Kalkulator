@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "OknoWalut.h"
 #include <iostream>
 
 namespace Kalkulator {
@@ -185,7 +186,7 @@ namespace Kalkulator {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 28);
+			this->menuStrip1->Size = System::Drawing::Size(605, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -196,14 +197,14 @@ namespace Kalkulator {
 					this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
 			});
 			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
-			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(115, 22);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -212,21 +213,21 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(115, 22);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(115, 22);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
 			// edycjaToolStripMenuItem
 			// 
 			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
-			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(64, 24);
+			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
 			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
 			// widokToolStripMenuItem
@@ -236,39 +237,40 @@ namespace Kalkulator {
 					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
 			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
-			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(53, 20);
 			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
+			this->walutowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::walutowyToolStripMenuItem_Click);
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			// 
 			// pomocToolStripMenuItem
@@ -278,19 +280,19 @@ namespace Kalkulator {
 					this->oProgramieToolStripMenuItem
 			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(163, 24);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(163, 24);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			// 
 			// textBox1
@@ -1223,5 +1225,10 @@ namespace Kalkulator {
 			Operator = "";
 		}
 	}
+private: System::Void walutowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	OknoWalut^ Waluty = gcnew OknoWalut();
+	Waluty->Show();
+
+}
 };
 }

@@ -18,9 +18,15 @@
     <ClCompile Include="Kalkulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OknoWalut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kalkulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OknoWalut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
