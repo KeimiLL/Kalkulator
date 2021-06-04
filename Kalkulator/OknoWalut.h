@@ -211,52 +211,48 @@ namespace Kalkulator {
 #pragma endregion
 
 	private: System::Double exchange_to_GBP(double f) {
-		if (comboBox_from->SelectedItem == "GBP (funt szterling)")
-			f = f;
-		else if(comboBox_from->SelectedItem == "PLN (z這ty)")
+		if(comboBox_from->SelectedItem == "PLN (z這ty)")
 		{
-			f*=0.19;
+			f *=0.19;
 		}
 		else if (comboBox_from->SelectedItem == "USD (dolar ameryka雟ki)")
 		{
-			f= f * 0.7;
+			f *= 0.7;
 		}
 		else if (comboBox_from->SelectedItem == "EUR (euro)")
 		{
-			f*=0.86;
+			f *= 0.86;
 		}
 		else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
 		{
-			f*=0.78;
+			f *= 0.78;
 		}
 		else if (comboBox_from->SelectedItem == "AUD (dolar australijski)")
 		{
-			f*=0.55;
+			f *= 0.55;
 		}
 		return f;
 	}
 	private: System::Double exchange_from_GBP(double f) {
-		if (comboBox_from->SelectedItem == "GBP (funt szterling)")
-			f = f;
-		else if (comboBox_to->SelectedItem == "PLN (z這ty)")
+		if (comboBox_to->SelectedItem == "PLN (z這ty)")
 		{
-			f*=5.20;
+			f *= 5.20;
 		}
 		else if (comboBox_to->SelectedItem == "USD (dolar ameryka雟ki)")
 		{
-			f*=1.42;
+			f *= 1.42;
 		}
 		else if (comboBox_to->SelectedItem == "EUR (euro)")
 		{
-			f*=1.16;
+			f*= 1.16;
 		}
 		else if (comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
 		{
-			f*= 1.27;
+			f *= 1.27;
 		}
 		else if (comboBox_to->SelectedItem == "AUD (dolar australijski)")
 		{
-			 f*= 1.83;
+			 f *= 1.83;
 		}
 		return f;
 	}

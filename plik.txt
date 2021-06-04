@@ -25,6 +25,7 @@ Zasady działania:
 - operacje wymagające kliknięcia "=" - podaj kolejno liczbę, znak działania, drugą liczbę, znak
 równości (+, -, ÷, ×, mod);
  - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.
+
 To Do:
 Kalkulator główny (coś z tym podpowiadaniem, żeby nie nachodziło; naprawa błędu z ujemnymi liczbami (github -> issues))
 Zamiana jednostek (okno; menu strip; działanie)
