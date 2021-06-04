@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "OknoWalut.h"
 #include "OknoWektory.h"
+#include "O_programie.h"
+#include "Objasnienia.h"
 #include <iostream>
 
 namespace Kalkulator {
@@ -43,7 +45,7 @@ namespace Kalkulator {
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ wyjścieToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ edycjaToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ widokToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ standardowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ naukowyToolStripMenuItem;
@@ -121,7 +123,6 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->wyjścieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->edycjaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->widokToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->standardowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->naukowyToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -180,9 +181,9 @@ namespace Kalkulator {
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->plikToolStripMenuItem,
-					this->edycjaToolStripMenuItem, this->widokToolStripMenuItem, this->pomocToolStripMenuItem
+					this->widokToolStripMenuItem, this->pomocToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -224,12 +225,6 @@ namespace Kalkulator {
 			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(115, 22);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
-			// 
-			// edycjaToolStripMenuItem
-			// 
-			this->edycjaToolStripMenuItem->Name = L"edycjaToolStripMenuItem";
-			this->edycjaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
-			this->edycjaToolStripMenuItem->Text = L"Edycja";
 			// 
 			// widokToolStripMenuItem
 			// 
@@ -288,14 +283,16 @@ namespace Kalkulator {
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
+			this->objaśnieniaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::objaśnieniaToolStripMenuItem_Click);
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
+			this->oProgramieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oProgramieToolStripMenuItem_Click);
 			// 
 			// textBox1
 			// 
@@ -850,6 +847,7 @@ namespace Kalkulator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->ClientSize = System::Drawing::Size(605, 606);
 			this->Controls->Add(this->historiaBox);
 			this->Controls->Add(this->showOperator);
@@ -1235,6 +1233,14 @@ private: System::Void walutowyToolStripMenuItem_Click(System::Object^ sender, Sy
 private: System::Void iloczynyWektorówToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 	OknoWektory^ Wektory = gcnew OknoWektory();
 	Wektory->Show();
+}
+private: System::Void objaśnieniaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	Objasnienia^ okno_objasnien = gcnew Objasnienia();
+	okno_objasnien->Show();
+}
+private: System::Void oProgramieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	O_programie^ okno_o_prog = gcnew O_programie();
+	okno_o_prog->Show();
 }
 };
 }

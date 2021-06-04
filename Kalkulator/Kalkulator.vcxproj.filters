@@ -24,6 +24,12 @@
     <ClCompile Include="OknoWektory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Objasnienia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="O_programie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kalkulator.h">
@@ -33,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OknoWektory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Objasnienia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="O_programie.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
