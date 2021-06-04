@@ -1,0 +1,33 @@
+O Programie:
+Kalkulator Naukowy napisany w C++/CLI
+Autorzy:
+Kamil Giziński
+<GitHub link>
+Bartosz Rolnik
+<GitHub link>
+Dominik Sigulski
+<GitHub link>
+Projekt na Programowanie II
+Wydział MS, semestr II
+
+Objaśnienia:
+Tryby:
+Kliknięcia znaku równości nie wymagają: 1/x, pierwiastek, druga i trzecia potęga, silnia, operacje
+walutowe, procent
+
+Tryby:
+- standardowy – standardowy kalkulator prosty;
+- naukowy – kalkulator naukowy z dodatkowymi funkcjami;
+- walutowy – pozwala na zamianę walut między: PLN, EUR, USD, AUD, CHF i GBP;
+- zamiana jednostek – pozwala na zamianę jednostek objętości, masy, długości, powierzchni, danych, prędkości, prędkości przesyłu danych, czasu (ustalić czy wszystkie te);
+- iloczyny wektorów – wyświetla wynik iloczynu wektorowego 2 wektorów, jego długość oraz wartość ich iloczynu skalarnego.
+Zasady działania:
+- operacje wymagające kliknięcia "=" - podaj kolejno liczbę, znak działania, drugą liczbę, znak
+równości (+, -, ÷, ×, mod);
+ - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.
+To Do:
+Kalkulator główny (coś z tym podpowiadaniem, żeby nie nachodziło; naprawa błędu z ujemnymi liczbami (github -> issues))
+Zamiana jednostek (okno; menu strip; działanie)
+Pomoc (wkleić tekst z tego pliku wraz z linkami)
+Wektorowy (zmiennoprzecinkowe; jakiś limit do 2 po przecinku?)
+Obsługa błędów (wszędzie)

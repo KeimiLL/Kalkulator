@@ -1084,8 +1084,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void convert(int system_type, String^ system_name) {
-		// funkcja Convert, żeby usprawnić działanie przycisków konwertujących
-		// konwertuje liczby zapisane w systemie 10 na odpowiedni system i 
+		// funkcja Convert - konwertuje liczby zapisane w systemie 10 na odpowiedni system i 
 		// zapisuje wszystko w historii.
 		int b = int::Parse(textBox1->Text);
 		writeToTextBox1(System::Convert::ToString(b, system_type));
@@ -1093,27 +1092,28 @@ namespace Kalkulator {
 		historiaBox->Items->Add("dec " + b + " = " + system_name + textBox1->Text);
 	}
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10
+		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10.
 		int b = int::Parse(textBox1->Text);
 		writeToTextBox1(System::Convert::ToString(System::Convert::ToInt32(textBox1->Text, 2)));
 		showOperator->Text = "bin -> dec";
 		historiaBox->Items->Add("bin " + b + " = " + "dec " + textBox1->Text);
 	}
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2
+		// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2.
 		convert(2, "bin ");
 	}
 	private: System::Void btnOct_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Oct - konwertuje liczbę zapisaną w systemie 10 na system 8
+		// Oct - konwertuje liczbę zapisaną w systemie 10 na system 8.
 		convert(8, "oct ");
 	}
 	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Hex - konwertuje liczbę zapisaną w systemie 10 na system 16
+		// Hex - konwertuje liczbę zapisaną w systemie 10 na system 16.
 		convert(16, "hex ");
 	}
 
 	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
-		// squared
+		// squared - zwraca kwadrat danej liczby.
+		// obsługa błędów dla za dużych liczb
 		double b = Convert::ToDouble(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
 		a = Math::Pow(b, 2);
@@ -1121,7 +1121,8 @@ namespace Kalkulator {
 		historiaBox->Items->Add(showOperator->Text + a);
 	}
 	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
-		// cubed
+		// cubed - zwraca sześcian danej liczby.
+		// obsługa błędów dla za dużych liczb
 		double b = Convert::ToDouble(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
 		a = Math::Pow(b, 3);
@@ -1129,7 +1130,8 @@ namespace Kalkulator {
 		historiaBox->Items->Add(showOperator->Text + a);
 	}
 	private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
-		// exp
+		// exp - zwraca wartość eksponanty danej liczby - e^x
+		// obsługa błędów dla za dużych liczb
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("exp" + "(" + textBox1->Text + ") = ");
 		a = Math::Exp(a);
@@ -1137,7 +1139,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
-		// abs
+		// abs - zwraca wartość bezwzględną liczby
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("|" + "" + textBox1->Text + "| = ");
 		a = Math::Abs(a);
@@ -1145,7 +1147,9 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
-		// fact
+		// fact - zwraca silnię danej liczby naturalnej.
+		// Konwertuje zmiennoprzecinkowe na całkowite.
+		// obsługa błędów dla zbyt dużych liczb i dla ujemnych (chyba, że dajemy jakby był abs?)
 		a = Convert::ToInt32(Double::Parse(textBox1->Text));
 		int f = Convert::ToInt32(a);
 		showOperator->Text = System::Convert::ToString("" + textBox1->Text + "! = ");
@@ -1155,7 +1159,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 		   }
 	private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
-		// permille
+		// permille - zwraca liczbę zamienioną na promil.
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "‰ = ");
 		a /= 1000.0;
@@ -1163,7 +1167,7 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
-		// percent
+		// percent - zwraca liczbę zamienioną na procent.
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "% = ");
 		a /= 100.0;
@@ -1171,7 +1175,8 @@ namespace Kalkulator {
 		writeToTextBox1(System::Convert::ToString(a));
 	}
 	private: System::Void btnInverse_Click(System::Object^ sender, System::EventArgs^ e) {
-		// 1/x
+		// 1/x - zwraca odwrotność liczby.
+		// obsługa błędów dla 0.
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("1/" + textBox1->Text + " = ");
 		a = 1.0 / a;
