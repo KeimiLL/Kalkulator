@@ -1,4 +1,5 @@
 #pragma once
+#include <math.h>
 
 namespace Kalkulator {
 
@@ -56,6 +57,10 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Button^ Oblicz_btn;
 	private: System::Windows::Forms::Label^ Ilocz_wekt;
 	private: System::Windows::Forms::Label^ Ilocz_skal;
+	private: System::Windows::Forms::Label^ lbl6;
+	private: System::Windows::Forms::Label^ dl_wekt;
+
+
 
 
 
@@ -92,66 +97,68 @@ namespace Kalkulator {
 			this->Oblicz_btn = (gcnew System::Windows::Forms::Button());
 			this->Ilocz_wekt = (gcnew System::Windows::Forms::Label());
 			this->Ilocz_skal = (gcnew System::Windows::Forms::Label());
+			this->lbl6 = (gcnew System::Windows::Forms::Label());
+			this->dl_wekt = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// text_v1
 			// 
-			this->text_v1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_v1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->text_v1->Location = System::Drawing::Point(114, 39);
+			this->text_v1->Location = System::Drawing::Point(109, 39);
 			this->text_v1->Multiline = true;
 			this->text_v1->Name = L"text_v1";
-			this->text_v1->Size = System::Drawing::Size(34, 33);
+			this->text_v1->Size = System::Drawing::Size(39, 33);
 			this->text_v1->TabIndex = 0;
 			// 
 			// text_w3
 			// 
-			this->text_w3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_w3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->text_w3->Location = System::Drawing::Point(231, 99);
 			this->text_w3->Multiline = true;
 			this->text_w3->Name = L"text_w3";
-			this->text_w3->Size = System::Drawing::Size(34, 33);
+			this->text_w3->Size = System::Drawing::Size(39, 33);
 			this->text_w3->TabIndex = 5;
 			// 
 			// text_w2
 			// 
-			this->text_w2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_w2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->text_w2->Location = System::Drawing::Point(173, 99);
+			this->text_w2->Location = System::Drawing::Point(170, 99);
 			this->text_w2->Multiline = true;
 			this->text_w2->Name = L"text_w2";
-			this->text_w2->Size = System::Drawing::Size(34, 33);
+			this->text_w2->Size = System::Drawing::Size(39, 33);
 			this->text_w2->TabIndex = 4;
 			// 
 			// text_w1
 			// 
-			this->text_w1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_w1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->text_w1->Location = System::Drawing::Point(114, 99);
+			this->text_w1->Location = System::Drawing::Point(112, 99);
 			this->text_w1->Multiline = true;
 			this->text_w1->Name = L"text_w1";
-			this->text_w1->Size = System::Drawing::Size(34, 33);
+			this->text_w1->Size = System::Drawing::Size(39, 33);
 			this->text_w1->TabIndex = 3;
 			// 
 			// text_v3
 			// 
-			this->text_v3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_v3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->text_v3->Location = System::Drawing::Point(231, 39);
 			this->text_v3->Multiline = true;
 			this->text_v3->Name = L"text_v3";
-			this->text_v3->Size = System::Drawing::Size(34, 33);
+			this->text_v3->Size = System::Drawing::Size(39, 33);
 			this->text_v3->TabIndex = 2;
 			// 
 			// text_v2
 			// 
-			this->text_v2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->text_v2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->text_v2->Location = System::Drawing::Point(173, 39);
+			this->text_v2->Location = System::Drawing::Point(171, 39);
 			this->text_v2->Multiline = true;
 			this->text_v2->Name = L"text_v2";
-			this->text_v2->Size = System::Drawing::Size(34, 33);
+			this->text_v2->Size = System::Drawing::Size(39, 33);
 			this->text_v2->TabIndex = 1;
 			// 
 			// wektor_v
@@ -251,7 +258,7 @@ namespace Kalkulator {
 			this->lbl1->AutoSize = true;
 			this->lbl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->lbl1->Location = System::Drawing::Point(55, 211);
+			this->lbl1->Location = System::Drawing::Point(57, 211);
 			this->lbl1->Name = L"lbl1";
 			this->lbl1->Size = System::Drawing::Size(94, 25);
 			this->lbl1->TabIndex = 15;
@@ -262,7 +269,7 @@ namespace Kalkulator {
 			this->lbl2->AutoSize = true;
 			this->lbl2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->lbl2->Location = System::Drawing::Point(55, 254);
+			this->lbl2->Location = System::Drawing::Point(61, 290);
 			this->lbl2->Name = L"lbl2";
 			this->lbl2->Size = System::Drawing::Size(90, 25);
 			this->lbl2->TabIndex = 16;
@@ -296,16 +303,39 @@ namespace Kalkulator {
 			this->Ilocz_skal->AutoSize = true;
 			this->Ilocz_skal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->Ilocz_skal->Location = System::Drawing::Point(145, 254);
+			this->Ilocz_skal->Location = System::Drawing::Point(146, 290);
 			this->Ilocz_skal->Name = L"Ilocz_skal";
 			this->Ilocz_skal->Size = System::Drawing::Size(0, 25);
 			this->Ilocz_skal->TabIndex = 19;
+			// 
+			// lbl6
+			// 
+			this->lbl6->AutoSize = true;
+			this->lbl6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->lbl6->Location = System::Drawing::Point(45, 250);
+			this->lbl6->Name = L"lbl6";
+			this->lbl6->Size = System::Drawing::Size(106, 25);
+			this->lbl6->TabIndex = 20;
+			this->lbl6->Text = L"|v × w| = ";
+			// 
+			// dl_wekt
+			// 
+			this->dl_wekt->AutoSize = true;
+			this->dl_wekt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->dl_wekt->Location = System::Drawing::Point(146, 250);
+			this->dl_wekt->Name = L"dl_wekt";
+			this->dl_wekt->Size = System::Drawing::Size(0, 25);
+			this->dl_wekt->TabIndex = 21;
 			// 
 			// OknoWektory
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(387, 302);
+			this->ClientSize = System::Drawing::Size(387, 340);
+			this->Controls->Add(this->dl_wekt);
+			this->Controls->Add(this->lbl6);
 			this->Controls->Add(this->Ilocz_skal);
 			this->Controls->Add(this->Ilocz_wekt);
 			this->Controls->Add(this->Oblicz_btn);
@@ -350,7 +380,10 @@ namespace Kalkulator {
 		u3 = v1 * w2 - v2 * w1;
 
 		Ilocz_wekt->Text = "[ " + u1 + " , " + u2 + " , " + u3 + " ]";
+		dl_wekt->Text = String::Format("{0:0.00}", sqrt(u1 * u1 + u2 * u2 + u3 * u3));
 		Ilocz_skal->Text = System::Convert::ToString(v1 * w1 + v2 * w2 + v3 * w3);
 	}
+
+
 };
 }

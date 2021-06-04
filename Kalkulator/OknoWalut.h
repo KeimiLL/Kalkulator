@@ -309,7 +309,7 @@ namespace Kalkulator {
 			else if (comboBox_from->SelectedItem == "EUR (euro)")
 				display_txt->Text = "Przeliczona wartoœæ: "
 				+ String::Format("{0:0.00}", i * 0.78)->Replace('.', ',') + "\t GBP";
-			else if (comboBox_from->SelectedItem == "GBP (funt szterling)")
+			else if (comboBox_from->SelectedItem == "CHF (frank szwajcarski)")
 				display_txt->Text = "Przeliczona wartoœæ: "
 				+ String::Format("{0:0.00}", i * 0.86)->Replace('.', ',') + "\t GBP";
 		}
