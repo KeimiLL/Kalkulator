@@ -48,6 +48,7 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Label^ display_txt;
 
 	private: System::Windows::Forms::Button^ Convert_btn;
+	private: System::Windows::Forms::Button^ button1;
 
 	private:
 		/// <summary>
@@ -71,6 +72,7 @@ namespace Kalkulator {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->display_txt = (gcnew System::Windows::Forms::Label());
 			this->Convert_btn = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// comboBox_from
@@ -151,7 +153,7 @@ namespace Kalkulator {
 			this->display_txt->AutoSize = true;
 			this->display_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->display_txt->Location = System::Drawing::Point(28, 256);
+			this->display_txt->Location = System::Drawing::Point(28, 241);
 			this->display_txt->Name = L"display_txt";
 			this->display_txt->Size = System::Drawing::Size(173, 20);
 			this->display_txt->TabIndex = 6;
@@ -161,7 +163,7 @@ namespace Kalkulator {
 			// 
 			this->Convert_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->Convert_btn->Location = System::Drawing::Point(137, 192);
+			this->Convert_btn->Location = System::Drawing::Point(32, 192);
 			this->Convert_btn->Name = L"Convert_btn";
 			this->Convert_btn->Size = System::Drawing::Size(104, 35);
 			this->Convert_btn->TabIndex = 7;
@@ -169,12 +171,25 @@ namespace Kalkulator {
 			this->Convert_btn->UseVisualStyleBackColor = true;
 			this->Convert_btn->Click += gcnew System::EventHandler(this, &OknoWalut::Convert_btn_Click);
 			// 
+			// button1
+			// 
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->button1->Location = System::Drawing::Point(222, 192);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(104, 35);
+			this->button1->TabIndex = 8;
+			this->button1->Text = L"Reset";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &OknoWalut::reset_btn);
+			// 
 			// OknoWalut
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->ClientSize = System::Drawing::Size(370, 326);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Convert_btn);
 			this->Controls->Add(this->display_txt);
 			this->Controls->Add(this->label3);
@@ -287,6 +302,10 @@ namespace Kalkulator {
 				display_txt->Text = "Przeliczona wartoœæ: "
 				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t CHF";
 		}
+	}
+	private: System::Void reset_btn(System::Object^ sender, System::EventArgs^ e) {
+			amount_txt->Clear();
+			display_txt->Text = "Przeliczona wartoœæ: ";
 	}
 };
 }

@@ -59,6 +59,8 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Label^ Ilocz_skal;
 	private: System::Windows::Forms::Label^ lbl6;
 	private: System::Windows::Forms::Label^ dl_wekt;
+	private: System::Windows::Forms::Button^ reset_btn;
+
 
 
 
@@ -99,6 +101,7 @@ namespace Kalkulator {
 			this->Ilocz_skal = (gcnew System::Windows::Forms::Label());
 			this->lbl6 = (gcnew System::Windows::Forms::Label());
 			this->dl_wekt = (gcnew System::Windows::Forms::Label());
+			this->reset_btn = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// text_v1
@@ -286,7 +289,6 @@ namespace Kalkulator {
 			this->Oblicz_btn->Text = L"Oblicz";
 			this->Oblicz_btn->UseVisualStyleBackColor = true;
 			this->Oblicz_btn->Click += gcnew System::EventHandler(this, &OknoWektory::Oblicz_btn_Click);
-			this->Oblicz_btn->Enter += gcnew System::EventHandler(this, &OknoWektory::Oblicz_btn_Click);
 			// 
 			// Ilocz_wekt
 			// 
@@ -329,11 +331,24 @@ namespace Kalkulator {
 			this->dl_wekt->Size = System::Drawing::Size(0, 25);
 			this->dl_wekt->TabIndex = 21;
 			// 
+			// reset_btn
+			// 
+			this->reset_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->reset_btn->Location = System::Drawing::Point(139, 330);
+			this->reset_btn->Name = L"reset_btn";
+			this->reset_btn->Size = System::Drawing::Size(100, 34);
+			this->reset_btn->TabIndex = 22;
+			this->reset_btn->Text = L"Reset";
+			this->reset_btn->UseVisualStyleBackColor = true;
+			this->reset_btn->Click += gcnew System::EventHandler(this, &OknoWektory::reset_btn_Click);
+			// 
 			// OknoWektory
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(387, 340);
+			this->ClientSize = System::Drawing::Size(387, 376);
+			this->Controls->Add(this->reset_btn);
 			this->Controls->Add(this->dl_wekt);
 			this->Controls->Add(this->lbl6);
 			this->Controls->Add(this->Ilocz_skal);
@@ -383,7 +398,19 @@ namespace Kalkulator {
 		dl_wekt->Text = String::Format("{0:0.00}", sqrt(u1 * u1 + u2 * u2 + u3 * u3));
 		Ilocz_skal->Text = System::Convert::ToString(v1 * w1 + v2 * w2 + v3 * w3);
 	}
+	
 
 
+	private: System::Void reset_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+		text_v1->Clear();
+		text_v2->Clear();
+		text_v3->Clear();
+		text_w1->Clear();
+		text_w2->Clear();
+		text_w3->Clear();
+		dl_wekt->Text = "";
+		Ilocz_wekt->Text = "";
+		Ilocz_skal->Text = "";
+	}
 };
 }
