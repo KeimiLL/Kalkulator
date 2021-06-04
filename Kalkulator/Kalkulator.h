@@ -1096,7 +1096,7 @@ namespace Kalkulator {
 		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10
 		int b = int::Parse(textBox1->Text);
 		writeToTextBox1(System::Convert::ToString(System::Convert::ToInt32(textBox1->Text, 2)));
-		showOperator->Text = "bin -> dec";;
+		showOperator->Text = "bin -> dec";
 		historiaBox->Items->Add("bin " + b + " = " + "dec " + textBox1->Text);
 	}
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
