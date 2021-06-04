@@ -188,7 +188,7 @@ namespace Kalkulator {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 24);
+			this->menuStrip1->Size = System::Drawing::Size(605, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -199,14 +199,14 @@ namespace Kalkulator {
 					this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
 			});
 			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
-			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -215,14 +215,14 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(115, 22);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
@@ -233,40 +233,40 @@ namespace Kalkulator {
 					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
 			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
-			this->widokToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			this->walutowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::walutowyToolStripMenuItem_Click);
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			this->iloczynyWektorówToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::iloczynyWektorówToolStripMenuItem1_Click);
 			// 
@@ -277,20 +277,20 @@ namespace Kalkulator {
 					this->oProgramieToolStripMenuItem
 			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			this->objaśnieniaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::objaśnieniaToolStripMenuItem_Click);
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			this->oProgramieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oProgramieToolStripMenuItem_Click);
 			// 
@@ -753,7 +753,7 @@ namespace Kalkulator {
 			this->btnHex->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnHex->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnHex->Location = System::Drawing::Point(452, 280);
+			this->btnHex->Location = System::Drawing::Point(452, 349);
 			this->btnHex->Name = L"btnHex";
 			this->btnHex->Size = System::Drawing::Size(70, 70);
 			this->btnHex->TabIndex = 97;
@@ -805,7 +805,7 @@ namespace Kalkulator {
 			this->btnOct->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnOct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->btnOct->Location = System::Drawing::Point(452, 349);
+			this->btnOct->Location = System::Drawing::Point(452, 280);
 			this->btnOct->Name = L"btnOct";
 			this->btnOct->Size = System::Drawing::Size(70, 70);
 			this->btnOct->TabIndex = 103;
@@ -1094,8 +1094,10 @@ namespace Kalkulator {
 	}
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10
-		// dodać dec to bin
-		convert(10, "dec ");
+		int b = int::Parse(textBox1->Text);
+		writeToTextBox1(System::Convert::ToString(System::Convert::ToInt32(textBox1->Text, 2)));
+		showOperator->Text = "";
+		historiaBox->Items->Add("bin " + b + " = " + "dec " + textBox1->Text);
 	}
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2
