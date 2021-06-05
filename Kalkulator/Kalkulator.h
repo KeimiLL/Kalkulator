@@ -263,6 +263,7 @@ namespace Kalkulator {
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
 			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
+			this->zamianaJednostekToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::zamianaJednostekToolStripMenuItem_Click);
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
@@ -1249,6 +1250,10 @@ private: System::Void objaśnieniaToolStripMenuItem_Click(System::Object^ sender
 private: System::Void oProgramieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	O_programie^ okno_o_prog = gcnew O_programie();
 	okno_o_prog->Show();
+}
+private: System::Void zamianaJednostekToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	Jednostki^ jednostki = gcnew Jednostki();
+	jednostki->Show();
 }
 };
 }
