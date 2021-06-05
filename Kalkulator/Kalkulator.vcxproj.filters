@@ -30,6 +30,9 @@
     <ClCompile Include="O_programie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Jednostki.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kalkulator.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="O_programie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Jednostki.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

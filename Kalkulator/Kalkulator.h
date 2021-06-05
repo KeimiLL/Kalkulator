@@ -3,6 +3,7 @@
 #include "OknoWektory.h"
 #include "O_programie.h"
 #include "Objasnienia.h"
+#include "Jednostki.h"
 #include <iostream>
 
 namespace Kalkulator {

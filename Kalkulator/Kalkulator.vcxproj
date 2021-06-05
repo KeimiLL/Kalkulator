@@ -120,6 +120,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Jednostki.cpp" />
     <ClCompile Include="Kalkulator.cpp" />
     <ClCompile Include="Objasnienia.cpp" />
     <ClCompile Include="OknoWalut.cpp" />
@@ -127,6 +128,9 @@
     <ClCompile Include="O_programie.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Jednostki.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Kalkulator.h">
       <FileType>CppForm</FileType>
     </ClInclude>
