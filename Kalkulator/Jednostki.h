@@ -91,8 +91,8 @@ namespace Kalkulator {
 				static_cast<System::Byte>(238)));
 			this->comboBox_what->FormattingEnabled = true;
 			this->comboBox_what->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
-				L"Masa", L"D³ugoœæ", L"Prêdkoœæ",
-					L"Objêtoœæ", L"Powierzchnia", L"Dane"
+				L"Masa", L"D³ugoœæ", L"Prêdkoœæ", L"Objêtoœæ",
+					L"Powierzchnia", L"Dane"
 			});
 			this->comboBox_what->Location = System::Drawing::Point(197, 13);
 			this->comboBox_what->Name = L"comboBox_what";
@@ -181,9 +181,7 @@ namespace Kalkulator {
 			this->comboBox_to->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->comboBox_to->FormattingEnabled = true;
-			this->comboBox_to->Items->AddRange(gcnew cli::array< System::Object^  >(1) {
-					L"---"
-			});
+			this->comboBox_to->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"---" });
 			this->comboBox_to->Location = System::Drawing::Point(197, 133);
 			this->comboBox_to->Name = L"comboBox_to";
 			this->comboBox_to->Size = System::Drawing::Size(170, 24);
@@ -195,9 +193,7 @@ namespace Kalkulator {
 			this->comboBox_from->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->comboBox_from->FormattingEnabled = true;
-			this->comboBox_from->Items->AddRange(gcnew cli::array< System::Object^  >(1) {
-				L"---"
-			});
+			this->comboBox_from->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"---" });
 			this->comboBox_from->Location = System::Drawing::Point(197, 93);
 			this->comboBox_from->Name = L"comboBox_from";
 			this->comboBox_from->Size = System::Drawing::Size(170, 24);
@@ -220,6 +216,7 @@ namespace Kalkulator {
 			this->Controls->Add(this->comboBox_to);
 			this->Controls->Add(this->comboBox_from);
 			this->Name = L"Jednostki";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Przelicznik Jednostek";
 			this->ResumeLayout(false);
 			this->PerformLayout();

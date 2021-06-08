@@ -383,20 +383,20 @@ namespace Kalkulator {
 #pragma endregion
 	private: System::Void Oblicz_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		int v1, v2, v3, w1, w2, w3, u1, u2, u3;
-		v1 = Convert::ToInt32(text_v1->Text);
-		v2 = Convert::ToInt32(text_v2->Text);
-		v3 = Convert::ToInt32(text_v3->Text);
-		w1 = Convert::ToInt32(text_w1->Text);
-		w2 = Convert::ToInt32(text_w2->Text);
-		w3 = Convert::ToInt32(text_w3->Text);
+		v1 = Double::Parse(text_v1->Text);
+		v2 = Double::Parse(text_v2->Text);
+		v3 = Double::Parse(text_v3->Text);
+		w1 = Double::Parse(text_w1->Text);
+		w2 = Double::Parse(text_w2->Text);
+		w3 = Double::Parse(text_w3->Text);
 
 		u1 = v2 * w3 - v3 * w2;
 		u2 = v1 * w3 - v3 * w1;
 		u3 = v1 * w2 - v2 * w1;
 
-		Ilocz_wekt->Text = "[ " + u1 + " , " + u2 + " , " + u3 + " ]";
+		Ilocz_wekt->Text = "[ " + String::Format("{0:0.00}", u1) + " ; " + String::Format("{0:0.00}", u2) + " ; " + String::Format("{0:0.00}", u3) + " ]";
 		dl_wekt->Text = String::Format("{0:0.00}", sqrt(u1 * u1 + u2 * u2 + u3 * u3));
-		Ilocz_skal->Text = System::Convert::ToString(v1 * w1 + v2 * w2 + v3 * w3);
+		Ilocz_skal->Text = String::Format("{0:0.00}", v1 * w1 + v2 * w2 + v3 * w3);
 	}
 	
 

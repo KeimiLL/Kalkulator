@@ -50,24 +50,27 @@ namespace Kalkulator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Objasnienia::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
 			this->label1->Location = System::Drawing::Point(24, 23);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(125, 13);
+			this->label1->Size = System::Drawing::Size(574, 272);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Wpisaæ info o funkcjach.";
+			this->label1->Text = resources->GetString(L"label1.Text");
 			// 
 			// Objasnienia
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->ClientSize = System::Drawing::Size(621, 322);
 			this->Controls->Add(this->label1);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;

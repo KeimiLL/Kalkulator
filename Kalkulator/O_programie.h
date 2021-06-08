@@ -56,18 +56,22 @@ namespace Kalkulator {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(18, 25);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label1->Location = System::Drawing::Point(12, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(120, 13);
+			this->label1->Size = System::Drawing::Size(245, 144);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Wpisaæ info o autorach.";
+			this->label1->Text = L"Kalkulator Naukowy napisany w C++/CLI\r\n\r\nAutorzy:\r\nKamil Giziñski\r\nBartosz Rolnik"
+				L"\r\nDominik Sigulski\r\n\r\nProjekt na Programowanie II\r\nWydzia³ MS, semestr II, rok 2"
+				L"020/2021\r\n";
 			// 
 			// O_programie
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->ClientSize = System::Drawing::Size(268, 167);
 			this->Controls->Add(this->label1);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;

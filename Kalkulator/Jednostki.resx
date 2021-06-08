@@ -117,23 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Tryby:
-Kliknięcia znaku równości nie wymagają: 1/x, pierwiastek, druga i trzecia potęga, silnia, operacje
-walutowe, procent
-
-Tryby:
-- standardowy – standardowy kalkulator prosty;
-- naukowy – kalkulator naukowy z dodatkowymi funkcjami;
-- walutowy – pozwala na zamianę walut między: PLN, EUR, USD, AUD, CHF i GBP;
-- zamiana jednostek – pozwala na zamianę jednostek objętości, masy, długości, 
-   powierzchni, danych, prędkości, prędkości przesyłu danych, czasu (ustalić czy wszystkie te);
-- iloczyny wektorów – wyświetla wynik iloczynu wektorowego 2 wektorów, jego długość oraz 
-   wartość ich iloczynu skalarnego.
-
-Zasady działania:
-- operacje wymagające kliknięcia "=" - podaj kolejno liczbę, znak działania, drugą liczbę, znak
-równości (+, -, ÷, ×, mod);
- - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.</value>
-  </data>
 </root>
