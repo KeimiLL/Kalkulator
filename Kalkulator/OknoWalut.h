@@ -244,7 +244,7 @@ namespace Kalkulator {
 		}
 		else if (comboBox_to->SelectedItem == "EUR (euro)")
 		{
-			f*= 1.16;
+			f *= 1.16;
 		}
 		else if (comboBox_to->SelectedItem == "CHF (frank szwajcarski)")
 		{

@@ -98,6 +98,7 @@ namespace Kalkulator {
 			this->comboBox_what->Name = L"comboBox_what";
 			this->comboBox_what->Size = System::Drawing::Size(170, 24);
 			this->comboBox_what->TabIndex = 29;
+			this->comboBox_what->SelectedIndexChanged += gcnew System::EventHandler(this, &Jednostki::comboBox_what_SelectedIndexChanged);
 			// 
 			// button1
 			// 
@@ -224,5 +225,52 @@ namespace Kalkulator {
 		}
 #pragma endregion
 
+		private: void comboBox_what_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
+		{
+			// W zale¿noœci od opcji wybranej w comboBox_what dodaje opcje do wyboru w pozosta³ych
+			// comboBoxach
+			String^ current_item = comboBox_what->SelectedItem->ToString();
+			int current_index = comboBox_what->FindString(current_item);
+			switch (current_index)
+			{
+			case 0:
+				// Masa
+				comboBox_from->Items->Add("mg");
+				comboBox_to->Items->Add("mg");
+				comboBox_from->Items->Add("g");
+				comboBox_to->Items->Add("g");
+				comboBox_from->Items->Add("dag");
+				comboBox_to->Items->Add("dag");
+				comboBox_from->Items->Add("kg");
+				comboBox_to->Items->Add("kg");
+				comboBox_from->Items->Add("t");
+				comboBox_to->Items->Add("t");
+				comboBox_from->Items->Add("lb");
+				comboBox_to->Items->Add("lb");
+				comboBox_from->Items->Add("oz");
+				comboBox_to->Items->Add("oz");
+				break;
+			case 1:
+				// D³ugoœæ
+				comboBox_from->Items->Add("mg");
+				comboBox_to->Items->Add("mg");
+				comboBox_from->Items->Add("g");
+				comboBox_to->Items->Add("g");
+				comboBox_from->Items->Add("dag");
+				comboBox_to->Items->Add("dag");
+				comboBox_from->Items->Add("kg");
+				comboBox_to->Items->Add("kg");
+				comboBox_from->Items->Add("t");
+				comboBox_to->Items->Add("t");
+				comboBox_from->Items->Add("lb");
+				comboBox_to->Items->Add("lb");
+				comboBox_from->Items->Add("oz");
+				comboBox_to->Items->Add("oz");
+				break;
+			default:
+				break;
+			}
+
+		}
 	};
 }

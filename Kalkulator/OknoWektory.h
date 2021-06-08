@@ -382,7 +382,7 @@ namespace Kalkulator {
 		}
 #pragma endregion
 	private: System::Void Oblicz_btn_Click(System::Object^ sender, System::EventArgs^ e) {
-		int v1, v2, v3, w1, w2, w3, u1, u2, u3;
+		double v1, v2, v3, w1, w2, w3, u1, u2, u3;
 		v1 = Double::Parse(text_v1->Text);
 		v2 = Double::Parse(text_v2->Text);
 		v3 = Double::Parse(text_v3->Text);
@@ -394,7 +394,7 @@ namespace Kalkulator {
 		u2 = v1 * w3 - v3 * w1;
 		u3 = v1 * w2 - v2 * w1;
 
-		Ilocz_wekt->Text = "[ " + String::Format("{0:0.00}", u1) + " ; " + String::Format("{0:0.00}", u2) + " ; " + String::Format("{0:0.00}", u3) + " ]";
+		Ilocz_wekt->Text = "[" + String::Format("{0:0.00}", u1) + "; " + String::Format("{0:0.00}", u2) + "; " + String::Format("{0:0.00}", u3) + "]";
 		dl_wekt->Text = String::Format("{0:0.00}", sqrt(u1 * u1 + u2 * u2 + u3 * u3));
 		Ilocz_skal->Text = String::Format("{0:0.00}", v1 * w1 + v2 * w2 + v3 * w3);
 	}
