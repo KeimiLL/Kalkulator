@@ -2,11 +2,8 @@ O Programie:
 Kalkulator Naukowy napisany w C++/CLI
 Autorzy:
 Kamil Giziński
-<GitHub link>
 Bartosz Rolnik
-<GitHub link>
 Dominik Sigulski
-<GitHub link>
 Projekt na Programowanie II
 Wydział MS, semestr II
 
@@ -27,8 +24,7 @@ równości (+, -, ÷, ×, mod);
  - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.
 
 To Do:
-Kalkulator główny (coś z tym podpowiadaniem, żeby nie nachodziło; naprawa błędu z ujemnymi liczbami (github -> issues))
-Zamiana jednostek (okno; menu strip; działanie)
-Pomoc (wkleić tekst z tego pliku wraz z linkami)
-Wektorowy (zmiennoprzecinkowe; jakiś limit do 2 po przecinku?)
-Obsługa błędów (wszędzie)
+Kalkulator główny (coś z tym podpowiadaniem, żeby nie nachodziło; naprawa błędu z ujemnymi liczbami (github -> issues); obsługa błędów)
+Zamiana jednostek (obsługa błędów)
+Walutowy (obsługa błędów)
+Wektorowy (zmiennoprzecinkowe?; jakiś limit do 2 po przecinku?; obsługa błędów)
