@@ -130,7 +130,11 @@
 Zasady działania:
 - operacje wymagające kliknięcia "=" - podaj kolejno liczbę, znak działania, drugą liczbę, znak
 równości (+, -, ÷, ×, mod);
- - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.</value>
+ - operacje niewymagające kliknięcia "=" - podaj liczbę, a następnie znak działania.
+
+Stałe:
+- π - do 12 miejscu po przecinku;
+- e - do 12 miejscu po przecinku.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

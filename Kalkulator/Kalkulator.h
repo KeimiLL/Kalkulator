@@ -189,7 +189,7 @@ namespace Kalkulator {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 24);
+			this->menuStrip1->Size = System::Drawing::Size(605, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -200,14 +200,14 @@ namespace Kalkulator {
 					this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
 			});
 			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
-			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -216,14 +216,14 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(115, 22);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(115, 22);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
 			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
@@ -234,41 +234,41 @@ namespace Kalkulator {
 					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
 			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
-			this->widokToolStripMenuItem->Size = System::Drawing::Size(53, 20);
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
 			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			this->walutowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::walutowyToolStripMenuItem_Click);
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(174, 22);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			this->zamianaJednostekToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::zamianaJednostekToolStripMenuItem_Click);
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(174, 22);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			this->iloczynyWektorówToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::iloczynyWektorówToolStripMenuItem1_Click);
 			// 
@@ -279,20 +279,20 @@ namespace Kalkulator {
 					this->oProgramieToolStripMenuItem
 			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			this->objaśnieniaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::objaśnieniaToolStripMenuItem_Click);
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(163, 24);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			this->oProgramieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oProgramieToolStripMenuItem_Click);
 			// 
@@ -908,40 +908,56 @@ namespace Kalkulator {
 
 		}
 #pragma endregion
-		// zmienne 'globalne'
+		// Zmienne 'globalne'.
 		double firstVariable;
 		double secondVariable;
 		double result;
 		double a;
 		String^ Operator;
-		char Operation;
 
-		// ładowanie okienek z odpowiednimi parametrami
+	// Ładowanie okienka Kalkulator z odpowiednimi parametrami.
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 317;
 		Kalkulator::Height = 489;
+		// Ukrywanie drugiego przycisku 'Historia'.
 		historiaToolStripMenuItem1->Visible = false;
 	}
+	// Działanie w przypadku kliknięcia w 'Naukowy' w strip menu.
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 620;
 		historiaBox->Width = 579;
 	}
+	// Działanie w przypadku kliknięcia w 'Standardowy' w strip menu.
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 317;
 		historiaBox->Width = 277;
 	}
-
+	// Funkcja writeTotextBox - wpisuje podany tekst do textBox1.
 	private: System::Void writeToTextBox1(String^ text) {
-		// funkcja writeTotextBox - wpisuje podany tekst do textBox1
+		
 		textBox1->Text = (text);
 	}
-
-	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	// Funkcja checkForInf - sprawdza, czy dana liczba nie jest nieskończonością.
+	private: System::Boolean checkForInf(double b) {
+		if (isinf(b) || isinf(-b)) {
+			writeToTextBox1("error");
+			return true;
+		}
+		return false;
 	}
-
-		   // działania po kliknięciu w strip menu
+	private: System::Void checkLength(String^ temp) {
+		if (temp->Length > 14) {
+			writeToTextBox1(temp->Substring(0, 14));
+		}
+		else {
+			writeToTextBox1(temp);
+		}
+	}
+	// Działanie w przypadku kliknięcia w 'Plik' w strip menu.
+	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {}
+	// Pierwszy przycisk "Historia" - odpowiada za wyświetlanie historii po kliknięciu.
 	private: System::Void historiaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Pierwszy przycisk "Historia" - odpowiada za wyświetlanie historii po kliknięciu
+		
 		if (historiaToolStripMenuItem1->Checked == true)
 		{
 			historiaBox->Visible = true;
@@ -952,117 +968,131 @@ namespace Kalkulator {
 			else historiaBox->Width = 579;
 		}
 	}
-
+	// Drugi przycisk "Historia" - odpowiada za ukrywanie historii po kliknięciu;
+	// ponadto ma właściwość "checked", która wyświetla zaznaczony box obok nazwy,
+	// jeśli historia jest aktualnie wyświetlana.
 	private: System::Void historiaToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Drugi przycisk "Historia" - odpowiada za ukrywanie historii po kliknięciu;
-		// ponadto ma właściwość "checked", która wyświetla zaznaczony box obok nazwy,
-		// jeśli historia jest aktualnie wyświetlana
 		historiaBox->Visible = false;
 		historiaToolStripMenuItem1->Visible = false;
 		historiaToolStripMenuItem->Visible = true;
 		Kalkulator::Height = 489;
 	}
-
+	// Wyjście z aplikacji - zamknięcie wszystkich okien.
 	private: System::Void wyjścieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Wyjście z aplikacji - zamknięcie wszystkich(?) okien
 		Application::Exit();
 	}
-
+	// Backspace - usuwa ostatni znak z pola obszaru roboczego.
 	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Backspace - usuwa ostatni znak z pola obszaru roboczego
 		if (textBox1->Text->Length > 0)
 		{
 			writeToTextBox1(textBox1->Text->Remove(textBox1->Text->Length - 1, 1));
 		}
 	}
-
+	// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0,
+	// ponadto czyści historię oraz zawartość etykiety "showOperator".
 	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
-		// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0,
-		// ponadto czyści historię oraz zawartość etykiety "showOperator".
 		if (textBox1->Text != "0") textBox1->Clear();
 		writeToTextBox1("0");
 		historiaBox->Items->Clear();
 		showOperator->Text = "";
 	}
-
+	// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
+	// ponadto czyści zawartość etykiety "showOperator".
 	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
-		// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
-		// ponadto czyści zawartość etykiety "showOperator".
 		if (textBox1->Text != "0") textBox1->Clear();
 		writeToTextBox1("0");
 		showOperator->Text = "";
 	}
-
+	// e - stała, do 12 miejsc po przecinku.
 	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
-		// e - liczba Eulera, do 10 miejsc po przecinku
-		writeToTextBox1("2,71828182845904523536");
+		writeToTextBox1("2,718281828459");
 	}
-
+	// pi - stała, do 12 miejsc po przecinku.
 	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
-		// pi - stała, do 10 miejsc po przecinku
-		writeToTextBox1("3,14159265358979311600");
+		writeToTextBox1("3,141592653589");
 	}
-
+	// Działanie w przypadku naciśnięcia przycisku 'numerycznego'.
 	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Opis działania w przypadku naciśnięcia przycisku 'numerycznego'
 		Button^ Numbers = safe_cast<Button^>(sender);
-		if (textBox1->Text == "0")
-		{
+		if (textBox1->Text == "0") {
 			writeToTextBox1(Numbers->Text);
 		}
-		else
-		{
+		else if (textBox1->Text == "error") {
+			writeToTextBox1(Numbers->Text);
+		}
+		else {
 			writeToTextBox1(textBox1->Text + Numbers->Text);
 		}
 	}
-
+	// , - dodawanie przecinka do liczb, aby wyświetlały się jako zmiennoprzecinkowe.
 	private: System::Void btnComma_Click(System::Object^ sender, System::EventArgs^ e) {
-		// , - dodawanie przecinka do liczb, aby wyświetlały się jako zmiennoprzecinkowe
-		if (!textBox1->Text->Contains(","))
-		{
+		if (!textBox1->Text->Contains(",")) {
 			textBox1->Text += ",";
 		}
 	}
+	// Aritm_Operators - odpowiada za wpisywanie liczb do obszaru roboczego.
 	private: System::Void Aritm_Operators(System::Object^ sender, System::EventArgs^ e) {
-
+		// safe_cast pozwala zmienić typ danego wyrażenia - w tym wypadku sender
+		// zostaje zmieniony na <Button^>.
 		Button^ op = safe_cast<Button^>(sender);
-
-		firstVariable = Double::Parse(textBox1->Text);
+		if (!Double::TryParse(textBox1->Text, firstVariable)) {
+			writeToTextBox1("error");
+			return;
+		}
 		writeToTextBox1("");
 		Operator = op->Text;
 		showOperator->Text = System::Convert::ToString(firstVariable) + " " + Operator;
 	}
-
+	// +/- - zmienia znak liczby.
 	private: System::Void btnSigned_Click(System::Object^ sender, System::EventArgs^ e) {
-		//+/-
-		if (textBox1->Text->Contains("-"))
-		{
+		if (textBox1->Text == "error") {
+			return;
+		}
+		else if (textBox1->Text->Contains("-")) {
 			writeToTextBox1(textBox1->Text->Remove(0, 1));
 		}
-		else
-		{
+		else {
 			writeToTextBox1("-" + textBox1->Text);
 		}
 	}
-
+	// log - logarytm naturalny danej liczby.
 	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
-		// log
-		a = Double::Parse(textBox1->Text);
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
 		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
+		if (a <= 0) {
+			writeToTextBox1("error");
+			return;
+		}
 		a = Math::Log(a);
+		if (checkForInf(a)) {
+			return;
+		}
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		checkLength(System::Convert::ToString(a));
 	}
+	// sqrt - pierwiastek kwadratowy danej liczby.
 	private: System::Void btnSqrt_Click(System::Object^ sender, System::EventArgs^ e) {
-		// sqrt
-		a = Double::Parse(textBox1->Text);
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
 		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
+		if (a < 0) {
+			writeToTextBox1("error");
+			return;
+		}
 		a = Math::Sqrt(a);
+		if (checkForInf(a)) {
+			return;
+		}
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		checkLength(System::Convert::ToString(a));
 	}
+	// sin - sinus danej liczby.
 	private: System::Void btnSin_Click(System::Object^ sender, System::EventArgs^ e) {
-		// sin
 		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
 		a = Math::Sin(a);
