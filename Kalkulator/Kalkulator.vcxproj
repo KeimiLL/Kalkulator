@@ -148,9 +148,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Jednostki.resx">
-      <DependentUpon>Jednostki.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Kalkulator.resx">
       <DependentUpon>Kalkulator.h</DependentUpon>
     </EmbeddedResource>
