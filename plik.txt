@@ -1,7 +1,8 @@
 To Do:
 
-- Kalkulator główny (naprawa błędu z ujemnymi liczbami (github -> issues); obsługa błędów)
+- Kalkulator główny (komentarze)
 - Zamiana jednostek (obsługa błędów)
 - Walutowy (obsługa błędów)
 - Wektorowy (obsługa błędów)
-- wyrzucanie errora w przypadku błędu
+
+W przypadku błędu wyświetlamy "error".
