@@ -4,7 +4,8 @@
 #include "O_programie.h"
 #include "Objasnienia.h"
 #include "Jednostki.h"
-#include <iostream>
+#define _USE_MATH_DEFINES
+#include <cmath>
 
 namespace Kalkulator {
 
@@ -301,9 +302,8 @@ namespace Kalkulator {
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->textBox1->Location = System::Drawing::Point(12, 46);
-			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(277, 40);
+			this->textBox1->Size = System::Drawing::Size(277, 44);
 			this->textBox1->TabIndex = 1;
 			this->textBox1->Text = L"0";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -895,8 +895,10 @@ namespace Kalkulator {
 			this->Controls->Add(this->btnAC);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->menuStrip1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
 			this->Name = L"Kalkulator";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Kalkulator";
@@ -926,11 +928,13 @@ namespace Kalkulator {
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 620;
 		historiaBox->Width = 579;
+		textBox1->Width = 579;
 	}
 	// Działanie w przypadku kliknięcia w 'Standardowy' w strip menu.
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Kalkulator::Width = 317;
 		historiaBox->Width = 277;
+		textBox1->Width = 277;
 	}
 	// Funkcja writeTotextBox - wpisuje podany tekst do textBox1.
 	private: System::Void writeToTextBox1(String^ text) {
@@ -946,12 +950,17 @@ namespace Kalkulator {
 		return false;
 	}
 	private: System::Void checkLength(String^ temp) {
-		if (temp->Length > 14) {
-			writeToTextBox1(temp->Substring(0, 14));
+		int b = 14;
+		if (Kalkulator::Width > 317) {
+			b = 28;
+		}
+		if (temp->Length > b) {
+			writeToTextBox1(temp->Substring(0, b));
 		}
 		else {
 			writeToTextBox1(temp);
 		}
+		
 	}
 	// Działanie w przypadku kliknięcia w 'Plik' w strip menu.
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {}
@@ -964,8 +973,12 @@ namespace Kalkulator {
 			historiaToolStripMenuItem->Visible = false;
 			historiaToolStripMenuItem1->Visible = true;
 			Kalkulator::Height = 669;
-			if (Kalkulator::Width == 317) historiaBox->Width = 277;
-			else historiaBox->Width = 579;
+			if (Kalkulator::Width == 317) {
+				historiaBox->Width = 277;
+			}
+			else {
+				historiaBox->Width = 579;
+			}
 		}
 	}
 	// Drugi przycisk "Historia" - odpowiada za ukrywanie historii po kliknięciu;
@@ -991,7 +1004,9 @@ namespace Kalkulator {
 	// AC - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0,
 	// ponadto czyści historię oraz zawartość etykiety "showOperator".
 	private: System::Void btnAC_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text != "0") textBox1->Clear();
+		if (textBox1->Text != "0") {
+			textBox1->Clear();
+		}
 		writeToTextBox1("0");
 		historiaBox->Items->Clear();
 		showOperator->Text = "";
@@ -999,17 +1014,19 @@ namespace Kalkulator {
 	// C - czyści obszar roboczy, sprawdzając najpierw, czy zawiera jedynie 0
 	// ponadto czyści zawartość etykiety "showOperator".
 	private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text != "0") textBox1->Clear();
+		if (textBox1->Text != "0") {
+			textBox1->Clear();
+		}
 		writeToTextBox1("0");
 		showOperator->Text = "";
 	}
-	// e - stała, do 12 miejsc po przecinku.
+	// e - stała, do 20 miejsc po przecinku.
 	private: System::Void btnE_Click(System::Object^ sender, System::EventArgs^ e) {
-		writeToTextBox1("2,718281828459");
+		writeToTextBox1("2,71828182845904523536");
 	}
-	// pi - stała, do 12 miejsc po przecinku.
+	// pi - stała, do 20 miejsc po przecinku.
 	private: System::Void btnPi_Click(System::Object^ sender, System::EventArgs^ e) {
-		writeToTextBox1("3,141592653589");
+		writeToTextBox1("3,14159265358979323846");
 	}
 	// Działanie w przypadku naciśnięcia przycisku 'numerycznego'.
 	private: System::Void button_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1057,11 +1074,11 @@ namespace Kalkulator {
 	}
 	// log - logarytm naturalny danej liczby.
 	private: System::Void btnLog_Click(System::Object^ sender, System::EventArgs^ e) {
+		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
 		if (!Double::TryParse(textBox1->Text, a)) {
 			writeToTextBox1("error");
 			return;
 		}
-		showOperator->Text = System::Convert::ToString("log " + "(" + (textBox1->Text) + ")");
 		if (a <= 0) {
 			writeToTextBox1("error");
 			return;
@@ -1075,11 +1092,11 @@ namespace Kalkulator {
 	}
 	// sqrt - pierwiastek kwadratowy danej liczby.
 	private: System::Void btnSqrt_Click(System::Object^ sender, System::EventArgs^ e) {
+		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
 		if (!Double::TryParse(textBox1->Text, a)) {
 			writeToTextBox1("error");
 			return;
 		}
-		showOperator->Text = System::Convert::ToString("sqrt" + "(" + textBox1->Text + ")");
 		if (a < 0) {
 			writeToTextBox1("error");
 			return;
@@ -1091,176 +1108,319 @@ namespace Kalkulator {
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		checkLength(System::Convert::ToString(a));
 	}
-	// sin - sinus danej liczby.
+	// sin - sinus danej liczby, jako argument przyjmuje stopnie.
 	private: System::Void btnSin_Click(System::Object^ sender, System::EventArgs^ e) {
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("sin" + "(" + textBox1->Text + ")");
-		a = Math::Sin(a);
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = Math::Sin(a * M_PI/180.);
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		checkLength(System::Convert::ToString(a));
 	}
+	// cos - cosinus danej liczby, jako argument przyjmuje stopnie.
 	private: System::Void btnCos_Click(System::Object^ sender, System::EventArgs^ e) {
-		// cos
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("cos" + "(" + textBox1->Text + ")");
-		a = Math::Cos(a);
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = Math::Cos(a * M_PI / 180.);
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		writeToTextBox1(System::Convert::ToString(a));
 	}
+	// tg - tangens danej liczby, jako argument przyjmuje stopnie.
 	private: System::Void btnTg_Click(System::Object^ sender, System::EventArgs^ e) {
-		// tg
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("tg" + "(" + textBox1->Text + ")");
-		a = Math::Tan(a);
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = Math::Tan(a * M_PI / 180.);
+		if (checkForInf(a)) {
+			return;
+		}
 		historiaBox->Items->Add(showOperator->Text + " = " + a);
 		writeToTextBox1(System::Convert::ToString(a));
 	}
-	private: System::Void convert(int system_type, String^ system_name) {
-		// funkcja Convert - konwertuje liczby zapisane w systemie 10 na odpowiedni system i 
-		// zapisuje wszystko w historii.
-		int b = int::Parse(textBox1->Text);
-		writeToTextBox1(System::Convert::ToString(b, system_type));
-		showOperator->Text = "dec -> " + system_name;
-		historiaBox->Items->Add("dec " + b + " = " + system_name + textBox1->Text);
-	}
+	// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10.
 	private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Dec - konwertuje liczbę zapisaną w systemie 2 na system 10.
-		int b = int::Parse(textBox1->Text);
-		writeToTextBox1(System::Convert::ToString(System::Convert::ToInt32(textBox1->Text, 2)));
-		showOperator->Text = "bin -> dec";
+		showOperator->Text = "bin " + a + " -> dec";
+		int b;
+		if (!int::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		try {
+			checkLength(System::Convert::ToString(System::Convert::ToInt32(textBox1->Text, 2)));
+		}
+		catch (...) {
+			writeToTextBox1("error");
+			return;
+		}
 		historiaBox->Items->Add("bin " + b + " = " + "dec " + textBox1->Text);
 	}
+	// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2.
 	private: System::Void btnBin_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Bin - konwertuje liczbę zapisaną w systemie 10 na system 2.
-		convert(2, "bin ");
+		showOperator->Text = "dec " + a + " -> bin";
+		int b;
+		if (!int::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		try {
+			checkLength(System::Convert::ToString(b, 2));
+		}
+		catch (...) {
+			writeToTextBox1("error");
+			return;
+		}
+		historiaBox->Items->Add("dec " + b + " = " + "bin " + textBox1->Text);
 	}
+	// Oct - konwertuje liczbę zapisaną w systemie 10 na system 8.
 	private: System::Void btnOct_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Oct - konwertuje liczbę zapisaną w systemie 10 na system 8.
-		convert(8, "oct ");
+		showOperator->Text = "dec " + a + " -> oct";
+		int b;
+		if (!int::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		try {
+			checkLength(System::Convert::ToString(b, 8));
+		}
+		catch (...) {
+			writeToTextBox1("error");
+			return;
+		}
+		historiaBox->Items->Add("dec " + b + " = " + "oct " + textBox1->Text);
 	}
+	// Hex - konwertuje liczbę zapisaną w systemie 10 na system 16.
 	private: System::Void btnHex_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Hex - konwertuje liczbę zapisaną w systemie 10 na system 16.
-		convert(16, "hex ");
+		showOperator->Text = "dec " + a + " -> hex";
+		int b;
+		if (!int::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		try {
+			checkLength(System::Convert::ToString(b, 16));
+		}
+		catch (...) {
+			writeToTextBox1("error");
+			return;
+		}
+		historiaBox->Items->Add("dec " + b + " = " + "hex " + textBox1->Text);
 	}
-
+	// squared - zwraca kwadrat danej liczby.
 	private: System::Void btnSquared_Click(System::Object^ sender, System::EventArgs^ e) {
-		// squared - zwraca kwadrat danej liczby.
-		// obsługa błędów dla za dużych liczb
-		double b = Convert::ToDouble(textBox1->Text);
-		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
+		double b;
+		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^2 = ");
+		if (!Double::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		if (a < 0) {
+			writeToTextBox1("error");
+			return;
+		}
 		a = Math::Pow(b, 2);
-		writeToTextBox1(Convert::ToString(a));
+		if (checkForInf(a)) {
+			return;
+		}
+		checkLength(System::Convert::ToString(a));
 		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// cubed - zwraca sześcian danej liczby.
 	private: System::Void btnCubed_Click(System::Object^ sender, System::EventArgs^ e) {
-		// cubed - zwraca sześcian danej liczby.
-		// obsługa błędów dla za dużych liczb
-		double b = Convert::ToDouble(textBox1->Text);
+		double b;
 		showOperator->Text = System::Convert::ToString("(" + textBox1->Text + ")^3 = ");
+		if (!Double::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		if (a < 0) {
+			writeToTextBox1("error");
+			return;
+		}
 		a = Math::Pow(b, 3);
-		writeToTextBox1(Convert::ToString(a));
+		if (checkForInf(a)) {
+			return;
+		}
+		checkLength(System::Convert::ToString(a));
 		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// exp - zwraca wartość eksponanty danej liczby - e^x.
 	private: System::Void btnExp_Click(System::Object^ sender, System::EventArgs^ e) {
-		// exp - zwraca wartość eksponanty danej liczby - e^x
-		// obsługa błędów dla za dużych liczb
-		a = Double::Parse(textBox1->Text);
+		double b;
 		showOperator->Text = System::Convert::ToString("exp" + "(" + textBox1->Text + ") = ");
-		a = Math::Exp(a);
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		if (!Double::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		if (a < 0) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = Math::Exp(b);
+		if (checkForInf(a)) {
+			return;
+		}
+		checkLength(System::Convert::ToString(a));
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// abs - zwraca wartość bezwzględną liczby.
 	private: System::Void btnAbs_Click(System::Object^ sender, System::EventArgs^ e) {
-		// abs - zwraca wartość bezwzględną liczby
-		a = Double::Parse(textBox1->Text);
+		double b;
 		showOperator->Text = System::Convert::ToString("|" + "" + textBox1->Text + "| = ");
-		a = Math::Abs(a);
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		if (!Double::TryParse(textBox1->Text, b)) {
+			writeToTextBox1("error");
+			return;
+		}
+		if (a < 0) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = Math::Abs(b);
+		if (checkForInf(a)) {
+			return;
+		}
+		checkLength(System::Convert::ToString(a));
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// fact - zwraca silnię danej liczby naturalnej.
+	// Konwertuje liczby zmiennoprzecinkowe na całkowite.
 	private: System::Void btnFact_Click(System::Object^ sender, System::EventArgs^ e) {
-		// fact - zwraca silnię danej liczby naturalnej.
-		// Konwertuje zmiennoprzecinkowe na całkowite.
-		// obsługa błędów dla zbyt dużych liczb i dla ujemnych (chyba, że dajemy jakby był abs?)
-		a = Convert::ToInt32(Double::Parse(textBox1->Text));
-		int f = Convert::ToInt32(a);
-		showOperator->Text = System::Convert::ToString("" + textBox1->Text + "! = ");
-		for (int i = 1; i < f; i++)
-			a *= i;
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
-		   }
+		showOperator->Text = System::Convert::ToString(textBox1->Text + "! = ");
+		int b, c = 1;
+		try {
+			b = Convert::ToInt32(Double::Parse(textBox1->Text));
+			if (b < 0 || b > 12) {
+				writeToTextBox1("error");
+				return;
+			}
+			for (int i = 1; i <= b; i++)
+				c *= i;
+		}
+		catch (...) {
+			writeToTextBox1("error");
+			return;
+		}
+		checkLength(System::Convert::ToString(c));
+		historiaBox->Items->Add(showOperator->Text + c);
+	}
+	// permille - zwraca liczbę zamienioną na promil.
 	private: System::Void btnPerMille_Click(System::Object^ sender, System::EventArgs^ e) {
-		// permille - zwraca liczbę zamienioną na promil.
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "‰ = ");
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
 		a /= 1000.0;
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		checkLength(System::Convert::ToString(a));
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// percent - zwraca liczbę zamienioną na procent.
 	private: System::Void btnPercent_Click(System::Object^ sender, System::EventArgs^ e) {
-		// percent - zwraca liczbę zamienioną na procent.
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString(textBox1->Text + "% = ");
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
 		a /= 100.0;
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
+		checkLength(System::Convert::ToString(a));
+		historiaBox->Items->Add(showOperator->Text + a);
 	}
+	// 1/x - zwraca odwrotność liczby.
 	private: System::Void btnInverse_Click(System::Object^ sender, System::EventArgs^ e) {
-		// 1/x - zwraca odwrotność liczby.
-		// obsługa błędów dla 0.
-		a = Double::Parse(textBox1->Text);
 		showOperator->Text = System::Convert::ToString("1/" + textBox1->Text + " = ");
-		a = 1.0 / a;
-		historiaBox->Items->Add(showOperator->Text + " = " + a);
-		writeToTextBox1(System::Convert::ToString(a));
-}
-	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
-		// deklaracja operatorów 'arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "="
-		secondVariable = Double::Parse(textBox1->Text);
 
+		if (!Double::TryParse(textBox1->Text, a)) {
+			writeToTextBox1("error");
+			return;
+		}
+		if (a == 0) {
+			writeToTextBox1("error");
+			return;
+		}
+		a = 1.0 / a;
+		checkLength(System::Convert::ToString(a));
+		historiaBox->Items->Add(showOperator->Text + a);
+	}
+	// Deklaracja 'operatorów arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "=".
+	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (Operator == "+")
 		{
+			showOperator->Text += " " + textBox1->Text + " =";
+			if (!Double::TryParse(textBox1->Text, secondVariable)) {
+				writeToTextBox1("error");
+				return;
+			}
 			result = firstVariable + secondVariable;
-			writeToTextBox1(System::Convert::ToString(result));
+			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 			Operator = "";
 
 		}
 		else if (Operator == "-")
 		{
+			showOperator->Text += " " + textBox1->Text + " =";
+			if (!Double::TryParse(textBox1->Text, secondVariable)) {
+				writeToTextBox1("error");
+				return;
+			}
 			result = firstVariable - secondVariable;
-			writeToTextBox1(System::Convert::ToString(result));
+			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 			Operator = "";
 		}
 		else if (Operator == "×")
 		{
+			showOperator->Text += " " + textBox1->Text + " =";
+			if (!Double::TryParse(textBox1->Text, secondVariable)) {
+				writeToTextBox1("error");
+				return;
+			}
 			result = firstVariable * secondVariable;
-			writeToTextBox1(System::Convert::ToString(result));
+			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 			Operator = "";
 		}
 		else if (Operator == "÷")
 		{
+			showOperator->Text += " " + textBox1->Text + " =";
+			if (!Double::TryParse(textBox1->Text, secondVariable)) {
+				writeToTextBox1("error");
+				return;
+			}
+			if (secondVariable == 0) {
+				writeToTextBox1("error");
+				return;
+			}
 			result = firstVariable / secondVariable;
-			writeToTextBox1(System::Convert::ToString(result));
+			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 			Operator = "";
 		}
 		else if (Operator == "mod")
 		{
+			showOperator->Text += " " + textBox1->Text + " =";
+			if (!Double::TryParse(textBox1->Text, secondVariable)) {
+				writeToTextBox1("error");
+				return;
+			}
 			int first, second, res;
-			first = Convert::ToInt32(firstVariable);
-			second = Convert::ToInt32(secondVariable);
-			res = first % second;
-			writeToTextBox1(System::Convert::ToString(res));
+			try {
+				first = Convert::ToInt32(firstVariable);
+				second = Convert::ToInt32(secondVariable);
+				res = first % second;
+			}
+			catch (...) {
+				writeToTextBox1("error");
+				return;
+			}
+			checkLength(System::Convert::ToString(res));
 			historiaBox->Items->Add(first + " mod " + second + " = " + res);
-			showOperator->Text += " " + System::Convert::ToString(secondVariable) + " = ";
 			Operator = "";
 		}
 	}
