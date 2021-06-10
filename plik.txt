@@ -1,8 +1,6 @@
 To Do:
-
-- Kalkulator główny (komentarze)
-- Zamiana jednostek (obsługa błędów)
-- Walutowy (obsługa błędów)
-- Wektorowy (obsługa błędów)
+- Zamiana jednostek (obsługa błędów i komentarze)
+- Walutowy (obsługa błędów i komentarze)
+- Wektorowy (obsługa błędów i komentarze)
 
 W przypadku błędu wyświetlamy "error".

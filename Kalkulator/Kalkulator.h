@@ -1,9 +1,11 @@
 ﻿#pragma once
+// Pliki potrzebne do działania.
 #include "OknoWalut.h"
 #include "OknoWektory.h"
 #include "O_programie.h"
 #include "Objasnienia.h"
 #include "Jednostki.h"
+// Do korzystania ze stałych matematycznych.
 #define _USE_MATH_DEFINES
 #include <cmath>
 
@@ -22,43 +24,43 @@ namespace Kalkulator {
 	public ref class Kalkulator : public System::Windows::Forms::Form
 	{
 	public:
+		// Definicja konstruktora.
 		Kalkulator(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
+		// Definicja destruktora.
 		~Kalkulator()
 		{
+			// Jeśli są jakiekolwiek komponenty, to są one usuwane.
 			if (components)
 			{
 				delete components;
 			}
 		}
+	// menuStrip1 i jego zawartość.
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	protected:
+	// plik i przyciski pod plik.
 	private: System::Windows::Forms::ToolStripMenuItem^ plikToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ historiaToolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^ wyjścieToolStripMenuItem;
-
+	// widok i przyciski pod widok.
 	private: System::Windows::Forms::ToolStripMenuItem^ widokToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ standardowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ naukowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ walutowyToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ zamianaJednostekToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ iloczynyWektorówToolStripMenuItem1;
+	// pomoc i przyciski pod pomoc.
 	private: System::Windows::Forms::ToolStripMenuItem^ pomocToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ objaśnieniaToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ oProgramieToolStripMenuItem;
-
+	// Przyciski i pola w głównym oknie.
 	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ showOperator;
 	private: System::Windows::Forms::Button^ btnBackspace;
 	private: System::Windows::Forms::Button^ btnAC;
 	private: System::Windows::Forms::Button^ btnC;
@@ -78,9 +80,9 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Button^ btnSigned;
 	private: System::Windows::Forms::Button^ btn0;
 	private: System::Windows::Forms::Button^ btnComma;
-
 	private: System::Windows::Forms::Button^ btnEquals;
-
+	private: System::Windows::Forms::ListBox^ historiaBox;
+	// Przyciski i pola pojawiające się po wybraniu trybu naukowego.
 	private: System::Windows::Forms::Button^ btnPi;
 	private: System::Windows::Forms::Button^ btnE;
 	private: System::Windows::Forms::Button^ btnSqrt;
@@ -101,22 +103,12 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Button^ btnMod;
 	private: System::Windows::Forms::Button^ btnOct;
 	private: System::Windows::Forms::Button^ btnPerMille;
-
-	private: System::Windows::Forms::Label^ showOperator;
-	private: System::Windows::Forms::ListBox^ historiaBox;
-	protected:
-
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
+		// Wymagany element dla Designera.
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+		// Wymagana metoda dla Designera - nie modyfikować z poziomu edytora kodu.
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Kalkulator::typeid));
@@ -907,7 +899,6 @@ namespace Kalkulator {
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 #pragma endregion
 		// Zmienne 'globalne'.
@@ -919,29 +910,36 @@ namespace Kalkulator {
 
 	// Ładowanie okienka Kalkulator z odpowiednimi parametrami.
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
+		// Ustawianie wymiarów okna.
 		Kalkulator::Width = 317;
 		Kalkulator::Height = 489;
-		// Ukrywanie drugiego przycisku 'Historia'.
+		// Ukrywanie drugiego przycisku Historia.
 		historiaToolStripMenuItem1->Visible = false;
 	}
-	// Działanie w przypadku kliknięcia w 'Naukowy' w strip menu.
+	// Działanie w przypadku wybrania trybu naukowego.
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Ustawianie szerokości okna.
 		Kalkulator::Width = 620;
+		// Ustawianie szerokości historii.
 		historiaBox->Width = 579;
+		// Ustawianie szerokości pola tesktowego.
 		textBox1->Width = 579;
 	}
-	// Działanie w przypadku kliknięcia w 'Standardowy' w strip menu.
+		   // Działanie w przypadku wybrania trybu standardowego.
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Ustawianie szerokości okna.
 		Kalkulator::Width = 317;
+		// Ustawianie szerokości historii.
 		historiaBox->Width = 277;
+		// Ustawianie szerokości pola tesktowego.
 		textBox1->Width = 277;
 	}
 	// Funkcja writeTotextBox - wpisuje podany tekst do textBox1.
 	private: System::Void writeToTextBox1(String^ text) {
-		
+		// Ustawienie zmiennej text jako tekstu w textBox1.
 		textBox1->Text = (text);
 	}
-	// Funkcja checkForInf - sprawdza, czy dana liczba nie jest nieskończonością.
+	// Funkcja checkForInf - sprawdza, czy dana liczba jest nieskończonością.
 	private: System::Boolean checkForInf(double b) {
 		if (isinf(b) || isinf(-b)) {
 			writeToTextBox1("error");
@@ -949,6 +947,7 @@ namespace Kalkulator {
 		}
 		return false;
 	}
+	// Funckja checkLength sprawdza, czy wynik nie jest zbyt długi i, jeśli jest, modyfikuje jego długość.
 	private: System::Void checkLength(String^ temp) {
 		int b = 14;
 		if (Kalkulator::Width > 317) {
@@ -966,7 +965,7 @@ namespace Kalkulator {
 	private: System::Void plikToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {}
 	// Pierwszy przycisk "Historia" - odpowiada za wyświetlanie historii po kliknięciu.
 	private: System::Void historiaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		// Jeśli historia1 jest zaznaczona, to pokazujemy pole z historią operacji.
 		if (historiaToolStripMenuItem1->Checked == true)
 		{
 			historiaBox->Visible = true;
@@ -996,8 +995,7 @@ namespace Kalkulator {
 	}
 	// Backspace - usuwa ostatni znak z pola obszaru roboczego.
 	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (textBox1->Text->Length > 0)
-		{
+		if (textBox1->Text->Length > 0) {
 			writeToTextBox1(textBox1->Text->Remove(textBox1->Text->Length - 1, 1));
 		}
 	}
@@ -1049,8 +1047,7 @@ namespace Kalkulator {
 	}
 	// Aritm_Operators - odpowiada za wpisywanie liczb do obszaru roboczego.
 	private: System::Void Aritm_Operators(System::Object^ sender, System::EventArgs^ e) {
-		// safe_cast pozwala zmienić typ danego wyrażenia - w tym wypadku sender
-		// zostaje zmieniony na <Button^>.
+		// safe_cast pozwala zmienić typ danego wyrażenia - w tym wypadku sender zostaje zmieniony na <Button^>.
 		Button^ op = safe_cast<Button^>(sender);
 		if (!Double::TryParse(textBox1->Text, firstVariable)) {
 			writeToTextBox1("error");
@@ -1344,6 +1341,9 @@ namespace Kalkulator {
 			return;
 		}
 		a = 1.0 / a;
+		if (checkForInf(a)) {
+			return;
+		}
 		checkLength(System::Convert::ToString(a));
 		historiaBox->Items->Add(showOperator->Text + a);
 	}
@@ -1357,6 +1357,9 @@ namespace Kalkulator {
 				return;
 			}
 			result = firstVariable + secondVariable;
+			if (checkForInf(result)) {
+				return;
+			}
 			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			Operator = "";
@@ -1370,6 +1373,9 @@ namespace Kalkulator {
 				return;
 			}
 			result = firstVariable - secondVariable;
+			if (checkForInf(result)) {
+				return;
+			}
 			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			Operator = "";
@@ -1382,6 +1388,9 @@ namespace Kalkulator {
 				return;
 			}
 			result = firstVariable * secondVariable;
+			if (checkForInf(result)) {
+				return;
+			}
 			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			Operator = "";
@@ -1398,6 +1407,9 @@ namespace Kalkulator {
 				return;
 			}
 			result = firstVariable / secondVariable;
+			if (checkForInf(result)) {
+				return;
+			}
 			checkLength(System::Convert::ToString(result));
 			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
 			Operator = "";
@@ -1424,23 +1436,27 @@ namespace Kalkulator {
 			Operator = "";
 		}
 	}
+// Działanie w przypadku wybrania trybu walutowego - otwarcie nowego okna.
 private: System::Void walutowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	OknoWalut^ Waluty = gcnew OknoWalut();
 	Waluty->Show();
-
 }
+// Działanie w przypadku wybrania trybu iloczynu wektorow - otwarcie nowego okna.
 private: System::Void iloczynyWektorówToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 	OknoWektory^ Wektory = gcnew OknoWektory();
 	Wektory->Show();
 }
+// Działanie w przypadku wybrania objaśnień - otwarcie nowego okna.
 private: System::Void objaśnieniaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Objasnienia^ okno_objasnien = gcnew Objasnienia();
 	okno_objasnien->Show();
 }
+// Działanie w przypadku wybrania 'O programie' - otwarcie nowego okna.
 private: System::Void oProgramieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	O_programie^ okno_o_prog = gcnew O_programie();
 	okno_o_prog->Show();
 }
+// Działanie w przypadku wybrania trybu zamiany jednostek - otwarcie nowego okna.
 private: System::Void zamianaJednostekToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Jednostki^ jednostki = gcnew Jednostki();
 	jednostki->Show();
