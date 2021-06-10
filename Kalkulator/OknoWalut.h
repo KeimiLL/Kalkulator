@@ -258,45 +258,15 @@ namespace Kalkulator {
 	}
 
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ waluta = comboBox_to->SelectedItem->ToString();
 		double i = Double::Parse(amount_txt->Text);
 		i = exchange_to_GBP(i);
-		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
+		i = exchange_from_GBP(i);
+		if(comboBox_from->SelectedItem == comboBox_to->SelectedItem)
 			display_txt->Text = "B³¹d. Wybierz inn¹ walutê.";
-
-		//PLN
-		else if (comboBox_to->SelectedItem == "PLN (z³oty)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t PLN";
-		}
-
-		//GBP
-		else if (comboBox_to->SelectedItem == "GBP (funt szterling)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t GBP";
-		}
-
-		//EUR
-		else if (comboBox_to->SelectedItem == "EUR (euro)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t EUR";
-		}
-		
-		//USD
-		else if (comboBox_to->SelectedItem == "USD (dolar amerykañski)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t USD";
-		}
-
-		//AUD
-		else if (comboBox_to->SelectedItem == "AUD (dolar australijski)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t AUD";
-		}
-
-		//CHF
-		else if (comboBox_to->SelectedItem == "CHF (frank szwajcarski)") {
-				display_txt->Text = "Przeliczona wartoœæ: "
-				+ String::Format("{0:0.00}", exchange_from_GBP(i))->Replace('.', ',') + "\t CHF";
+		else{
+			display_txt->Text = "Przeliczona wartoœæ: "
+			+ String::Format("{0:0.00}", i)->Replace('.', ',') + " " + waluta->Substring(0, 3);
 		}
 	}
 	private: System::Void reset_btn(System::Object^ sender, System::EventArgs^ e) {
