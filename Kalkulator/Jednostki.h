@@ -60,6 +60,7 @@ namespace Kalkulator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Jednostki::typeid));
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->comboBox_what = (gcnew System::Windows::Forms::ComboBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -91,8 +92,8 @@ namespace Kalkulator {
 				static_cast<System::Byte>(238)));
 			this->comboBox_what->FormattingEnabled = true;
 			this->comboBox_what->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
-				L"Masa", L"D³ugoœæ", L"Prêdkoœæ", L"Objêtoœæ",
-					L"Powierzchnia", L"Dane"
+				L"Masa", L"D³ugoœæ", L"Powierzchnia", L"Objêtoœæ",
+					L"Prêdkoœæ", L"Dane"
 			});
 			this->comboBox_what->Location = System::Drawing::Point(197, 13);
 			this->comboBox_what->Name = L"comboBox_what";
@@ -110,6 +111,7 @@ namespace Kalkulator {
 			this->button1->TabIndex = 28;
 			this->button1->Text = L"Reset";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Jednostki::button1_Click);
 			// 
 			// Convert_btn
 			// 
@@ -121,15 +123,16 @@ namespace Kalkulator {
 			this->Convert_btn->TabIndex = 27;
 			this->Convert_btn->Text = L"Przelicz";
 			this->Convert_btn->UseVisualStyleBackColor = true;
+			this->Convert_btn->Click += gcnew System::EventHandler(this, &Jednostki::Convert_btn_Click);
 			// 
 			// display_txt
 			// 
 			this->display_txt->AutoSize = true;
-			this->display_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->display_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->display_txt->Location = System::Drawing::Point(17, 223);
 			this->display_txt->Name = L"display_txt";
-			this->display_txt->Size = System::Drawing::Size(211, 25);
+			this->display_txt->Size = System::Drawing::Size(173, 20);
 			this->display_txt->TabIndex = 26;
 			this->display_txt->Text = L"Przeliczona wartoœæ:";
 			// 
@@ -216,6 +219,7 @@ namespace Kalkulator {
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->comboBox_to);
 			this->Controls->Add(this->comboBox_from);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"Jednostki";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Przelicznik Jednostek";
@@ -225,16 +229,347 @@ namespace Kalkulator {
 		}
 #pragma endregion
 
+		//funkcja czyszcz¹ca comboboxy
+		private: void ClearCombo(){
+			comboBox_from->Items->Clear();
+			comboBox_to->Items->Clear();
+		}
+
+		//funkcja pisz¹ca wynik w okienku
+		private: void Write_display(double f){
+			String^ current_item = comboBox_to->SelectedItem->ToString();
+			display_txt->Text = "Przeliczona wartoœæ: "
+			+ String::Format("{0:0.00}", f)->Replace('.', ',') + " " + current_item;
+		}
+
+		//Centrum sprowadzania jednostek do wspólnego mianownika
+		//Masa 
+		private: System::Double exchange_from_kg(double f) {
+			if (comboBox_to->SelectedItem == "g")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_to->SelectedItem == "dag")
+			{
+				f *= 100;
+			}
+			else if (comboBox_to->SelectedItem == "mg")
+			{
+				f *= 1000000;
+			}
+			else if (comboBox_to->SelectedItem == "t")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_to->SelectedItem == "oz")
+			{
+				f *= 0.0283286;
+			}
+			else if (comboBox_to->SelectedItem == "lb")
+			{
+				f *= 0.453515;
+			}
+			return f;
+		}
+		private: System::Double exchange_to_kg(double f) {
+			if (comboBox_from->SelectedItem == "g")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_from->SelectedItem == "dag")
+			{
+				f *= 0.01;
+			}
+			else if (comboBox_from->SelectedItem == "mg")
+			{
+				f *= 0.000001;
+			}
+			else if (comboBox_from->SelectedItem == "t")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_from->SelectedItem == "oz")
+			{
+				f *= 35.3;
+			}
+			else if (comboBox_from->SelectedItem == "lb")
+			{
+				f *= 2.205;
+			}
+			return f;
+		}
+		//D³ugoœæ 
+		private: System::Double exchange_to_m(double f) {
+			if (comboBox_from->SelectedItem == "mm")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_from->SelectedItem == "cm")
+			{
+				f *= 0.01;
+			}
+			else if (comboBox_from->SelectedItem == "dm")
+			{
+				f *= 0.1;
+			}
+			else if (comboBox_from->SelectedItem == "km")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_from->SelectedItem == "in")
+			{
+				f *= 0.0254;
+			}
+			else if (comboBox_from->SelectedItem == "ft")
+			{
+				f *= 0.30480;
+			}
+			else if (comboBox_from->SelectedItem == "yd")
+			{
+				f *= 0.9144;
+			}
+			else if (comboBox_from->SelectedItem == "mile")
+			{
+				f *= 1609.344;
+			}
+			return f;
+		}
+		private: System::Double exchange_from_m(double f) {
+			if (comboBox_to->SelectedItem == "mm")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_to->SelectedItem == "cm")
+			{
+				f *= 100;
+			}
+			else if (comboBox_to->SelectedItem == "dm")
+			{
+				f *= 10;
+			}
+			else if (comboBox_to->SelectedItem == "km")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_to->SelectedItem == "in")
+			{
+				f *= 39,37008;
+			}
+			else if (comboBox_to->SelectedItem == "ft")
+			{
+				f *= 328084;
+			}
+			else if (comboBox_to->SelectedItem == "yd")
+			{
+				f *= 1.09361;
+			}
+			else if (comboBox_to->SelectedItem == "mile")
+			{
+				f *= 0.000621375;
+			}
+			return f;
+		}
+		//Powierzchnia 
+		private: System::Double exchange_to_m2(double f) {
+			if (comboBox_from->SelectedItem == "mm^2")
+			{
+				f *= 0.0000001;
+			}
+			else if (comboBox_from->SelectedItem == "cm^2")
+			{
+				f *= 0.00001;
+			}
+			else if (comboBox_from->SelectedItem == "dm^2")
+			{
+				f *= 0.01;
+			}
+			else if (comboBox_from->SelectedItem == "km^2")
+			{
+				f *= 1000000;
+			}
+			else if (comboBox_from->SelectedItem == "a")
+			{
+				f *= 100;
+			}
+			else if (comboBox_from->SelectedItem == "ha")
+			{
+				f *= 10000;
+			}
+			return f;
+		}
+		private: System::Double exchange_from_m2(double f) {
+			if (comboBox_to->SelectedItem == "mm^2")
+			{
+				f *= 1000000;
+			}
+			else if (comboBox_to->SelectedItem == "cm^2")
+			{
+				f *= 10000;
+			}
+			else if (comboBox_to->SelectedItem == "dm^2")
+			{
+				f *= 100;
+			}
+			else if (comboBox_to->SelectedItem == "km^2")
+			{
+				f *= 0.000001;
+			}
+			else if (comboBox_to->SelectedItem == "a")
+			{
+				f *= 0.01;
+			}
+			else if (comboBox_to->SelectedItem == "ha")
+			{
+				f *= 0.0001;
+			}
+			return f;
+		}
+		//Objêtoœæ
+		private: System::Double exchange_to_l(double f) {
+			if (comboBox_from->SelectedItem == "mm^3")
+			{
+				f *= 0.000001;
+			}
+			else if (comboBox_from->SelectedItem == "ml")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_from->SelectedItem == "hl")
+			{
+				f *= 100;
+			}
+			else if (comboBox_from->SelectedItem == "m^3")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_from->SelectedItem == "gal")
+			{
+				f *= 4.54609;
+			}
+			else if (comboBox_from->SelectedItem == "bbl")
+			{
+				f *= 158.987295;
+			}
+			return f;
+		}
+		private: System::Double exchange_from_l(double f) {
+			if (comboBox_to->SelectedItem == "mm^3")
+			{
+				f *= 1000000;
+			}
+			else if (comboBox_to->SelectedItem == "ml")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_to->SelectedItem == "hl")
+			{
+				f *= 0.01;
+			}
+			else if (comboBox_to->SelectedItem == "m^3")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_to->SelectedItem == "gal")
+			{
+				f *= 0.219969;
+			}
+			else if (comboBox_to->SelectedItem == "bbl")
+			{
+				f *= 0.00629;
+			}
+			return f;
+		}
+		//Prêdkoœæ 
+		private: System::Double exchange_to_kmh(double f) {
+			if (comboBox_from->SelectedItem == "m/s")
+			{
+				f *= 3.6;
+			}
+			else if (comboBox_from->SelectedItem == "mph")
+			{
+				f *= 1.6090;
+			}
+			else if (comboBox_from->SelectedItem == "w")
+			{
+				f *= 1.85;
+			}
+			else if (comboBox_from->SelectedItem == "Ma")
+			{
+				f *= 1225.04;
+			}
+			return f;
+		}
+		private: System::Double exchange_from_kmh(double f) {
+			if (comboBox_to->SelectedItem == "m/s")
+			{
+				f *= 0.277778;
+			}
+			else if (comboBox_to->SelectedItem == "mph")
+			{
+				f *= 0.621504;
+			}
+			else if (comboBox_to->SelectedItem == "w")
+			{
+				f *= 0.540541;
+			}
+			else if (comboBox_to->SelectedItem == "Ma")
+			{
+				f *= 0.0008163;
+			}
+			return f;
+		}
+		//Dane 
+		private: System::Double exchange_to_b(double f) {
+			if (comboBox_from->SelectedItem == "kB")
+			{
+				f *= 1000;
+			}
+			else if (comboBox_from->SelectedItem == "MB")
+			{
+				f *= 1000000;
+			}
+			else if (comboBox_from->SelectedItem == "GB")
+			{
+				f *= 1000000000;
+			}
+			else if (comboBox_from->SelectedItem == "TB")
+			{
+				f *= 1000000000000;
+			}
+			return f;
+		}
+		private: System::Double exchange_from_b(double f) {
+			if (comboBox_to->SelectedItem == "kB")
+			{
+				f *= 0.001;
+			}
+			else if (comboBox_to->SelectedItem == "MB")
+			{
+				f *= 0.000001;
+			}
+			else if (comboBox_to->SelectedItem == "GB")
+			{
+				f *= 0.000000001;
+			}
+			else if (comboBox_to->SelectedItem == "TB")
+			{
+				f *= 0.000000000001;
+			}
+			return f;
+		}
+
 		private: void comboBox_what_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 		{
 			// W zale¿noœci od opcji wybranej w comboBox_what dodaje opcje do wyboru w pozosta³ych
 			// comboBoxach
 			String^ current_item = comboBox_what->SelectedItem->ToString();
 			int current_index = comboBox_what->FindString(current_item);
+	
 			switch (current_index)
 			{
 			case 0:
 				// Masa
+				ClearCombo();
 				comboBox_from->Items->Add("mg");
 				comboBox_to->Items->Add("mg");
 				comboBox_from->Items->Add("g");
@@ -252,25 +587,148 @@ namespace Kalkulator {
 				break;
 			case 1:
 				// D³ugoœæ
-				comboBox_from->Items->Add("mg");
-				comboBox_to->Items->Add("mg");
-				comboBox_from->Items->Add("g");
-				comboBox_to->Items->Add("g");
-				comboBox_from->Items->Add("dag");
-				comboBox_to->Items->Add("dag");
-				comboBox_from->Items->Add("kg");
-				comboBox_to->Items->Add("kg");
-				comboBox_from->Items->Add("t");
-				comboBox_to->Items->Add("t");
-				comboBox_from->Items->Add("lb");
-				comboBox_to->Items->Add("lb");
-				comboBox_from->Items->Add("oz");
-				comboBox_to->Items->Add("oz");
+				ClearCombo();
+				comboBox_from->Items->Add("mm");
+				comboBox_to->Items->Add("mm");
+				comboBox_from->Items->Add("cm");
+				comboBox_to->Items->Add("cm");
+				comboBox_from->Items->Add("dm");
+				comboBox_to->Items->Add("dm");
+				comboBox_from->Items->Add("m");
+				comboBox_to->Items->Add("m");
+				comboBox_from->Items->Add("km");
+				comboBox_to->Items->Add("km");
+				comboBox_from->Items->Add("in");
+				comboBox_to->Items->Add("in");
+				comboBox_from->Items->Add("ft");
+				comboBox_to->Items->Add("ft");
+				comboBox_from->Items->Add("yd");
+				comboBox_to->Items->Add("yd");
+				comboBox_from->Items->Add("mile");
+				comboBox_to->Items->Add("mile");
 				break;
+			case 2:
+				//Powierzchnia
+				ClearCombo();
+				comboBox_from->Items->Add("mm^2");
+				comboBox_to->Items->Add("mm^2");
+				comboBox_from->Items->Add("cm^2");
+				comboBox_to->Items->Add("cm^2");
+				comboBox_from->Items->Add("dm^2");
+				comboBox_to->Items->Add("dm^2");
+				comboBox_from->Items->Add("m^2");
+				comboBox_to->Items->Add("m^2");
+				comboBox_from->Items->Add("km^2");
+				comboBox_to->Items->Add("km^2");
+				comboBox_from->Items->Add("a");
+				comboBox_to->Items->Add("a");
+				comboBox_from->Items->Add("ha");
+				comboBox_to->Items->Add("ha");
+				break;
+			case 3:
+				//Objêtoœæ
+				ClearCombo();
+				comboBox_from->Items->Add("mm^3");
+				comboBox_to->Items->Add("mm^3");
+				comboBox_from->Items->Add("ml");
+				comboBox_to->Items->Add("ml");
+				comboBox_from->Items->Add("l");
+				comboBox_to->Items->Add("l");
+				comboBox_from->Items->Add("hl");
+				comboBox_to->Items->Add("hl");
+				comboBox_from->Items->Add("m^3");
+				comboBox_to->Items->Add("m^3");
+				comboBox_from->Items->Add("gal");
+				comboBox_to->Items->Add("gal");
+				comboBox_from->Items->Add("bbl");
+				comboBox_to->Items->Add("bbl");
+				break;
+			case 4:
+				//Predkoœæ
+				ClearCombo();
+				comboBox_from->Items->Add("m/s");
+				comboBox_to->Items->Add("m/s");
+				comboBox_from->Items->Add("km/h");
+				comboBox_to->Items->Add("km/h");
+				comboBox_from->Items->Add("mph");
+				comboBox_to->Items->Add("mph");
+				comboBox_from->Items->Add("w");
+				comboBox_to->Items->Add("w");
+				comboBox_from->Items->Add("Ma");
+				comboBox_to->Items->Add("Ma");
+				break;
+			case 5:
+				//Dane
+				ClearCombo();
+				comboBox_from->Items->Add("B");
+				comboBox_to->Items->Add("B");
+				comboBox_from->Items->Add("kB");
+				comboBox_to->Items->Add("kB");
+				comboBox_from->Items->Add("MB");
+				comboBox_to->Items->Add("MB");
+				comboBox_from->Items->Add("GB");
+				comboBox_to->Items->Add("GB");
+				comboBox_from->Items->Add("TB");
+				comboBox_to->Items->Add("TB");
 			default:
 				break;
 			}
+		}
+
+		private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
+		{
+			//funkcja licz¹ca
+			String^ current_item = comboBox_what->SelectedItem->ToString();
+			int current_index = comboBox_what->FindString(current_item);
+
+			double i = Double::Parse(amount_txt->Text);
+
+		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
+			display_txt->Text = "B³¹d. Wybierz inn¹ jednostkê";
+
+		else if (comboBox_what->SelectedItem == "Masa") {
+			// Masa
+			i = exchange_to_kg(i);
+			i = exchange_from_kg(i);
+			Write_display(i);
+		}
+		else if (comboBox_what->SelectedItem == "D³ugoœæ") {
+			// D³ugoœæ
+			i = exchange_to_m(i);
+			i = exchange_from_m(i);
+			Write_display(i);
+		}
+		else if (comboBox_what->SelectedItem == "Powierzchnia") {
+			//Powierzchnia
+			i = exchange_to_m2(i);
+			i = exchange_from_m2(i);
+			Write_display(i);
+		}
+		else if (comboBox_what->SelectedItem == "Objêtoœæ") {
+			//Objêtoœæ
+			i = exchange_to_l(i);
+			i = exchange_from_l(i);
+			Write_display(i);
+		}
+		else if (comboBox_what->SelectedItem == "Prêdkoœæ") {
+			//Predkoœæ
+			i = exchange_to_kmh(i);
+			i = exchange_from_kmh(i);
+			Write_display(i);
+		}
+		else if (comboBox_what->SelectedItem == "Dane"){
+			//Dane
+			i = exchange_to_b(i);
+			i = exchange_from_b(i);
+			Write_display(i);
+		}
 
 		}
-	};
+		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+			amount_txt->Clear();
+			display_txt->Text = "Przeliczona wartoœæ: ";
+			ClearCombo();
+			comboBox_what->Items->Clear();
+		}
+};
 }
