@@ -209,7 +209,7 @@ namespace Kalkulator {
 
 		}
 #pragma endregion
-
+	//zamiana walut na funty
 	private: System::Double exchange_to_GBP(double f) {
 		if(comboBox_from->SelectedItem == "PLN (z³oty)")
 		{
@@ -233,6 +233,8 @@ namespace Kalkulator {
 		}
 		return f;
 	}
+
+	//zamaina funta na inne waluty
 	private: System::Double exchange_from_GBP(double f) {
 		if (comboBox_to->SelectedItem == "PLN (z³oty)")
 		{
@@ -257,6 +259,7 @@ namespace Kalkulator {
 		return f;
 	}
 
+	//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ waluta = comboBox_to->SelectedItem->ToString();
 		double i = Double::Parse(amount_txt->Text);
@@ -269,6 +272,8 @@ namespace Kalkulator {
 			+ String::Format("{0:0.00}", i)->Replace('.', ',') + " " + waluta->Substring(0, 3);
 		}
 	}
+
+	//reset obszaru wpisywania i wyniku
 	private: System::Void reset_btn(System::Object^ sender, System::EventArgs^ e) {
 			amount_txt->Clear();
 			display_txt->Text = "Przeliczona wartoœæ: ";

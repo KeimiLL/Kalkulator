@@ -243,6 +243,7 @@ namespace Kalkulator {
 		}
 
 		//Centrum sprowadzania jednostek do wspólnego mianownika
+
 		//Masa 
 		private: System::Double exchange_from_kg(double f) {
 			if (comboBox_to->SelectedItem == "g")
@@ -558,10 +559,9 @@ namespace Kalkulator {
 			return f;
 		}
 
+		// W zale¿noœci od opcji wybranej w comboBox_what dodaje opcje do wyboru w pozosta³ych comboBoxach
 		private: void comboBox_what_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 		{
-			// W zale¿noœci od opcji wybranej w comboBox_what dodaje opcje do wyboru w pozosta³ych
-			// comboBoxach
 			String^ current_item = comboBox_what->SelectedItem->ToString();
 			int current_index = comboBox_what->FindString(current_item);
 	
@@ -675,17 +675,16 @@ namespace Kalkulator {
 			}
 		}
 
+		//przycisk liczenia
 		private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
 		{
-			//funkcja licz¹ca
 			String^ current_item = comboBox_what->SelectedItem->ToString();
 			int current_index = comboBox_what->FindString(current_item);
 
 			double i = Double::Parse(amount_txt->Text);
-
+		//wybór przypadku
 		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
 			display_txt->Text = "B³¹d. Wybierz inn¹ jednostkê";
-
 		else if (comboBox_what->SelectedItem == "Masa") {
 			// Masa
 			i = exchange_to_kg(i);
@@ -724,6 +723,8 @@ namespace Kalkulator {
 		}
 
 		}
+
+		//Przycisk resetuj¹cy wszystko
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 			amount_txt->Clear();
 			display_txt->Text = "Przeliczona wartoœæ: ";
