@@ -103,6 +103,8 @@ namespace Kalkulator {
 	private: System::Windows::Forms::Button^ btnMod;
 	private: System::Windows::Forms::Button^ btnOct;
 	private: System::Windows::Forms::Button^ btnPerMille;
+	private: System::Windows::Forms::ToolStripMenuItem^ przypnijToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ oknoToolStripMenuItem;
 	private:
 		// Wymagany element dla Designera.
 		System::ComponentModel::Container^ components;
@@ -114,6 +116,8 @@ namespace Kalkulator {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Kalkulator::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->plikToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->przypnijToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->oknoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historiaToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->wyjścieToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -182,25 +186,39 @@ namespace Kalkulator {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 28);
+			this->menuStrip1->Size = System::Drawing::Size(605, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// plikToolStripMenuItem
 			// 
-			this->plikToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->historiaToolStripMenuItem,
-					this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
+			this->plikToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->przypnijToolStripMenuItem,
+					this->oknoToolStripMenuItem, this->historiaToolStripMenuItem, this->historiaToolStripMenuItem1, this->wyjścieToolStripMenuItem
 			});
 			this->plikToolStripMenuItem->Name = L"plikToolStripMenuItem";
-			this->plikToolStripMenuItem->Size = System::Drawing::Size(44, 24);
+			this->plikToolStripMenuItem->Size = System::Drawing::Size(38, 20);
 			this->plikToolStripMenuItem->Text = L"Plik";
 			this->plikToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::plikToolStripMenuItem_Click);
+			// 
+			// przypnijToolStripMenuItem
+			// 
+			this->przypnijToolStripMenuItem->Name = L"przypnijToolStripMenuItem";
+			this->przypnijToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->przypnijToolStripMenuItem->Text = L"Przypnij";
+			this->przypnijToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::przypnijToolStripMenuItem_Click);
+			// 
+			// oknoToolStripMenuItem
+			// 
+			this->oknoToolStripMenuItem->Name = L"oknoToolStripMenuItem";
+			this->oknoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->oknoToolStripMenuItem->Text = L"Okno";
+			this->oknoToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oknoToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -209,15 +227,15 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(130, 24);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(130, 24);
-			this->wyjścieToolStripMenuItem->Text = L"Wyjście";
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->wyjścieToolStripMenuItem->Text = L"Zamknij";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
 			// widokToolStripMenuItem
@@ -227,41 +245,41 @@ namespace Kalkulator {
 					this->naukowyToolStripMenuItem, this->walutowyToolStripMenuItem, this->zamianaJednostekToolStripMenuItem, this->iloczynyWektorówToolStripMenuItem1
 			});
 			this->widokToolStripMenuItem->Name = L"widokToolStripMenuItem";
-			this->widokToolStripMenuItem->Size = System::Drawing::Size(64, 24);
+			this->widokToolStripMenuItem->Size = System::Drawing::Size(53, 20);
 			this->widokToolStripMenuItem->Text = L"Widok";
 			// 
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			this->walutowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::walutowyToolStripMenuItem_Click);
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(204, 24);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			this->zamianaJednostekToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::zamianaJednostekToolStripMenuItem_Click);
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(204, 24);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			this->iloczynyWektorówToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::iloczynyWektorówToolStripMenuItem1_Click);
 			// 
@@ -272,20 +290,20 @@ namespace Kalkulator {
 					this->oProgramieToolStripMenuItem
 			});
 			this->pomocToolStripMenuItem->Name = L"pomocToolStripMenuItem";
-			this->pomocToolStripMenuItem->Size = System::Drawing::Size(66, 24);
+			this->pomocToolStripMenuItem->Size = System::Drawing::Size(57, 20);
 			this->pomocToolStripMenuItem->Text = L"Pomoc";
 			// 
 			// objaśnieniaToolStripMenuItem
 			// 
 			this->objaśnieniaToolStripMenuItem->Name = L"objaśnieniaToolStripMenuItem";
-			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(163, 24);
+			this->objaśnieniaToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->objaśnieniaToolStripMenuItem->Text = L"Objaśnienia";
 			this->objaśnieniaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::objaśnieniaToolStripMenuItem_Click);
 			// 
 			// oProgramieToolStripMenuItem
 			// 
 			this->oProgramieToolStripMenuItem->Name = L"oProgramieToolStripMenuItem";
-			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(163, 24);
+			this->oProgramieToolStripMenuItem->Size = System::Drawing::Size(141, 22);
 			this->oProgramieToolStripMenuItem->Text = L"O programie";
 			this->oProgramieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oProgramieToolStripMenuItem_Click);
 			// 
@@ -899,6 +917,7 @@ namespace Kalkulator {
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 #pragma endregion
 		// Zmienne 'globalne'.
@@ -1460,6 +1479,15 @@ private: System::Void oProgramieToolStripMenuItem_Click(System::Object^ sender, 
 private: System::Void zamianaJednostekToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Jednostki^ jednostki = gcnew Jednostki();
 	jednostki->Show();
+}
+// Działanie w przypadku wybrania opcji "Przypnij" - przypięcie aplikacji na wierzch.
+private: System::Void przypnijToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	Kalkulator::FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+	TopMost = true;
+}
+// Działanie w przypadku wybrania opcji "Okno" - powrót z opcji "Przypnij" do zwykłego okna.
+private: System::Void oknoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	Kalkulator::FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 }
 };
 }

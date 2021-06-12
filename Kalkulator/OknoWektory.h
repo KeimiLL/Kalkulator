@@ -347,6 +347,7 @@ namespace Kalkulator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->ClientSize = System::Drawing::Size(387, 376);
 			this->Controls->Add(this->reset_btn);
 			this->Controls->Add(this->dl_wekt);

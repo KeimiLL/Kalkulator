@@ -207,6 +207,7 @@ namespace Kalkulator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->ClientSize = System::Drawing::Size(384, 261);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->comboBox_what);
@@ -220,6 +221,8 @@ namespace Kalkulator {
 			this->Controls->Add(this->comboBox_to);
 			this->Controls->Add(this->comboBox_from);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"Jednostki";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Przelicznik Jednostek";
