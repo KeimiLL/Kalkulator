@@ -1,6 +1,5 @@
 To Do:
 - Zamiana jednostek (obsługa błędów i komentarze)
-- Walutowy (obsługa błędów i komentarze)
 - Zmiana kolorów
 
 W przypadku błędu wyświetlamy "error".

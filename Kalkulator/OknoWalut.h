@@ -18,6 +18,8 @@ namespace Kalkulator {
 		OknoWalut(void)
 		{
 			InitializeComponent();
+			//Ustawienie maksymalnej liczby znaków na 10.
+			amount_txt->MaxLength = 10;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -262,9 +264,24 @@ namespace Kalkulator {
 	//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ waluta = comboBox_to->SelectedItem->ToString();
-		double i = Double::Parse(amount_txt->Text);
+		double i;
+		//Zabezpieczenie przed wpisaniem liter.
+		if (!Double::TryParse(amount_txt->Text, i)) {
+			display_txt->Text = "Przeliczona wartoœæ: error";
+			return;
+		}
+	
 		i = exchange_to_GBP(i);
 		i = exchange_from_GBP(i);
+		//Sprawdzenie czy przeliczona wartoœæ nie jest zbyt ma³a lub zbyt du¿a.
+		if (i < 0.01) {
+			display_txt->Text = "Przeliczona wartoœæ jest zbyt ma³a.";
+			return;
+		}
+		if (i > 1000000) {
+			display_txt->Text = "Przeliczona wartoœæ jest zbyt du¿a.";
+			return;
+		}
 		if(comboBox_from->SelectedItem == comboBox_to->SelectedItem)
 			display_txt->Text = "B³¹d. Wybierz inn¹ walutê.";
 		else{
