@@ -1488,6 +1488,7 @@ private: System::Void przypnijToolStripMenuItem_Click(System::Object^ sender, Sy
 // Działanie w przypadku wybrania opcji "Okno" - powrót z opcji "Przypnij" do zwykłego okna.
 private: System::Void oknoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Kalkulator::FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
+	TopMost = false;
 }
 };
 }
