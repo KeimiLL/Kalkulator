@@ -269,14 +269,20 @@ namespace Kalkulator {
 			return;
 		}
 		*/
-		String^ waluta = comboBox_to->SelectedItem->ToString();
+		String^ waluta = "";
+		if (comboBox_to->SelectedItem == nullptr) {
+			display_txt->Text = "Przeliczona wartoœæ: error";
+			return;
+		}
+		waluta = comboBox_to->SelectedItem->ToString();
+		
 		double i;
 		//Zabezpieczenie przed wpisaniem liter.
 		if (!Double::TryParse(amount_txt->Text, i)) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
-	
+
 		i = exchange_to_GBP(i);
 		i = exchange_from_GBP(i);
 		//Sprawdzenie czy przeliczona wartoœæ nie jest zbyt ma³a lub zbyt du¿a.
@@ -288,18 +294,21 @@ namespace Kalkulator {
 			display_txt->Text = "Przeliczona wartoœæ jest zbyt du¿a.";
 			return;
 		}
-		if(comboBox_from->SelectedItem == comboBox_to->SelectedItem)
-			display_txt->Text = "B³¹d. Wybierz inn¹ walutê.";
-		else{
+		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem) {
+			display_txt->Text = "Wybierz inn¹ walutê.";
+		}
+		else {
 			display_txt->Text = "Przeliczona wartoœæ: "
 			+ String::Format("{0:0.00}", i)->Replace('.', ',') + " " + waluta->Substring(0, 3);
 		}
 	}
 
-	//reset obszaru wpisywania i wyniku
+	// Reset obszaru wpisywania i wyniku oraz wyboru w comboBox_from i comboBox_to.
 	private: System::Void reset_btn(System::Object^ sender, System::EventArgs^ e) {
-			amount_txt->Clear();
-			display_txt->Text = "Przeliczona wartoœæ: ";
+		comboBox_from->SelectedIndex = -1;
+		comboBox_to->SelectedIndex = -1;
+		amount_txt->Clear();
+		display_txt->Text = "Przeliczona wartoœæ: ";
 	}
 };
 }

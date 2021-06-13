@@ -740,10 +740,17 @@ namespace Kalkulator {
 			return;
 		}
 		//wybór przypadku
-		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
-			display_txt->Text = "B³¹d. Wybierz inn¹ jednostkê";
+
+		if (comboBox_from->SelectedIndex == -1 || comboBox_to->SelectedIndex == -1) {
+			display_txt->Text = "Przeliczona wartoœæ: error";
+			return;
+		}
+		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem) {
+			display_txt->Text = "Wybierz inn¹ jednostkê";
+			return;
+		}
 		// Masa
-		else if (comboBox_what->SelectedItem == "Masa") {			
+		if (comboBox_what->SelectedItem == "Masa") {			
 			i = exchange_to_kg(i);
 			i = exchange_from_kg(i);
 			checkLength(System::Convert::ToString(i));
@@ -755,41 +762,41 @@ namespace Kalkulator {
 			i = exchange_from_m(i);
 			checkLength(System::Convert::ToString(i));
 		}
-		//Powierzchnia
+		// Powierzchnia
 		else if (comboBox_what->SelectedItem == "Powierzchnia") {
 			
 			i = exchange_to_m2(i);
 			i = exchange_from_m2(i);
 			checkLength(System::Convert::ToString(i));
 		}
-		//Objêtoœæ
+		// Objêtoœæ
 		else if (comboBox_what->SelectedItem == "Objêtoœæ") {
 			
 			i = exchange_to_l(i);
 			i = exchange_from_l(i);
 			checkLength(System::Convert::ToString(i));
 		}
-		//Predkoœæ
+		// Predkoœæ
 		else if (comboBox_what->SelectedItem == "Prêdkoœæ") {
 			
 			i = exchange_to_kmh(i);
 			i = exchange_from_kmh(i);
 			checkLength(System::Convert::ToString(i));
 		}
-		//Dane
+		// Dane
 		else if (comboBox_what->SelectedItem == "Dane"){
 			
 			i = exchange_to_b(i);
 			i = exchange_from_b(i);
 			checkLength(System::Convert::ToString(i));
 		}
+	}
 
-		}
-
-		//Przycisk resetuj¹cy wszystko
-		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-			amount_txt->Clear();
-			display_txt->Text = "Przeliczona wartoœæ: ";
-		}
+	// Reset obszaru wpisywania i wyniku oraz wyboru w comboBox_what.
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		comboBox_what->SelectedIndex = -1;
+		amount_txt->Clear();
+		display_txt->Text = "Przeliczona wartoœæ: ";
+	}
 };
 }
