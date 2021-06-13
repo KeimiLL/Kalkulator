@@ -251,35 +251,35 @@ namespace Kalkulator {
 			// standardowyToolStripMenuItem
 			// 
 			this->standardowyToolStripMenuItem->Name = L"standardowyToolStripMenuItem";
-			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->standardowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
 			this->standardowyToolStripMenuItem->Text = L"Standardowy";
 			this->standardowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::standardowyToolStripMenuItem_Click);
 			// 
 			// naukowyToolStripMenuItem
 			// 
 			this->naukowyToolStripMenuItem->Name = L"naukowyToolStripMenuItem";
-			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->naukowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
 			this->naukowyToolStripMenuItem->Text = L"Naukowy";
 			this->naukowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::naukowyToolStripMenuItem_Click);
 			// 
 			// walutowyToolStripMenuItem
 			// 
 			this->walutowyToolStripMenuItem->Name = L"walutowyToolStripMenuItem";
-			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->walutowyToolStripMenuItem->Size = System::Drawing::Size(174, 22);
 			this->walutowyToolStripMenuItem->Text = L"Walutowy";
 			this->walutowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::walutowyToolStripMenuItem_Click);
 			// 
 			// zamianaJednostekToolStripMenuItem
 			// 
 			this->zamianaJednostekToolStripMenuItem->Name = L"zamianaJednostekToolStripMenuItem";
-			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->zamianaJednostekToolStripMenuItem->Size = System::Drawing::Size(174, 22);
 			this->zamianaJednostekToolStripMenuItem->Text = L"Zamiana jednostek";
 			this->zamianaJednostekToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::zamianaJednostekToolStripMenuItem_Click);
 			// 
 			// iloczynyWektorówToolStripMenuItem1
 			// 
 			this->iloczynyWektorówToolStripMenuItem1->Name = L"iloczynyWektorówToolStripMenuItem1";
-			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->iloczynyWektorówToolStripMenuItem1->Size = System::Drawing::Size(174, 22);
 			this->iloczynyWektorówToolStripMenuItem1->Text = L"Iloczyny wektorów";
 			this->iloczynyWektorówToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::iloczynyWektorówToolStripMenuItem1_Click);
 			// 
@@ -309,539 +309,743 @@ namespace Kalkulator {
 			// 
 			// textBox1
 			// 
+			this->textBox1->BackColor = System::Drawing::Color::Black;
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->textBox1->ForeColor = System::Drawing::Color::White;
 			this->textBox1->Location = System::Drawing::Point(12, 46);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(277, 44);
+			this->textBox1->Size = System::Drawing::Size(277, 37);
 			this->textBox1->TabIndex = 1;
 			this->textBox1->Text = L"0";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// btnBackspace
 			// 
+			this->btnBackspace->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->btnBackspace->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBackspace->FlatAppearance->BorderSize = 0;
 			this->btnBackspace->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnBackspace->Font = (gcnew System::Drawing::Font(L"Wingdings", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(2)));
+			this->btnBackspace->ForeColor = System::Drawing::Color::Black;
 			this->btnBackspace->Location = System::Drawing::Point(12, 92);
 			this->btnBackspace->Name = L"btnBackspace";
 			this->btnBackspace->Size = System::Drawing::Size(70, 70);
 			this->btnBackspace->TabIndex = 7;
 			this->btnBackspace->Text = L"";
-			this->btnBackspace->UseVisualStyleBackColor = true;
+			this->btnBackspace->UseVisualStyleBackColor = false;
 			this->btnBackspace->Click += gcnew System::EventHandler(this, &Kalkulator::btnBackspace_Click);
 			// 
 			// btnAC
 			// 
+			this->btnAC->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->btnAC->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnAC->FlatAppearance->BorderSize = 0;
 			this->btnAC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnAC->ForeColor = System::Drawing::Color::Black;
 			this->btnAC->Location = System::Drawing::Point(81, 92);
 			this->btnAC->Name = L"btnAC";
 			this->btnAC->Size = System::Drawing::Size(70, 70);
 			this->btnAC->TabIndex = 2;
 			this->btnAC->Text = L"AC";
-			this->btnAC->UseVisualStyleBackColor = true;
+			this->btnAC->UseVisualStyleBackColor = false;
 			this->btnAC->Click += gcnew System::EventHandler(this, &Kalkulator::btnAC_Click);
 			// 
 			// btnC
 			// 
+			this->btnC->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->btnC->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnC->FlatAppearance->BorderSize = 0;
 			this->btnC->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnC->ForeColor = System::Drawing::Color::Black;
 			this->btnC->Location = System::Drawing::Point(150, 92);
 			this->btnC->Name = L"btnC";
 			this->btnC->Size = System::Drawing::Size(70, 70);
 			this->btnC->TabIndex = 4;
 			this->btnC->Text = L"C";
-			this->btnC->UseVisualStyleBackColor = true;
+			this->btnC->UseVisualStyleBackColor = false;
 			this->btnC->Click += gcnew System::EventHandler(this, &Kalkulator::btnC_Click);
 			// 
 			// btnDivide
 			// 
+			this->btnDivide->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->btnDivide->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDivide->FlatAppearance->BorderSize = 0;
 			this->btnDivide->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnDivide->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnDivide->ForeColor = System::Drawing::Color::White;
 			this->btnDivide->Location = System::Drawing::Point(219, 92);
 			this->btnDivide->Name = L"btnDivide";
 			this->btnDivide->Size = System::Drawing::Size(70, 70);
 			this->btnDivide->TabIndex = 42;
 			this->btnDivide->Text = L"÷";
-			this->btnDivide->UseVisualStyleBackColor = true;
+			this->btnDivide->UseVisualStyleBackColor = false;
 			this->btnDivide->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btn7
 			// 
+			this->btn7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn7->FlatAppearance->BorderSize = 0;
 			this->btn7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn7->ForeColor = System::Drawing::Color::White;
 			this->btn7->Location = System::Drawing::Point(12, 161);
 			this->btn7->Name = L"btn7";
 			this->btn7->Size = System::Drawing::Size(70, 70);
 			this->btn7->TabIndex = 75;
 			this->btn7->Text = L"7";
-			this->btn7->UseVisualStyleBackColor = true;
+			this->btn7->UseVisualStyleBackColor = false;
 			this->btn7->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn8
 			// 
+			this->btn8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn8->FlatAppearance->BorderSize = 0;
 			this->btn8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn8->ForeColor = System::Drawing::Color::White;
 			this->btn8->Location = System::Drawing::Point(81, 161);
 			this->btn8->Name = L"btn8";
 			this->btn8->Size = System::Drawing::Size(70, 70);
 			this->btn8->TabIndex = 43;
 			this->btn8->Text = L"8";
-			this->btn8->UseVisualStyleBackColor = true;
+			this->btn8->UseVisualStyleBackColor = false;
 			this->btn8->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn9
 			// 
+			this->btn9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn9->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn9->FlatAppearance->BorderSize = 0;
 			this->btn9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn9->ForeColor = System::Drawing::Color::White;
 			this->btn9->Location = System::Drawing::Point(150, 161);
 			this->btn9->Name = L"btn9";
 			this->btn9->Size = System::Drawing::Size(70, 70);
 			this->btn9->TabIndex = 44;
 			this->btn9->Text = L"9";
-			this->btn9->UseVisualStyleBackColor = true;
+			this->btn9->UseVisualStyleBackColor = false;
 			this->btn9->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnMultiply
 			// 
+			this->btnMultiply->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->btnMultiply->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnMultiply->FlatAppearance->BorderSize = 0;
 			this->btnMultiply->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnMultiply->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnMultiply->ForeColor = System::Drawing::Color::White;
 			this->btnMultiply->Location = System::Drawing::Point(219, 161);
 			this->btnMultiply->Name = L"btnMultiply";
 			this->btnMultiply->Size = System::Drawing::Size(70, 70);
 			this->btnMultiply->TabIndex = 46;
 			this->btnMultiply->Text = L"×";
-			this->btnMultiply->UseVisualStyleBackColor = true;
+			this->btnMultiply->UseVisualStyleBackColor = false;
 			this->btnMultiply->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btn4
 			// 
+			this->btn4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn4->FlatAppearance->BorderSize = 0;
 			this->btn4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn4->ForeColor = System::Drawing::Color::White;
 			this->btn4->Location = System::Drawing::Point(12, 230);
 			this->btn4->Name = L"btn4";
 			this->btn4->Size = System::Drawing::Size(70, 70);
 			this->btn4->TabIndex = 76;
 			this->btn4->Text = L"4";
-			this->btn4->UseVisualStyleBackColor = true;
+			this->btn4->UseVisualStyleBackColor = false;
 			this->btn4->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn5
 			// 
+			this->btn5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn5->FlatAppearance->BorderSize = 0;
 			this->btn5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn5->ForeColor = System::Drawing::Color::White;
 			this->btn5->Location = System::Drawing::Point(81, 230);
 			this->btn5->Name = L"btn5";
 			this->btn5->Size = System::Drawing::Size(70, 70);
 			this->btn5->TabIndex = 47;
 			this->btn5->Text = L"5";
-			this->btn5->UseVisualStyleBackColor = true;
+			this->btn5->UseVisualStyleBackColor = false;
 			this->btn5->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn6
 			// 
+			this->btn6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn6->FlatAppearance->BorderSize = 0;
 			this->btn6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn6->ForeColor = System::Drawing::Color::White;
 			this->btn6->Location = System::Drawing::Point(150, 230);
 			this->btn6->Name = L"btn6";
 			this->btn6->Size = System::Drawing::Size(70, 70);
 			this->btn6->TabIndex = 48;
 			this->btn6->Text = L"6";
-			this->btn6->UseVisualStyleBackColor = true;
+			this->btn6->UseVisualStyleBackColor = false;
 			this->btn6->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnSubstract
 			// 
+			this->btnSubstract->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->btnSubstract->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSubstract->FlatAppearance->BorderSize = 0;
 			this->btnSubstract->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSubstract->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnSubstract->ForeColor = System::Drawing::Color::White;
 			this->btnSubstract->Location = System::Drawing::Point(219, 230);
 			this->btnSubstract->Name = L"btnSubstract";
 			this->btnSubstract->Size = System::Drawing::Size(70, 70);
 			this->btnSubstract->TabIndex = 54;
 			this->btnSubstract->Text = L"-";
-			this->btnSubstract->UseVisualStyleBackColor = true;
+			this->btnSubstract->UseVisualStyleBackColor = false;
 			this->btnSubstract->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btn1
 			// 
+			this->btn1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn1->FlatAppearance->BorderSize = 0;
 			this->btn1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn1->ForeColor = System::Drawing::Color::White;
 			this->btn1->Location = System::Drawing::Point(12, 299);
 			this->btn1->Name = L"btn1";
 			this->btn1->Size = System::Drawing::Size(70, 70);
 			this->btn1->TabIndex = 81;
 			this->btn1->Text = L"1";
-			this->btn1->UseVisualStyleBackColor = true;
+			this->btn1->UseVisualStyleBackColor = false;
 			this->btn1->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn2
 			// 
+			this->btn2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn2->FlatAppearance->BorderSize = 0;
 			this->btn2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn2->ForeColor = System::Drawing::Color::White;
 			this->btn2->Location = System::Drawing::Point(81, 299);
 			this->btn2->Name = L"btn2";
 			this->btn2->Size = System::Drawing::Size(70, 70);
 			this->btn2->TabIndex = 51;
 			this->btn2->Text = L"2";
-			this->btn2->UseVisualStyleBackColor = true;
+			this->btn2->UseVisualStyleBackColor = false;
 			this->btn2->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btn3
 			// 
+			this->btn3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn3->FlatAppearance->BorderSize = 0;
 			this->btn3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn3->ForeColor = System::Drawing::Color::White;
 			this->btn3->Location = System::Drawing::Point(150, 299);
 			this->btn3->Name = L"btn3";
 			this->btn3->Size = System::Drawing::Size(70, 70);
 			this->btn3->TabIndex = 52;
 			this->btn3->Text = L"3";
-			this->btn3->UseVisualStyleBackColor = true;
+			this->btn3->UseVisualStyleBackColor = false;
 			this->btn3->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnAdd
 			// 
+			this->btnAdd->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->btnAdd->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnAdd->FlatAppearance->BorderSize = 0;
 			this->btnAdd->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAdd->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnAdd->ForeColor = System::Drawing::Color::White;
 			this->btnAdd->Location = System::Drawing::Point(219, 299);
 			this->btnAdd->Name = L"btnAdd";
 			this->btnAdd->Size = System::Drawing::Size(70, 70);
 			this->btnAdd->TabIndex = 50;
 			this->btnAdd->Text = L"+";
-			this->btnAdd->UseVisualStyleBackColor = true;
+			this->btnAdd->UseVisualStyleBackColor = false;
 			this->btnAdd->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btnSigned
 			// 
+			this->btnSigned->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btnSigned->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSigned->FlatAppearance->BorderSize = 0;
 			this->btnSigned->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSigned->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnSigned->ForeColor = System::Drawing::Color::White;
 			this->btnSigned->Location = System::Drawing::Point(12, 368);
 			this->btnSigned->Name = L"btnSigned";
 			this->btnSigned->Size = System::Drawing::Size(70, 70);
 			this->btnSigned->TabIndex = 5;
 			this->btnSigned->Text = L"+/-";
-			this->btnSigned->UseVisualStyleBackColor = true;
+			this->btnSigned->UseVisualStyleBackColor = false;
 			this->btnSigned->Click += gcnew System::EventHandler(this, &Kalkulator::btnSigned_Click);
 			// 
 			// btn0
 			// 
+			this->btn0->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btn0->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btn0->FlatAppearance->BorderSize = 0;
 			this->btn0->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btn0->ForeColor = System::Drawing::Color::White;
 			this->btn0->Location = System::Drawing::Point(81, 368);
 			this->btn0->Name = L"btn0";
 			this->btn0->Size = System::Drawing::Size(70, 70);
 			this->btn0->TabIndex = 82;
 			this->btn0->Text = L"0";
-			this->btn0->UseVisualStyleBackColor = true;
+			this->btn0->UseVisualStyleBackColor = false;
 			this->btn0->Click += gcnew System::EventHandler(this, &Kalkulator::button_Click);
 			// 
 			// btnComma
 			// 
+			this->btnComma->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->btnComma->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnComma->FlatAppearance->BorderSize = 0;
 			this->btnComma->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnComma->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnComma->ForeColor = System::Drawing::Color::White;
 			this->btnComma->Location = System::Drawing::Point(150, 368);
 			this->btnComma->Name = L"btnComma";
 			this->btnComma->Size = System::Drawing::Size(70, 70);
 			this->btnComma->TabIndex = 83;
 			this->btnComma->Text = L",";
-			this->btnComma->UseVisualStyleBackColor = true;
+			this->btnComma->UseVisualStyleBackColor = false;
 			this->btnComma->Click += gcnew System::EventHandler(this, &Kalkulator::btnComma_Click);
 			// 
 			// btnEquals
 			// 
+			this->btnEquals->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->btnEquals->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnEquals->FlatAppearance->BorderSize = 0;
 			this->btnEquals->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnEquals->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnEquals->ForeColor = System::Drawing::Color::White;
 			this->btnEquals->Location = System::Drawing::Point(219, 368);
 			this->btnEquals->Name = L"btnEquals";
 			this->btnEquals->Size = System::Drawing::Size(70, 70);
 			this->btnEquals->TabIndex = 84;
 			this->btnEquals->Text = L"=";
-			this->btnEquals->UseVisualStyleBackColor = true;
+			this->btnEquals->UseVisualStyleBackColor = false;
 			this->btnEquals->Click += gcnew System::EventHandler(this, &Kalkulator::btnEquals_Click);
 			// 
 			// btnPi
 			// 
+			this->btnPi->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnPi->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnPi->FlatAppearance->BorderSize = 0;
 			this->btnPi->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnPi->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnPi->ForeColor = System::Drawing::Color::White;
 			this->btnPi->Location = System::Drawing::Point(314, 92);
 			this->btnPi->Name = L"btnPi";
 			this->btnPi->Size = System::Drawing::Size(70, 70);
 			this->btnPi->TabIndex = 88;
 			this->btnPi->Text = L"π";
-			this->btnPi->UseVisualStyleBackColor = true;
+			this->btnPi->UseVisualStyleBackColor = false;
 			this->btnPi->Click += gcnew System::EventHandler(this, &Kalkulator::btnPi_Click);
 			// 
 			// btnE
 			// 
+			this->btnE->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnE->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnE->FlatAppearance->BorderSize = 0;
 			this->btnE->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnE->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnE->ForeColor = System::Drawing::Color::White;
 			this->btnE->Location = System::Drawing::Point(383, 92);
 			this->btnE->Name = L"btnE";
 			this->btnE->Size = System::Drawing::Size(70, 70);
 			this->btnE->TabIndex = 100;
 			this->btnE->Text = L"e";
-			this->btnE->UseVisualStyleBackColor = true;
+			this->btnE->UseVisualStyleBackColor = false;
 			this->btnE->Click += gcnew System::EventHandler(this, &Kalkulator::btnE_Click);
 			// 
 			// btnSqrt
 			// 
+			this->btnSqrt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnSqrt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSqrt->FlatAppearance->BorderSize = 0;
 			this->btnSqrt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSqrt->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnSqrt->ForeColor = System::Drawing::Color::White;
 			this->btnSqrt->Location = System::Drawing::Point(452, 92);
 			this->btnSqrt->Name = L"btnSqrt";
 			this->btnSqrt->Size = System::Drawing::Size(70, 70);
 			this->btnSqrt->TabIndex = 86;
 			this->btnSqrt->Text = L"√";
-			this->btnSqrt->UseVisualStyleBackColor = true;
+			this->btnSqrt->UseVisualStyleBackColor = false;
 			this->btnSqrt->Click += gcnew System::EventHandler(this, &Kalkulator::btnSqrt_Click);
 			// 
 			// btnSquared
 			// 
+			this->btnSquared->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnSquared->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSquared->FlatAppearance->BorderSize = 0;
 			this->btnSquared->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSquared->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnSquared->ForeColor = System::Drawing::Color::White;
 			this->btnSquared->Location = System::Drawing::Point(521, 92);
 			this->btnSquared->Name = L"btnSquared";
 			this->btnSquared->Size = System::Drawing::Size(70, 70);
 			this->btnSquared->TabIndex = 110;
 			this->btnSquared->Text = L"x²";
-			this->btnSquared->UseVisualStyleBackColor = true;
+			this->btnSquared->UseVisualStyleBackColor = false;
 			this->btnSquared->Click += gcnew System::EventHandler(this, &Kalkulator::btnSquared_Click);
 			// 
 			// btnLog
 			// 
+			this->btnLog->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnLog->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnLog->FlatAppearance->BorderSize = 0;
 			this->btnLog->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnLog->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnLog->ForeColor = System::Drawing::Color::White;
 			this->btnLog->Location = System::Drawing::Point(314, 161);
 			this->btnLog->Name = L"btnLog";
 			this->btnLog->Size = System::Drawing::Size(70, 70);
 			this->btnLog->TabIndex = 85;
 			this->btnLog->Text = L"log";
-			this->btnLog->UseVisualStyleBackColor = true;
+			this->btnLog->UseVisualStyleBackColor = false;
 			this->btnLog->Click += gcnew System::EventHandler(this, &Kalkulator::btnLog_Click);
 			// 
 			// btnSin
 			// 
+			this->btnSin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnSin->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSin->FlatAppearance->BorderSize = 0;
 			this->btnSin->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnSin->ForeColor = System::Drawing::Color::White;
 			this->btnSin->Location = System::Drawing::Point(383, 161);
 			this->btnSin->Name = L"btnSin";
 			this->btnSin->Size = System::Drawing::Size(70, 70);
 			this->btnSin->TabIndex = 90;
 			this->btnSin->Text = L"sin";
-			this->btnSin->UseVisualStyleBackColor = true;
+			this->btnSin->UseVisualStyleBackColor = false;
 			this->btnSin->Click += gcnew System::EventHandler(this, &Kalkulator::btnSin_Click);
 			// 
 			// btnDec
 			// 
+			this->btnDec->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnDec->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnDec->FlatAppearance->BorderSize = 0;
 			this->btnDec->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnDec->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnDec->ForeColor = System::Drawing::Color::White;
 			this->btnDec->Location = System::Drawing::Point(452, 161);
 			this->btnDec->Name = L"btnDec";
 			this->btnDec->Size = System::Drawing::Size(70, 70);
 			this->btnDec->TabIndex = 91;
 			this->btnDec->Text = L"Dec";
-			this->btnDec->UseVisualStyleBackColor = true;
+			this->btnDec->UseVisualStyleBackColor = false;
 			this->btnDec->Click += gcnew System::EventHandler(this, &Kalkulator::btnDec_Click);
 			// 
 			// btnCubed
 			// 
+			this->btnCubed->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnCubed->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnCubed->FlatAppearance->BorderSize = 0;
 			this->btnCubed->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnCubed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnCubed->ForeColor = System::Drawing::Color::White;
 			this->btnCubed->Location = System::Drawing::Point(521, 161);
 			this->btnCubed->Name = L"btnCubed";
 			this->btnCubed->Size = System::Drawing::Size(70, 70);
 			this->btnCubed->TabIndex = 111;
 			this->btnCubed->Text = L"x³";
-			this->btnCubed->UseVisualStyleBackColor = true;
+			this->btnCubed->UseVisualStyleBackColor = false;
 			this->btnCubed->Click += gcnew System::EventHandler(this, &Kalkulator::btnCubed_Click);
 			// 
 			// btnAbs
 			// 
+			this->btnAbs->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnAbs->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnAbs->FlatAppearance->BorderSize = 0;
 			this->btnAbs->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnAbs->ForeColor = System::Drawing::Color::White;
 			this->btnAbs->Location = System::Drawing::Point(314, 230);
 			this->btnAbs->Name = L"btnAbs";
 			this->btnAbs->Size = System::Drawing::Size(70, 70);
 			this->btnAbs->TabIndex = 99;
 			this->btnAbs->Text = L"|x|";
-			this->btnAbs->UseVisualStyleBackColor = true;
+			this->btnAbs->UseVisualStyleBackColor = false;
 			this->btnAbs->Click += gcnew System::EventHandler(this, &Kalkulator::btnAbs_Click);
 			// 
 			// btnCos
 			// 
+			this->btnCos->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnCos->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnCos->FlatAppearance->BorderSize = 0;
 			this->btnCos->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnCos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnCos->ForeColor = System::Drawing::Color::White;
 			this->btnCos->Location = System::Drawing::Point(383, 230);
 			this->btnCos->Name = L"btnCos";
 			this->btnCos->Size = System::Drawing::Size(70, 70);
 			this->btnCos->TabIndex = 93;
 			this->btnCos->Text = L"cos";
-			this->btnCos->UseVisualStyleBackColor = true;
+			this->btnCos->UseVisualStyleBackColor = false;
 			this->btnCos->Click += gcnew System::EventHandler(this, &Kalkulator::btnCos_Click);
 			// 
 			// btnBin
 			// 
+			this->btnBin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnBin->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnBin->FlatAppearance->BorderSize = 0;
 			this->btnBin->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnBin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnBin->ForeColor = System::Drawing::Color::White;
 			this->btnBin->Location = System::Drawing::Point(452, 230);
 			this->btnBin->Name = L"btnBin";
 			this->btnBin->Size = System::Drawing::Size(70, 70);
 			this->btnBin->TabIndex = 94;
 			this->btnBin->Text = L"Bin";
-			this->btnBin->UseVisualStyleBackColor = true;
+			this->btnBin->UseVisualStyleBackColor = false;
 			this->btnBin->Click += gcnew System::EventHandler(this, &Kalkulator::btnBin_Click);
 			// 
 			// btnInverse
 			// 
+			this->btnInverse->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnInverse->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnInverse->FlatAppearance->BorderSize = 0;
 			this->btnInverse->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnInverse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnInverse->ForeColor = System::Drawing::Color::White;
 			this->btnInverse->Location = System::Drawing::Point(521, 230);
 			this->btnInverse->Name = L"btnInverse";
 			this->btnInverse->Size = System::Drawing::Size(70, 70);
 			this->btnInverse->TabIndex = 108;
 			this->btnInverse->Text = L"1/x";
-			this->btnInverse->UseVisualStyleBackColor = true;
+			this->btnInverse->UseVisualStyleBackColor = false;
 			this->btnInverse->Click += gcnew System::EventHandler(this, &Kalkulator::btnInverse_Click);
 			// 
 			// btnExp
 			// 
+			this->btnExp->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnExp->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnExp->FlatAppearance->BorderSize = 0;
 			this->btnExp->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnExp->ForeColor = System::Drawing::Color::White;
 			this->btnExp->Location = System::Drawing::Point(314, 299);
 			this->btnExp->Name = L"btnExp";
 			this->btnExp->Size = System::Drawing::Size(70, 70);
 			this->btnExp->TabIndex = 104;
 			this->btnExp->Text = L"exp";
-			this->btnExp->UseVisualStyleBackColor = true;
+			this->btnExp->UseVisualStyleBackColor = false;
 			this->btnExp->Click += gcnew System::EventHandler(this, &Kalkulator::btnExp_Click);
 			// 
 			// btnTg
 			// 
+			this->btnTg->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnTg->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnTg->FlatAppearance->BorderSize = 0;
 			this->btnTg->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnTg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnTg->ForeColor = System::Drawing::Color::White;
 			this->btnTg->Location = System::Drawing::Point(383, 299);
 			this->btnTg->Name = L"btnTg";
 			this->btnTg->Size = System::Drawing::Size(70, 70);
 			this->btnTg->TabIndex = 96;
 			this->btnTg->Text = L"tg";
-			this->btnTg->UseVisualStyleBackColor = true;
+			this->btnTg->UseVisualStyleBackColor = false;
 			this->btnTg->Click += gcnew System::EventHandler(this, &Kalkulator::btnTg_Click);
 			// 
 			// btnHex
 			// 
+			this->btnHex->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnHex->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnHex->FlatAppearance->BorderSize = 0;
 			this->btnHex->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnHex->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnHex->ForeColor = System::Drawing::Color::White;
 			this->btnHex->Location = System::Drawing::Point(452, 368);
 			this->btnHex->Name = L"btnHex";
 			this->btnHex->Size = System::Drawing::Size(70, 70);
 			this->btnHex->TabIndex = 97;
 			this->btnHex->Text = L"Hex";
-			this->btnHex->UseVisualStyleBackColor = true;
+			this->btnHex->UseVisualStyleBackColor = false;
 			this->btnHex->Click += gcnew System::EventHandler(this, &Kalkulator::btnHex_Click);
 			// 
 			// btnPercent
 			// 
+			this->btnPercent->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnPercent->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnPercent->FlatAppearance->BorderSize = 0;
 			this->btnPercent->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnPercent->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnPercent->ForeColor = System::Drawing::Color::White;
 			this->btnPercent->Location = System::Drawing::Point(521, 299);
 			this->btnPercent->Name = L"btnPercent";
 			this->btnPercent->Size = System::Drawing::Size(70, 70);
 			this->btnPercent->TabIndex = 107;
 			this->btnPercent->Text = L"%";
-			this->btnPercent->UseVisualStyleBackColor = true;
+			this->btnPercent->UseVisualStyleBackColor = false;
 			this->btnPercent->Click += gcnew System::EventHandler(this, &Kalkulator::btnPercent_Click);
 			// 
 			// btnFact
 			// 
+			this->btnFact->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnFact->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnFact->FlatAppearance->BorderSize = 0;
 			this->btnFact->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnFact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnFact->ForeColor = System::Drawing::Color::White;
 			this->btnFact->Location = System::Drawing::Point(314, 368);
 			this->btnFact->Name = L"btnFact";
 			this->btnFact->Size = System::Drawing::Size(70, 70);
 			this->btnFact->TabIndex = 106;
 			this->btnFact->Text = L"n!";
-			this->btnFact->UseVisualStyleBackColor = true;
+			this->btnFact->UseVisualStyleBackColor = false;
 			this->btnFact->Click += gcnew System::EventHandler(this, &Kalkulator::btnFact_Click);
 			// 
 			// btnMod
 			// 
+			this->btnMod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnMod->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnMod->FlatAppearance->BorderSize = 0;
 			this->btnMod->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnMod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnMod->ForeColor = System::Drawing::Color::White;
 			this->btnMod->Location = System::Drawing::Point(383, 368);
 			this->btnMod->Name = L"btnMod";
 			this->btnMod->Size = System::Drawing::Size(70, 70);
 			this->btnMod->TabIndex = 102;
 			this->btnMod->Text = L"mod";
-			this->btnMod->UseVisualStyleBackColor = true;
+			this->btnMod->UseVisualStyleBackColor = false;
 			this->btnMod->Click += gcnew System::EventHandler(this, &Kalkulator::Aritm_Operators);
 			// 
 			// btnOct
 			// 
+			this->btnOct->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnOct->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnOct->FlatAppearance->BorderSize = 0;
 			this->btnOct->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnOct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnOct->ForeColor = System::Drawing::Color::White;
 			this->btnOct->Location = System::Drawing::Point(452, 299);
 			this->btnOct->Name = L"btnOct";
 			this->btnOct->Size = System::Drawing::Size(70, 70);
 			this->btnOct->TabIndex = 103;
 			this->btnOct->Text = L"Oct";
-			this->btnOct->UseVisualStyleBackColor = true;
+			this->btnOct->UseVisualStyleBackColor = false;
 			this->btnOct->Click += gcnew System::EventHandler(this, &Kalkulator::btnOct_Click);
 			// 
 			// btnPerMille
 			// 
+			this->btnPerMille->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(25)), static_cast<System::Int32>(static_cast<System::Byte>(25)),
+				static_cast<System::Int32>(static_cast<System::Byte>(25)));
+			this->btnPerMille->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnPerMille->FlatAppearance->BorderSize = 0;
 			this->btnPerMille->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnPerMille->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->btnPerMille->ForeColor = System::Drawing::Color::White;
 			this->btnPerMille->Location = System::Drawing::Point(521, 368);
 			this->btnPerMille->Name = L"btnPerMille";
 			this->btnPerMille->Size = System::Drawing::Size(70, 70);
 			this->btnPerMille->TabIndex = 105;
 			this->btnPerMille->Text = L"‰";
-			this->btnPerMille->UseVisualStyleBackColor = true;
+			this->btnPerMille->UseVisualStyleBackColor = false;
 			this->btnPerMille->Click += gcnew System::EventHandler(this, &Kalkulator::btnPerMille_Click);
 			// 
 			// showOperator
 			// 
 			this->showOperator->AutoSize = true;
-			this->showOperator->BackColor = System::Drawing::SystemColors::Control;
+			this->showOperator->BackColor = System::Drawing::Color::Black;
+			this->showOperator->ForeColor = System::Drawing::Color::White;
 			this->showOperator->Location = System::Drawing::Point(11, 27);
 			this->showOperator->Name = L"showOperator";
 			this->showOperator->Size = System::Drawing::Size(0, 13);
@@ -849,6 +1053,8 @@ namespace Kalkulator {
 			// 
 			// historiaBox
 			// 
+			this->historiaBox->BackColor = System::Drawing::Color::Black;
+			this->historiaBox->ForeColor = System::Drawing::Color::White;
 			this->historiaBox->FormattingEnabled = true;
 			this->historiaBox->Location = System::Drawing::Point(12, 459);
 			this->historiaBox->Name = L"historiaBox";
@@ -860,6 +1066,7 @@ namespace Kalkulator {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(605, 639);
 			this->Controls->Add(this->historiaBox);
 			this->Controls->Add(this->showOperator);

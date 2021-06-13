@@ -116,6 +116,7 @@ namespace Kalkulator {
 			// 
 			this->text_v1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_v1->ForeColor = System::Drawing::Color::Black;
 			this->text_v1->Location = System::Drawing::Point(129, 36);
 			this->text_v1->Multiline = true;
 			this->text_v1->Name = L"text_v1";
@@ -126,6 +127,7 @@ namespace Kalkulator {
 			// 
 			this->text_w3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_w3->ForeColor = System::Drawing::Color::Black;
 			this->text_w3->Location = System::Drawing::Point(259, 95);
 			this->text_w3->Multiline = true;
 			this->text_w3->Name = L"text_w3";
@@ -136,6 +138,7 @@ namespace Kalkulator {
 			// 
 			this->text_w2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_w2->ForeColor = System::Drawing::Color::Black;
 			this->text_w2->Location = System::Drawing::Point(194, 95);
 			this->text_w2->Multiline = true;
 			this->text_w2->Name = L"text_w2";
@@ -146,6 +149,7 @@ namespace Kalkulator {
 			// 
 			this->text_w1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_w1->ForeColor = System::Drawing::Color::Black;
 			this->text_w1->Location = System::Drawing::Point(129, 95);
 			this->text_w1->Multiline = true;
 			this->text_w1->Name = L"text_w1";
@@ -156,6 +160,7 @@ namespace Kalkulator {
 			// 
 			this->text_v3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_v3->ForeColor = System::Drawing::Color::Black;
 			this->text_v3->Location = System::Drawing::Point(259, 35);
 			this->text_v3->Multiline = true;
 			this->text_v3->Name = L"text_v3";
@@ -166,6 +171,7 @@ namespace Kalkulator {
 			// 
 			this->text_v2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->text_v2->ForeColor = System::Drawing::Color::Black;
 			this->text_v2->Location = System::Drawing::Point(195, 35);
 			this->text_v2->Multiline = true;
 			this->text_v2->Name = L"text_v2";
@@ -177,6 +183,7 @@ namespace Kalkulator {
 			this->wektor_v->AutoSize = true;
 			this->wektor_v->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->wektor_v->ForeColor = System::Drawing::Color::White;
 			this->wektor_v->Location = System::Drawing::Point(65, 38);
 			this->wektor_v->Name = L"wektor_v";
 			this->wektor_v->Size = System::Drawing::Size(58, 25);
@@ -188,6 +195,7 @@ namespace Kalkulator {
 			this->wektor_w->AutoSize = true;
 			this->wektor_w->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->wektor_w->ForeColor = System::Drawing::Color::White;
 			this->wektor_w->Location = System::Drawing::Point(61, 98);
 			this->wektor_w->Name = L"wektor_w";
 			this->wektor_w->Size = System::Drawing::Size(62, 25);
@@ -199,6 +207,7 @@ namespace Kalkulator {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(175, 43);
 			this->label3->Margin = System::Windows::Forms::Padding(0);
 			this->label3->Name = L"label3";
@@ -211,6 +220,7 @@ namespace Kalkulator {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(307, 38);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(19, 25);
@@ -222,6 +232,7 @@ namespace Kalkulator {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label5->ForeColor = System::Drawing::Color::White;
 			this->label5->Location = System::Drawing::Point(307, 98);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(19, 25);
@@ -233,6 +244,7 @@ namespace Kalkulator {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(238, 43);
 			this->label1->Margin = System::Windows::Forms::Padding(0);
 			this->label1->Name = L"label1";
@@ -245,6 +257,7 @@ namespace Kalkulator {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(175, 103);
 			this->label2->Margin = System::Windows::Forms::Padding(0);
 			this->label2->Name = L"label2";
@@ -257,6 +270,7 @@ namespace Kalkulator {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label7->ForeColor = System::Drawing::Color::White;
 			this->label7->Location = System::Drawing::Point(237, 103);
 			this->label7->Margin = System::Windows::Forms::Padding(0);
 			this->label7->Name = L"label7";
@@ -269,6 +283,7 @@ namespace Kalkulator {
 			this->lbl1->AutoSize = true;
 			this->lbl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->lbl1->ForeColor = System::Drawing::Color::White;
 			this->lbl1->Location = System::Drawing::Point(24, 206);
 			this->lbl1->Name = L"lbl1";
 			this->lbl1->Size = System::Drawing::Size(94, 25);
@@ -280,6 +295,7 @@ namespace Kalkulator {
 			this->lbl2->AutoSize = true;
 			this->lbl2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->lbl2->ForeColor = System::Drawing::Color::White;
 			this->lbl2->Location = System::Drawing::Point(28, 285);
 			this->lbl2->Name = L"lbl2";
 			this->lbl2->Size = System::Drawing::Size(90, 25);
@@ -288,14 +304,18 @@ namespace Kalkulator {
 			// 
 			// Oblicz_btn
 			// 
+			this->Oblicz_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->Oblicz_btn->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Oblicz_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->Oblicz_btn->ForeColor = System::Drawing::Color::White;
 			this->Oblicz_btn->Location = System::Drawing::Point(159, 148);
 			this->Oblicz_btn->Name = L"Oblicz_btn";
 			this->Oblicz_btn->Size = System::Drawing::Size(100, 34);
 			this->Oblicz_btn->TabIndex = 6;
 			this->Oblicz_btn->Text = L"Oblicz";
-			this->Oblicz_btn->UseVisualStyleBackColor = true;
+			this->Oblicz_btn->UseVisualStyleBackColor = false;
 			this->Oblicz_btn->Click += gcnew System::EventHandler(this, &OknoWektory::Oblicz_btn_Click);
 			// 
 			// Ilocz_wekt
@@ -303,6 +323,7 @@ namespace Kalkulator {
 			this->Ilocz_wekt->AutoSize = true;
 			this->Ilocz_wekt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->Ilocz_wekt->ForeColor = System::Drawing::Color::White;
 			this->Ilocz_wekt->Location = System::Drawing::Point(105, 206);
 			this->Ilocz_wekt->Name = L"Ilocz_wekt";
 			this->Ilocz_wekt->Size = System::Drawing::Size(0, 25);
@@ -313,6 +334,7 @@ namespace Kalkulator {
 			this->Ilocz_skal->AutoSize = true;
 			this->Ilocz_skal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->Ilocz_skal->ForeColor = System::Drawing::Color::White;
 			this->Ilocz_skal->Location = System::Drawing::Point(106, 285);
 			this->Ilocz_skal->Name = L"Ilocz_skal";
 			this->Ilocz_skal->Size = System::Drawing::Size(0, 25);
@@ -323,6 +345,7 @@ namespace Kalkulator {
 			this->lbl6->AutoSize = true;
 			this->lbl6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->lbl6->ForeColor = System::Drawing::Color::White;
 			this->lbl6->Location = System::Drawing::Point(12, 245);
 			this->lbl6->Name = L"lbl6";
 			this->lbl6->Size = System::Drawing::Size(106, 25);
@@ -334,6 +357,7 @@ namespace Kalkulator {
 			this->dl_wekt->AutoSize = true;
 			this->dl_wekt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->dl_wekt->ForeColor = System::Drawing::Color::White;
 			this->dl_wekt->Location = System::Drawing::Point(106, 245);
 			this->dl_wekt->Name = L"dl_wekt";
 			this->dl_wekt->Size = System::Drawing::Size(0, 25);
@@ -341,14 +365,18 @@ namespace Kalkulator {
 			// 
 			// reset_btn
 			// 
+			this->reset_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->reset_btn->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->reset_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->reset_btn->ForeColor = System::Drawing::Color::White;
 			this->reset_btn->Location = System::Drawing::Point(159, 327);
 			this->reset_btn->Name = L"reset_btn";
 			this->reset_btn->Size = System::Drawing::Size(100, 34);
 			this->reset_btn->TabIndex = 22;
 			this->reset_btn->Text = L"Reset";
-			this->reset_btn->UseVisualStyleBackColor = true;
+			this->reset_btn->UseVisualStyleBackColor = false;
 			this->reset_btn->Click += gcnew System::EventHandler(this, &OknoWektory::reset_btn_Click);
 			// 
 			// OknoWektory
@@ -356,6 +384,7 @@ namespace Kalkulator {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(419, 395);
 			this->Controls->Add(this->reset_btn);
 			this->Controls->Add(this->dl_wekt);
