@@ -77,8 +77,10 @@ namespace Kalkulator {
 			// label4
 			// 
 			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::SystemColors::ControlText;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label4->ForeColor = System::Drawing::Color::White;
 			this->label4->Location = System::Drawing::Point(18, 13);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(148, 20);
@@ -87,9 +89,12 @@ namespace Kalkulator {
 			// 
 			// comboBox_what
 			// 
+			this->comboBox_what->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
 			this->comboBox_what->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_what->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->comboBox_what->ForeColor = System::Drawing::Color::Black;
 			this->comboBox_what->FormattingEnabled = true;
 			this->comboBox_what->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
 				L"Masa", L"D³ugoœæ", L"Powierzchnia", L"Objêtoœæ",
@@ -103,33 +108,47 @@ namespace Kalkulator {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->button1->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(217, 173);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(150, 35);
 			this->button1->TabIndex = 28;
 			this->button1->Text = L"Reset";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Jednostki::button1_Click);
 			// 
 			// Convert_btn
 			// 
+			this->Convert_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->Convert_btn->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(160)), static_cast<System::Int32>(static_cast<System::Byte>(30)));
+			this->Convert_btn->FlatAppearance->BorderSize = 0;
 			this->Convert_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->Convert_btn->ForeColor = System::Drawing::Color::White;
 			this->Convert_btn->Location = System::Drawing::Point(17, 173);
 			this->Convert_btn->Name = L"Convert_btn";
 			this->Convert_btn->Size = System::Drawing::Size(150, 35);
 			this->Convert_btn->TabIndex = 27;
 			this->Convert_btn->Text = L"Przelicz";
-			this->Convert_btn->UseVisualStyleBackColor = true;
+			this->Convert_btn->UseVisualStyleBackColor = false;
 			this->Convert_btn->Click += gcnew System::EventHandler(this, &Jednostki::Convert_btn_Click);
 			// 
 			// display_txt
 			// 
 			this->display_txt->AutoSize = true;
+			this->display_txt->BackColor = System::Drawing::SystemColors::ControlText;
 			this->display_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->display_txt->ForeColor = System::Drawing::Color::White;
 			this->display_txt->Location = System::Drawing::Point(17, 223);
 			this->display_txt->Name = L"display_txt";
 			this->display_txt->Size = System::Drawing::Size(173, 20);
@@ -139,8 +158,10 @@ namespace Kalkulator {
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::SystemColors::ControlText;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(18, 137);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(101, 20);
@@ -150,8 +171,10 @@ namespace Kalkulator {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::SystemColors::ControlText;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label2->ForeColor = System::Drawing::Color::White;
 			this->label2->Location = System::Drawing::Point(17, 97);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(90, 20);
@@ -160,8 +183,10 @@ namespace Kalkulator {
 			// 
 			// amount_txt
 			// 
+			this->amount_txt->BackColor = System::Drawing::Color::Black;
 			this->amount_txt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->amount_txt->ForeColor = System::Drawing::Color::White;
 			this->amount_txt->Location = System::Drawing::Point(197, 53);
 			this->amount_txt->Multiline = true;
 			this->amount_txt->Name = L"amount_txt";
@@ -171,8 +196,10 @@ namespace Kalkulator {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::SystemColors::ControlText;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->label1->ForeColor = System::Drawing::Color::White;
 			this->label1->Location = System::Drawing::Point(17, 56);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(164, 20);
@@ -181,9 +208,12 @@ namespace Kalkulator {
 			// 
 			// comboBox_to
 			// 
+			this->comboBox_to->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
 			this->comboBox_to->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_to->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->comboBox_to->ForeColor = System::Drawing::Color::Black;
 			this->comboBox_to->FormattingEnabled = true;
 			this->comboBox_to->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"---" });
 			this->comboBox_to->Location = System::Drawing::Point(197, 133);
@@ -193,9 +223,12 @@ namespace Kalkulator {
 			// 
 			// comboBox_from
 			// 
+			this->comboBox_from->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
+				static_cast<System::Int32>(static_cast<System::Byte>(190)));
 			this->comboBox_from->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox_from->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
+			this->comboBox_from->ForeColor = System::Drawing::Color::Black;
 			this->comboBox_from->FormattingEnabled = true;
 			this->comboBox_from->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"---" });
 			this->comboBox_from->Location = System::Drawing::Point(197, 93);
@@ -208,6 +241,7 @@ namespace Kalkulator {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(384, 261);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->comboBox_what);
@@ -756,8 +790,6 @@ namespace Kalkulator {
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 			amount_txt->Clear();
 			display_txt->Text = "Przeliczona wartoœæ: ";
-			ClearCombo();
-			comboBox_what->Items->Clear();
 		}
 };
 }
