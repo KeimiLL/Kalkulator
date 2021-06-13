@@ -186,7 +186,7 @@ namespace Kalkulator {
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(605, 24);
+			this->menuStrip1->Size = System::Drawing::Size(614, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -204,21 +204,21 @@ namespace Kalkulator {
 			// przypnijToolStripMenuItem
 			// 
 			this->przypnijToolStripMenuItem->Name = L"przypnijToolStripMenuItem";
-			this->przypnijToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->przypnijToolStripMenuItem->Size = System::Drawing::Size(117, 22);
 			this->przypnijToolStripMenuItem->Text = L"Przypnij";
 			this->przypnijToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::przypnijToolStripMenuItem_Click);
 			// 
 			// oknoToolStripMenuItem
 			// 
 			this->oknoToolStripMenuItem->Name = L"oknoToolStripMenuItem";
-			this->oknoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->oknoToolStripMenuItem->Size = System::Drawing::Size(117, 22);
 			this->oknoToolStripMenuItem->Text = L"Okno";
 			this->oknoToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::oknoToolStripMenuItem_Click);
 			// 
 			// historiaToolStripMenuItem
 			// 
 			this->historiaToolStripMenuItem->Name = L"historiaToolStripMenuItem";
-			this->historiaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->historiaToolStripMenuItem->Size = System::Drawing::Size(117, 22);
 			this->historiaToolStripMenuItem->Text = L"Historia";
 			this->historiaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem_Click);
 			// 
@@ -227,14 +227,14 @@ namespace Kalkulator {
 			this->historiaToolStripMenuItem1->Checked = true;
 			this->historiaToolStripMenuItem1->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->historiaToolStripMenuItem1->Name = L"historiaToolStripMenuItem1";
-			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->historiaToolStripMenuItem1->Size = System::Drawing::Size(117, 22);
 			this->historiaToolStripMenuItem1->Text = L"Historia";
 			this->historiaToolStripMenuItem1->Click += gcnew System::EventHandler(this, &Kalkulator::historiaToolStripMenuItem1_Click);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this->wyjścieToolStripMenuItem->Name = L"wyjścieToolStripMenuItem";
-			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->wyjścieToolStripMenuItem->Size = System::Drawing::Size(117, 22);
 			this->wyjścieToolStripMenuItem->Text = L"Zamknij";
 			this->wyjścieToolStripMenuItem->Click += gcnew System::EventHandler(this, &Kalkulator::wyjścieToolStripMenuItem_Click);
 			// 
@@ -349,7 +349,7 @@ namespace Kalkulator {
 			this->btnAC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnAC->ForeColor = System::Drawing::Color::Black;
-			this->btnAC->Location = System::Drawing::Point(81, 92);
+			this->btnAC->Location = System::Drawing::Point(83, 92);
 			this->btnAC->Name = L"btnAC";
 			this->btnAC->Size = System::Drawing::Size(70, 70);
 			this->btnAC->TabIndex = 2;
@@ -367,7 +367,7 @@ namespace Kalkulator {
 			this->btnC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnC->ForeColor = System::Drawing::Color::Black;
-			this->btnC->Location = System::Drawing::Point(150, 92);
+			this->btnC->Location = System::Drawing::Point(154, 92);
 			this->btnC->Name = L"btnC";
 			this->btnC->Size = System::Drawing::Size(70, 70);
 			this->btnC->TabIndex = 4;
@@ -385,7 +385,7 @@ namespace Kalkulator {
 			this->btnDivide->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnDivide->ForeColor = System::Drawing::Color::White;
-			this->btnDivide->Location = System::Drawing::Point(219, 92);
+			this->btnDivide->Location = System::Drawing::Point(225, 92);
 			this->btnDivide->Name = L"btnDivide";
 			this->btnDivide->Size = System::Drawing::Size(70, 70);
 			this->btnDivide->TabIndex = 42;
@@ -403,7 +403,7 @@ namespace Kalkulator {
 			this->btn7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn7->ForeColor = System::Drawing::Color::White;
-			this->btn7->Location = System::Drawing::Point(12, 161);
+			this->btn7->Location = System::Drawing::Point(12, 163);
 			this->btn7->Name = L"btn7";
 			this->btn7->Size = System::Drawing::Size(70, 70);
 			this->btn7->TabIndex = 75;
@@ -421,7 +421,7 @@ namespace Kalkulator {
 			this->btn8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn8->ForeColor = System::Drawing::Color::White;
-			this->btn8->Location = System::Drawing::Point(81, 161);
+			this->btn8->Location = System::Drawing::Point(83, 163);
 			this->btn8->Name = L"btn8";
 			this->btn8->Size = System::Drawing::Size(70, 70);
 			this->btn8->TabIndex = 43;
@@ -439,7 +439,7 @@ namespace Kalkulator {
 			this->btn9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn9->ForeColor = System::Drawing::Color::White;
-			this->btn9->Location = System::Drawing::Point(150, 161);
+			this->btn9->Location = System::Drawing::Point(154, 163);
 			this->btn9->Name = L"btn9";
 			this->btn9->Size = System::Drawing::Size(70, 70);
 			this->btn9->TabIndex = 44;
@@ -457,7 +457,7 @@ namespace Kalkulator {
 			this->btnMultiply->Font = (gcnew System::Drawing::Font(L"Calibri", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnMultiply->ForeColor = System::Drawing::Color::White;
-			this->btnMultiply->Location = System::Drawing::Point(219, 161);
+			this->btnMultiply->Location = System::Drawing::Point(225, 163);
 			this->btnMultiply->Name = L"btnMultiply";
 			this->btnMultiply->Size = System::Drawing::Size(70, 70);
 			this->btnMultiply->TabIndex = 46;
@@ -475,7 +475,7 @@ namespace Kalkulator {
 			this->btn4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn4->ForeColor = System::Drawing::Color::White;
-			this->btn4->Location = System::Drawing::Point(12, 230);
+			this->btn4->Location = System::Drawing::Point(12, 234);
 			this->btn4->Name = L"btn4";
 			this->btn4->Size = System::Drawing::Size(70, 70);
 			this->btn4->TabIndex = 76;
@@ -493,7 +493,7 @@ namespace Kalkulator {
 			this->btn5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn5->ForeColor = System::Drawing::Color::White;
-			this->btn5->Location = System::Drawing::Point(81, 230);
+			this->btn5->Location = System::Drawing::Point(83, 234);
 			this->btn5->Name = L"btn5";
 			this->btn5->Size = System::Drawing::Size(70, 70);
 			this->btn5->TabIndex = 47;
@@ -511,7 +511,7 @@ namespace Kalkulator {
 			this->btn6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn6->ForeColor = System::Drawing::Color::White;
-			this->btn6->Location = System::Drawing::Point(150, 230);
+			this->btn6->Location = System::Drawing::Point(154, 234);
 			this->btn6->Name = L"btn6";
 			this->btn6->Size = System::Drawing::Size(70, 70);
 			this->btn6->TabIndex = 48;
@@ -529,7 +529,7 @@ namespace Kalkulator {
 			this->btnSubstract->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnSubstract->ForeColor = System::Drawing::Color::White;
-			this->btnSubstract->Location = System::Drawing::Point(219, 230);
+			this->btnSubstract->Location = System::Drawing::Point(225, 234);
 			this->btnSubstract->Name = L"btnSubstract";
 			this->btnSubstract->Size = System::Drawing::Size(70, 70);
 			this->btnSubstract->TabIndex = 54;
@@ -547,7 +547,7 @@ namespace Kalkulator {
 			this->btn1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn1->ForeColor = System::Drawing::Color::White;
-			this->btn1->Location = System::Drawing::Point(12, 299);
+			this->btn1->Location = System::Drawing::Point(12, 305);
 			this->btn1->Name = L"btn1";
 			this->btn1->Size = System::Drawing::Size(70, 70);
 			this->btn1->TabIndex = 81;
@@ -565,7 +565,7 @@ namespace Kalkulator {
 			this->btn2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn2->ForeColor = System::Drawing::Color::White;
-			this->btn2->Location = System::Drawing::Point(81, 299);
+			this->btn2->Location = System::Drawing::Point(83, 305);
 			this->btn2->Name = L"btn2";
 			this->btn2->Size = System::Drawing::Size(70, 70);
 			this->btn2->TabIndex = 51;
@@ -583,7 +583,7 @@ namespace Kalkulator {
 			this->btn3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn3->ForeColor = System::Drawing::Color::White;
-			this->btn3->Location = System::Drawing::Point(150, 299);
+			this->btn3->Location = System::Drawing::Point(154, 305);
 			this->btn3->Name = L"btn3";
 			this->btn3->Size = System::Drawing::Size(70, 70);
 			this->btn3->TabIndex = 52;
@@ -601,7 +601,7 @@ namespace Kalkulator {
 			this->btnAdd->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnAdd->ForeColor = System::Drawing::Color::White;
-			this->btnAdd->Location = System::Drawing::Point(219, 299);
+			this->btnAdd->Location = System::Drawing::Point(225, 305);
 			this->btnAdd->Name = L"btnAdd";
 			this->btnAdd->Size = System::Drawing::Size(70, 70);
 			this->btnAdd->TabIndex = 50;
@@ -619,7 +619,7 @@ namespace Kalkulator {
 			this->btnSigned->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnSigned->ForeColor = System::Drawing::Color::White;
-			this->btnSigned->Location = System::Drawing::Point(12, 368);
+			this->btnSigned->Location = System::Drawing::Point(12, 376);
 			this->btnSigned->Name = L"btnSigned";
 			this->btnSigned->Size = System::Drawing::Size(70, 70);
 			this->btnSigned->TabIndex = 5;
@@ -637,7 +637,7 @@ namespace Kalkulator {
 			this->btn0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btn0->ForeColor = System::Drawing::Color::White;
-			this->btn0->Location = System::Drawing::Point(81, 368);
+			this->btn0->Location = System::Drawing::Point(83, 376);
 			this->btn0->Name = L"btn0";
 			this->btn0->Size = System::Drawing::Size(70, 70);
 			this->btn0->TabIndex = 82;
@@ -655,7 +655,7 @@ namespace Kalkulator {
 			this->btnComma->Font = (gcnew System::Drawing::Font(L"Calibri", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnComma->ForeColor = System::Drawing::Color::White;
-			this->btnComma->Location = System::Drawing::Point(150, 368);
+			this->btnComma->Location = System::Drawing::Point(154, 376);
 			this->btnComma->Name = L"btnComma";
 			this->btnComma->Size = System::Drawing::Size(70, 70);
 			this->btnComma->TabIndex = 83;
@@ -673,7 +673,7 @@ namespace Kalkulator {
 			this->btnEquals->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnEquals->ForeColor = System::Drawing::Color::White;
-			this->btnEquals->Location = System::Drawing::Point(219, 368);
+			this->btnEquals->Location = System::Drawing::Point(225, 376);
 			this->btnEquals->Name = L"btnEquals";
 			this->btnEquals->Size = System::Drawing::Size(70, 70);
 			this->btnEquals->TabIndex = 84;
@@ -691,7 +691,7 @@ namespace Kalkulator {
 			this->btnPi->Font = (gcnew System::Drawing::Font(L"Cambria", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnPi->ForeColor = System::Drawing::Color::White;
-			this->btnPi->Location = System::Drawing::Point(314, 92);
+			this->btnPi->Location = System::Drawing::Point(320, 92);
 			this->btnPi->Name = L"btnPi";
 			this->btnPi->Size = System::Drawing::Size(70, 70);
 			this->btnPi->TabIndex = 88;
@@ -709,7 +709,7 @@ namespace Kalkulator {
 			this->btnE->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnE->ForeColor = System::Drawing::Color::White;
-			this->btnE->Location = System::Drawing::Point(383, 92);
+			this->btnE->Location = System::Drawing::Point(391, 92);
 			this->btnE->Name = L"btnE";
 			this->btnE->Size = System::Drawing::Size(70, 70);
 			this->btnE->TabIndex = 100;
@@ -727,7 +727,7 @@ namespace Kalkulator {
 			this->btnSqrt->Font = (gcnew System::Drawing::Font(L"Cambria", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnSqrt->ForeColor = System::Drawing::Color::White;
-			this->btnSqrt->Location = System::Drawing::Point(452, 92);
+			this->btnSqrt->Location = System::Drawing::Point(462, 92);
 			this->btnSqrt->Name = L"btnSqrt";
 			this->btnSqrt->Size = System::Drawing::Size(70, 70);
 			this->btnSqrt->TabIndex = 86;
@@ -745,7 +745,7 @@ namespace Kalkulator {
 			this->btnSquared->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnSquared->ForeColor = System::Drawing::Color::White;
-			this->btnSquared->Location = System::Drawing::Point(521, 92);
+			this->btnSquared->Location = System::Drawing::Point(533, 92);
 			this->btnSquared->Name = L"btnSquared";
 			this->btnSquared->Size = System::Drawing::Size(70, 70);
 			this->btnSquared->TabIndex = 110;
@@ -763,7 +763,7 @@ namespace Kalkulator {
 			this->btnLog->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnLog->ForeColor = System::Drawing::Color::White;
-			this->btnLog->Location = System::Drawing::Point(314, 161);
+			this->btnLog->Location = System::Drawing::Point(320, 163);
 			this->btnLog->Name = L"btnLog";
 			this->btnLog->Size = System::Drawing::Size(70, 70);
 			this->btnLog->TabIndex = 85;
@@ -781,7 +781,7 @@ namespace Kalkulator {
 			this->btnSin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnSin->ForeColor = System::Drawing::Color::White;
-			this->btnSin->Location = System::Drawing::Point(383, 161);
+			this->btnSin->Location = System::Drawing::Point(391, 163);
 			this->btnSin->Name = L"btnSin";
 			this->btnSin->Size = System::Drawing::Size(70, 70);
 			this->btnSin->TabIndex = 90;
@@ -799,7 +799,7 @@ namespace Kalkulator {
 			this->btnDec->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnDec->ForeColor = System::Drawing::Color::White;
-			this->btnDec->Location = System::Drawing::Point(452, 161);
+			this->btnDec->Location = System::Drawing::Point(462, 163);
 			this->btnDec->Name = L"btnDec";
 			this->btnDec->Size = System::Drawing::Size(70, 70);
 			this->btnDec->TabIndex = 91;
@@ -817,7 +817,7 @@ namespace Kalkulator {
 			this->btnCubed->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnCubed->ForeColor = System::Drawing::Color::White;
-			this->btnCubed->Location = System::Drawing::Point(521, 161);
+			this->btnCubed->Location = System::Drawing::Point(533, 163);
 			this->btnCubed->Name = L"btnCubed";
 			this->btnCubed->Size = System::Drawing::Size(70, 70);
 			this->btnCubed->TabIndex = 111;
@@ -835,7 +835,7 @@ namespace Kalkulator {
 			this->btnAbs->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnAbs->ForeColor = System::Drawing::Color::White;
-			this->btnAbs->Location = System::Drawing::Point(314, 230);
+			this->btnAbs->Location = System::Drawing::Point(320, 234);
 			this->btnAbs->Name = L"btnAbs";
 			this->btnAbs->Size = System::Drawing::Size(70, 70);
 			this->btnAbs->TabIndex = 99;
@@ -853,7 +853,7 @@ namespace Kalkulator {
 			this->btnCos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnCos->ForeColor = System::Drawing::Color::White;
-			this->btnCos->Location = System::Drawing::Point(383, 230);
+			this->btnCos->Location = System::Drawing::Point(391, 234);
 			this->btnCos->Name = L"btnCos";
 			this->btnCos->Size = System::Drawing::Size(70, 70);
 			this->btnCos->TabIndex = 93;
@@ -871,7 +871,7 @@ namespace Kalkulator {
 			this->btnBin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnBin->ForeColor = System::Drawing::Color::White;
-			this->btnBin->Location = System::Drawing::Point(452, 230);
+			this->btnBin->Location = System::Drawing::Point(462, 234);
 			this->btnBin->Name = L"btnBin";
 			this->btnBin->Size = System::Drawing::Size(70, 70);
 			this->btnBin->TabIndex = 94;
@@ -889,7 +889,7 @@ namespace Kalkulator {
 			this->btnInverse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnInverse->ForeColor = System::Drawing::Color::White;
-			this->btnInverse->Location = System::Drawing::Point(521, 230);
+			this->btnInverse->Location = System::Drawing::Point(533, 234);
 			this->btnInverse->Name = L"btnInverse";
 			this->btnInverse->Size = System::Drawing::Size(70, 70);
 			this->btnInverse->TabIndex = 108;
@@ -907,7 +907,7 @@ namespace Kalkulator {
 			this->btnExp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnExp->ForeColor = System::Drawing::Color::White;
-			this->btnExp->Location = System::Drawing::Point(314, 299);
+			this->btnExp->Location = System::Drawing::Point(320, 305);
 			this->btnExp->Name = L"btnExp";
 			this->btnExp->Size = System::Drawing::Size(70, 70);
 			this->btnExp->TabIndex = 104;
@@ -925,7 +925,7 @@ namespace Kalkulator {
 			this->btnTg->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnTg->ForeColor = System::Drawing::Color::White;
-			this->btnTg->Location = System::Drawing::Point(383, 299);
+			this->btnTg->Location = System::Drawing::Point(391, 305);
 			this->btnTg->Name = L"btnTg";
 			this->btnTg->Size = System::Drawing::Size(70, 70);
 			this->btnTg->TabIndex = 96;
@@ -943,7 +943,7 @@ namespace Kalkulator {
 			this->btnHex->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnHex->ForeColor = System::Drawing::Color::White;
-			this->btnHex->Location = System::Drawing::Point(452, 368);
+			this->btnHex->Location = System::Drawing::Point(462, 376);
 			this->btnHex->Name = L"btnHex";
 			this->btnHex->Size = System::Drawing::Size(70, 70);
 			this->btnHex->TabIndex = 97;
@@ -961,7 +961,7 @@ namespace Kalkulator {
 			this->btnPercent->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnPercent->ForeColor = System::Drawing::Color::White;
-			this->btnPercent->Location = System::Drawing::Point(521, 299);
+			this->btnPercent->Location = System::Drawing::Point(533, 305);
 			this->btnPercent->Name = L"btnPercent";
 			this->btnPercent->Size = System::Drawing::Size(70, 70);
 			this->btnPercent->TabIndex = 107;
@@ -979,7 +979,7 @@ namespace Kalkulator {
 			this->btnFact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnFact->ForeColor = System::Drawing::Color::White;
-			this->btnFact->Location = System::Drawing::Point(314, 368);
+			this->btnFact->Location = System::Drawing::Point(320, 376);
 			this->btnFact->Name = L"btnFact";
 			this->btnFact->Size = System::Drawing::Size(70, 70);
 			this->btnFact->TabIndex = 106;
@@ -997,7 +997,7 @@ namespace Kalkulator {
 			this->btnMod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnMod->ForeColor = System::Drawing::Color::White;
-			this->btnMod->Location = System::Drawing::Point(383, 368);
+			this->btnMod->Location = System::Drawing::Point(391, 376);
 			this->btnMod->Name = L"btnMod";
 			this->btnMod->Size = System::Drawing::Size(70, 70);
 			this->btnMod->TabIndex = 102;
@@ -1015,7 +1015,7 @@ namespace Kalkulator {
 			this->btnOct->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnOct->ForeColor = System::Drawing::Color::White;
-			this->btnOct->Location = System::Drawing::Point(452, 299);
+			this->btnOct->Location = System::Drawing::Point(462, 305);
 			this->btnOct->Name = L"btnOct";
 			this->btnOct->Size = System::Drawing::Size(70, 70);
 			this->btnOct->TabIndex = 103;
@@ -1033,7 +1033,7 @@ namespace Kalkulator {
 			this->btnPerMille->Font = (gcnew System::Drawing::Font(L"Calibri", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->btnPerMille->ForeColor = System::Drawing::Color::White;
-			this->btnPerMille->Location = System::Drawing::Point(521, 368);
+			this->btnPerMille->Location = System::Drawing::Point(533, 376);
 			this->btnPerMille->Name = L"btnPerMille";
 			this->btnPerMille->Size = System::Drawing::Size(70, 70);
 			this->btnPerMille->TabIndex = 105;
@@ -1067,7 +1067,7 @@ namespace Kalkulator {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::Black;
-			this->ClientSize = System::Drawing::Size(605, 639);
+			this->ClientSize = System::Drawing::Size(614, 618);
 			this->Controls->Add(this->historiaBox);
 			this->Controls->Add(this->showOperator);
 			this->Controls->Add(this->btnCubed);
@@ -1137,28 +1137,28 @@ namespace Kalkulator {
 	// Ładowanie okienka Kalkulator z odpowiednimi parametrami.
 	private: System::Void Kalkulator_Load(System::Object^ sender, System::EventArgs^ e) {
 		// Ustawianie wymiarów okna.
-		Kalkulator::Width = 317;
-		Kalkulator::Height = 489;
+		Kalkulator::Width = 323;
+		Kalkulator::Height = 498;
 		// Ukrywanie drugiego przycisku Historia.
 		historiaToolStripMenuItem1->Visible = false;
 	}
 	// Działanie w przypadku wybrania trybu naukowego.
 	private: System::Void naukowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Ustawianie szerokości okna.
-		Kalkulator::Width = 620;
+		Kalkulator::Width = 631;
 		// Ustawianie szerokości historii.
-		historiaBox->Width = 579;
+		historiaBox->Width = 590;
 		// Ustawianie szerokości pola tesktowego.
-		textBox1->Width = 579;
+		textBox1->Width = 590;
 	}
 		   // Działanie w przypadku wybrania trybu standardowego.
 	private: System::Void standardowyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Ustawianie szerokości okna.
-		Kalkulator::Width = 317;
+		Kalkulator::Width = 323;
 		// Ustawianie szerokości historii.
-		historiaBox->Width = 277;
+		historiaBox->Width = 283;
 		// Ustawianie szerokości pola tesktowego.
-		textBox1->Width = 277;
+		textBox1->Width = 283;
 	}
 	// Funkcja writeTotextBox - wpisuje podany tekst do textBox1.
 	private: System::Void writeToTextBox1(String^ text) {
@@ -1176,7 +1176,7 @@ namespace Kalkulator {
 	// Funckja checkLength sprawdza, czy wynik nie jest zbyt długi i, jeśli jest, modyfikuje jego długość.
 	private: System::Void checkLength(String^ temp) {
 		int b = 14;
-		if (Kalkulator::Width > 317) {
+		if (Kalkulator::Width > 323) {
 			b = 28;
 		}
 		if (temp->Length > b) {
@@ -1198,11 +1198,11 @@ namespace Kalkulator {
 			historiaToolStripMenuItem->Visible = false;
 			historiaToolStripMenuItem1->Visible = true;
 			Kalkulator::Height = 669;
-			if (Kalkulator::Width == 317) {
-				historiaBox->Width = 277;
+			if (Kalkulator::Width == 323) {
+				historiaBox->Width = 283;
 			}
 			else {
-				historiaBox->Width = 579;
+				historiaBox->Width = 590;
 			}
 		}
 	}
@@ -1213,7 +1213,7 @@ namespace Kalkulator {
 		historiaBox->Visible = false;
 		historiaToolStripMenuItem1->Visible = false;
 		historiaToolStripMenuItem->Visible = true;
-		Kalkulator::Height = 489;
+		Kalkulator::Height = 498;
 	}
 	// Wyjście z aplikacji - zamknięcie wszystkich okien.
 	private: System::Void wyjścieToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {

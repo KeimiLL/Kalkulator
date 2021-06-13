@@ -79,7 +79,7 @@ namespace Kalkulator {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label4->Location = System::Drawing::Point(18, 17);
+			this->label4->Location = System::Drawing::Point(18, 13);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(148, 20);
 			this->label4->TabIndex = 30;
@@ -173,7 +173,7 @@ namespace Kalkulator {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(17, 63);
+			this->label1->Location = System::Drawing::Point(17, 56);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(164, 20);
 			this->label1->TabIndex = 22;
