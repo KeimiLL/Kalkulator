@@ -1577,7 +1577,7 @@ namespace Kalkulator {
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (Operator == "+")
 		{
-			showOperator->Text += " " + textBox1->Text + " =";
+			showOperator->Text += " " + textBox1->Text + " = ";
 			if (!Double::TryParse(textBox1->Text, secondVariable)) {
 				writeToTextBox1("error");
 				return;
@@ -1593,7 +1593,7 @@ namespace Kalkulator {
 		}
 		else if (Operator == "-")
 		{
-			showOperator->Text += " " + textBox1->Text + " =";
+			showOperator->Text += " " + textBox1->Text + " = ";
 			if (!Double::TryParse(textBox1->Text, secondVariable)) {
 				writeToTextBox1("error");
 				return;
@@ -1608,7 +1608,7 @@ namespace Kalkulator {
 		}
 		else if (Operator == "×")
 		{
-			showOperator->Text += " " + textBox1->Text + " =";
+			showOperator->Text += " " + textBox1->Text + " = ";
 			if (!Double::TryParse(textBox1->Text, secondVariable)) {
 				writeToTextBox1("error");
 				return;
@@ -1623,7 +1623,7 @@ namespace Kalkulator {
 		}
 		else if (Operator == "÷")
 		{
-			showOperator->Text += " " + textBox1->Text + " =";
+			showOperator->Text += " " + textBox1->Text + " = ";
 			if (!Double::TryParse(textBox1->Text, secondVariable)) {
 				writeToTextBox1("error");
 				return;
@@ -1642,7 +1642,7 @@ namespace Kalkulator {
 		}
 		else if (Operator == "mod")
 		{
-			showOperator->Text += " " + textBox1->Text + " =";
+			showOperator->Text += " " + textBox1->Text + " = ";
 			if (!Double::TryParse(textBox1->Text, secondVariable)) {
 				writeToTextBox1("error");
 				return;
