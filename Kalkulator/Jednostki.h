@@ -239,10 +239,20 @@ namespace Kalkulator {
 		}
 
 		//funkcja pisz¹ca wynik w okienku
-		private: void Write_display(double f){
+		private: void Write_display(String^ f){
 			String^ current_item = comboBox_to->SelectedItem->ToString();
-			display_txt->Text = "Przeliczona wartoœæ: "
-			+ String::Format("{0:0.00}", f)->Replace('.', ',') + " " + current_item;
+			display_txt->Text = "Przeliczona wartoœæ: " + f + " " + current_item;
+		}
+
+		//sprawdzanie d³ugoœci wyniku i wysy³anie do wypisania
+		private: System::Void checkLength(String^ temp) {
+			int b = 14;
+			if (temp->Length > b) {
+				Write_display(temp->Substring(0, b));
+			}
+			else {
+				Write_display(temp);
+			}
 		}
 
 		//Centrum sprowadzania jednostek do wspólnego mianownika
@@ -679,50 +689,65 @@ namespace Kalkulator {
 		}
 
 		//przycisk liczenia
-		private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
-		{
-			String^ current_item = comboBox_what->SelectedItem->ToString();
-			int current_index = comboBox_what->FindString(current_item);
+	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		//zabezpieczenie przed nie wybraniem combobox_what
+		if(comboBox_from->SelectedItem == "---") {
+			display_txt->Text = "Przeliczona wartoœæ: error";
+			return;
+		}
 
-			double i = Double::Parse(amount_txt->Text);
+		String^ current_item = comboBox_what->SelectedItem->ToString();
+		int current_index = comboBox_what->FindString(current_item);
+
+		double i;
+		if (!Double::TryParse(amount_txt->Text, i)) {
+			display_txt->Text = "Przeliczona wartoœæ: error";
+			return;
+		}
 		//wybór przypadku
 		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem)
 			display_txt->Text = "B³¹d. Wybierz inn¹ jednostkê";
-		else if (comboBox_what->SelectedItem == "Masa") {
-			// Masa
+		// Masa
+		else if (comboBox_what->SelectedItem == "Masa") {			
 			i = exchange_to_kg(i);
 			i = exchange_from_kg(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
+		// D³ugoœæ
 		else if (comboBox_what->SelectedItem == "D³ugoœæ") {
-			// D³ugoœæ
+			
 			i = exchange_to_m(i);
 			i = exchange_from_m(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
+		//Powierzchnia
 		else if (comboBox_what->SelectedItem == "Powierzchnia") {
-			//Powierzchnia
+			
 			i = exchange_to_m2(i);
 			i = exchange_from_m2(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
+		//Objêtoœæ
 		else if (comboBox_what->SelectedItem == "Objêtoœæ") {
-			//Objêtoœæ
+			
 			i = exchange_to_l(i);
 			i = exchange_from_l(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
+		//Predkoœæ
 		else if (comboBox_what->SelectedItem == "Prêdkoœæ") {
-			//Predkoœæ
+			
 			i = exchange_to_kmh(i);
 			i = exchange_from_kmh(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
+		//Dane
 		else if (comboBox_what->SelectedItem == "Dane"){
-			//Dane
+			
 			i = exchange_to_b(i);
 			i = exchange_from_b(i);
-			Write_display(i);
+			checkLength(System::Convert::ToString(i));
 		}
 
 		}
