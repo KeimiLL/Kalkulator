@@ -263,10 +263,12 @@ namespace Kalkulator {
 
 	//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Zabezpieczenie przed niewybraniem opcji z comboBox_from lub/i comboBox_to.
 		if (comboBox_from->SelectedIndex == -1 || comboBox_to->SelectedIndex == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
+
 		String^ waluta = comboBox_to->SelectedItem->ToString();
 		
 		double i;

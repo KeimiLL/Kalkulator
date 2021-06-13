@@ -8,6 +8,7 @@ namespace Kalkulator {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Globalization;
 
 	/// <summary>
 	/// Summary for Jednostki
@@ -574,34 +575,34 @@ namespace Kalkulator {
 			}
 			else if (comboBox_from->SelectedItem == "MB")
 			{
-				f *= 1000000;
+				f *= Math::Pow(1000, 2);
 			}
 			else if (comboBox_from->SelectedItem == "GB")
 			{
-				f *= 1000000000;
+				f *= Math::Pow(1000, 3);
 			}
 			else if (comboBox_from->SelectedItem == "TB")
 			{
-				f *= 1000000000000;
+				f *= Math::Pow(1000, 4);
 			}
 			return f;
 		}
 		private: System::Double exchange_from_b(double f) {
 			if (comboBox_to->SelectedItem == "kB")
 			{
-				f *= 0.001;
+				f /= 1000;
 			}
 			else if (comboBox_to->SelectedItem == "MB")
 			{
-				f *= 0.000001;
+				f /= Math::Pow(1000, 2);
 			}
 			else if (comboBox_to->SelectedItem == "GB")
 			{
-				f *= 0.000000001;
+				f /= Math::Pow(1000, 3);
 			}
 			else if (comboBox_to->SelectedItem == "TB")
 			{
-				f *= 0.000000000001;
+				f /= Math::Pow(1000, 4);
 			}
 			return f;
 		}
@@ -725,69 +726,73 @@ namespace Kalkulator {
 		//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
 	{
+		// Deklaracja zmiennej przechowuj¹cej obecnie wybrany indeks z comboBox_what.
+		int current_index = comboBox_what->SelectedIndex;
+
 		// Zabezpieczenie przed niewybraniem comboBox_what.
-		if(comboBox_what->SelectedIndex == -1) {
+		if(current_index == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
 
-		String^ current_item = comboBox_what->SelectedItem->ToString();
-		int current_index = comboBox_what->FindString(current_item);
-
 		double i;
+		// Zabezpieczenie przed wpisywaniem liter i znaków.
 		if (!Double::TryParse(amount_txt->Text, i)) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
-		// Wybór przypadku
+		// Zabezpieczenie przed niewybraniem ¿adnej opcji z comboBox_from lub/i comboBox_to.
 		if (comboBox_from->SelectedIndex == -1 || comboBox_to->SelectedIndex == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
+		// Zabezpieczenie przed wyborem dwóch tych samych jednostek.
 		if (comboBox_from->SelectedItem == comboBox_to->SelectedItem) {
-			display_txt->Text = "Wybierz inn¹ jednostkê";
+			display_txt->Text = "Wybierz inn¹ jednostkê.";
 			return;
 		}
-		// Masa
-		if (comboBox_what->SelectedItem == "Masa") {			
-			i = exchange_to_kg(i);
-			i = exchange_from_kg(i);
-			checkLength(System::Convert::ToString(i));
-		}
-		// D³ugoœæ
-		else if (comboBox_what->SelectedItem == "D³ugoœæ") {
-			
-			i = exchange_to_m(i);
-			i = exchange_from_m(i);
-			checkLength(System::Convert::ToString(i));
-		}
-		// Powierzchnia
-		else if (comboBox_what->SelectedItem == "Powierzchnia") {
-			
-			i = exchange_to_m2(i);
-			i = exchange_from_m2(i);
-			checkLength(System::Convert::ToString(i));
-		}
-		// Objêtoœæ
-		else if (comboBox_what->SelectedItem == "Objêtoœæ") {
-			
-			i = exchange_to_l(i);
-			i = exchange_from_l(i);
-			checkLength(System::Convert::ToString(i));
-		}
-		// Predkoœæ
-		else if (comboBox_what->SelectedItem == "Prêdkoœæ") {
-			
-			i = exchange_to_kmh(i);
-			i = exchange_from_kmh(i);
-			checkLength(System::Convert::ToString(i));
-		}
-		// Dane
-		else if (comboBox_what->SelectedItem == "Dane"){
-			
-			i = exchange_to_b(i);
-			i = exchange_from_b(i);
-			checkLength(System::Convert::ToString(i));
+		// Wybór przypadku.
+		switch (current_index) {
+			// Brak wyboru.
+			case -1:
+				display_txt->Text = "Przeliczona wartoœæ: error";
+				return;
+			// Masa.
+			case 0:
+				i = exchange_to_kg(i);
+				i = exchange_from_kg(i);
+				checkLength(System::Convert::ToString(i));
+				break;
+			// D³ugoœæ.
+			case 1:
+				i = exchange_to_m(i);
+				i = exchange_from_m(i);
+				checkLength(System::Convert::ToString(i));
+				break;
+			// Powierzchnia.
+			case 2:
+				i = exchange_to_m2(i);
+				i = exchange_from_m2(i);
+				checkLength(System::Convert::ToString(i));
+				break;
+			// Objêtoœæ.
+			case 3:
+				i = exchange_to_l(i);
+				i = exchange_from_l(i);
+				checkLength(System::Convert::ToString(i));
+				break;
+			// Prêdkoœæ.
+			case 4:
+				i = exchange_to_kmh(i);
+				i = exchange_from_kmh(i);
+				checkLength(System::Convert::ToString(i));
+				break;
+			// Dane.
+			case 5:
+				i = exchange_to_b(i);
+				i = exchange_from_b(i);
+				checkLength(System::Convert::ToString(i));
+				break;
 		}
 	}
 

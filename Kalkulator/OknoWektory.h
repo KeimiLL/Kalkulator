@@ -435,7 +435,7 @@ namespace Kalkulator {
 	
 	private: System::Void Oblicz_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		double v1, v2, v3, w1, w2, w3, u1, u2, u3;
-		//Zabaezpieczenie przed wpisaniem liter.
+		// Zabezpieczenie przed wpisaniem liter.
 		if (!Double::TryParse(text_v1->Text, v1)) {
 			writeToAllTB("error");
 			return;
@@ -461,11 +461,12 @@ namespace Kalkulator {
 			return;
 		}
 
+		// Obliczanie wspó³rzêdnych iloczynu wektorowego.
 		u1 = v2 * w3 - v3 * w2;
 		u2 = v1 * w3 - v3 * w1;
 		u3 = v1 * w2 - v2 * w1;
 
-		//Zabezpieczenie przed zbyt d³ugimi wynikami.
+		// Zabezpieczenie przed zbyt d³ugimi wynikami.
 		if (System::Convert::ToString(u1)->Length > 4) {
 			writeToAllTB("error");
 			return;
@@ -478,13 +479,12 @@ namespace Kalkulator {
 			writeToAllTB("error");
 			return;
 		}
-		
-
+		// Odpowiednie formatowanie i wyœwietlanie wyniku.
 		Ilocz_wekt->Text = "[" + String::Format("{0:0.00}", u1) + "; " + String::Format("{0:0.00}", u2) + "; " + String::Format("{0:0.00}", u3) + "]";
 		dl_wekt->Text = String::Format("{0:0.00}", sqrt(u1 * u1 + u2 * u2 + u3 * u3));
 		Ilocz_skal->Text = String::Format("{0:0.00}", v1 * w1 + v2 * w2 + v3 * w3);
 	}
-	//Przycisk Reset - wyczyszczenie komórek.
+	// Przycisk Reset - czyszczenie komórek.
 	private: System::Void reset_btn_Click(System::Object^ sender, System::EventArgs^ e) {
 		text_v1->Clear();
 		text_v2->Clear();
