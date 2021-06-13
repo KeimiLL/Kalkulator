@@ -725,8 +725,8 @@ namespace Kalkulator {
 		//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		//zabezpieczenie przed nie wybraniem combobox_what
-		if(comboBox_from->SelectedItem == "---") {
+		// Zabezpieczenie przed niewybraniem comboBox_what.
+		if(comboBox_what->SelectedIndex == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
@@ -739,8 +739,7 @@ namespace Kalkulator {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
-		//wybór przypadku
-
+		// Wybór przypadku
 		if (comboBox_from->SelectedIndex == -1 || comboBox_to->SelectedIndex == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;

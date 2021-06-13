@@ -263,18 +263,11 @@ namespace Kalkulator {
 
 	//przycisk liczenia
 	private: System::Void Convert_btn_Click(System::Object^ sender, System::EventArgs^ e) {
-		// zabezpieczeni przed nie wybraniem combobox_to ale zjebane jest 
-		/*if (comboBox_to->SelectedItem != "PLN z³oty" || comboBox_to->SelectedItem != "EUR (euro)" || comboBox_to->SelectedItem != "USD (dolar amerykañski)" || comboBox_to->SelectedItem !=  "AUD (dolar australijski)" || comboBox_to->SelectedItem !=  "CHF (frank szwajcarski)" || comboBox_to->SelectedItem != "GBP (funt szterling)") {
+		if (comboBox_from->SelectedIndex == -1 || comboBox_to->SelectedIndex == -1) {
 			display_txt->Text = "Przeliczona wartoœæ: error";
 			return;
 		}
-		*/
-		String^ waluta = "";
-		if (comboBox_to->SelectedItem == nullptr) {
-			display_txt->Text = "Przeliczona wartoœæ: error";
-			return;
-		}
-		waluta = comboBox_to->SelectedItem->ToString();
+		String^ waluta = comboBox_to->SelectedItem->ToString();
 		
 		double i;
 		//Zabezpieczenie przed wpisaniem liter.
