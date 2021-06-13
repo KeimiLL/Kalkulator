@@ -1587,7 +1587,7 @@ namespace Kalkulator {
 				return;
 			}
 			checkLength(System::Convert::ToString(result));
-			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			historiaBox->Items->Add(showOperator->Text + result);
 			Operator = "";
 
 		}
@@ -1603,7 +1603,7 @@ namespace Kalkulator {
 				return;
 			}
 			checkLength(System::Convert::ToString(result));
-			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			historiaBox->Items->Add(showOperator->Text + result);
 			Operator = "";
 		}
 		else if (Operator == "×")
@@ -1618,7 +1618,7 @@ namespace Kalkulator {
 				return;
 			}
 			checkLength(System::Convert::ToString(result));
-			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			historiaBox->Items->Add(showOperator->Text + result);
 			Operator = "";
 		}
 		else if (Operator == "÷")
@@ -1637,7 +1637,7 @@ namespace Kalkulator {
 				return;
 			}
 			checkLength(System::Convert::ToString(result));
-			historiaBox->Items->Add(showOperator->Text + " " + secondVariable + " = " + result);
+			historiaBox->Items->Add(showOperator->Text + result);
 			Operator = "";
 		}
 		else if (Operator == "mod")
