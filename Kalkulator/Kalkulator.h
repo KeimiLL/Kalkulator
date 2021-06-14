@@ -1547,6 +1547,10 @@ namespace Kalkulator {
 	}
 	// Deklaracja 'operatorów arytmetycznych' - opis działania w przypadku naciśnięcia przycisku "=".
 	private: System::Void btnEquals_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (textBox1->Text == "") {
+			writeToTextBox1("error");
+			return;
+		}
 		if (Operator == "+")
 		{
 			showOperator->Text += " " + textBox1->Text + " = ";
