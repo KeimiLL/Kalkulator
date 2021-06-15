@@ -312,11 +312,11 @@ namespace Kalkulator {
 			}
 			else if (comboBox_to->SelectedItem == "oz")
 			{
-				f *= 0.0283286;
+				f *= 35.3;
 			}
 			else if (comboBox_to->SelectedItem == "lb")
 			{
-				f *= 0.453515;
+				f *= 2.205;
 			}
 			return f;
 		}
@@ -339,11 +339,11 @@ namespace Kalkulator {
 			}
 			else if (comboBox_from->SelectedItem == "oz")
 			{
-				f *= 35.3;
+				f *= 0.0283286;
 			}
 			else if (comboBox_from->SelectedItem == "lb")
 			{
-				f *= 2.205;
+				f *=0.453515;
 			}
 			return f;
 		}
