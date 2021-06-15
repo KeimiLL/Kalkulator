@@ -1,2 +1,0 @@
-To Do:
-- Zmiana kolorów w walutowym.
