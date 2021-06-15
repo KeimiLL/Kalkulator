@@ -304,18 +304,18 @@ namespace Kalkulator {
 			this->lbl2->ForeColor = System::Drawing::Color::White;
 			this->lbl2->Location = System::Drawing::Point(28, 285);
 			this->lbl2->Name = L"lbl2";
-			this->lbl2->Size = System::Drawing::Size(90, 25);
+			this->lbl2->Size = System::Drawing::Size(89, 25);
 			this->lbl2->TabIndex = 16;
-			this->lbl2->Text = L"v * w = ";
+			this->lbl2->Text = L"v • w = ";
 			// 
 			// Oblicz_btn
 			// 
-			this->Oblicz_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
-				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->Oblicz_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->Oblicz_btn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->Oblicz_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Oblicz_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->Oblicz_btn->ForeColor = System::Drawing::Color::Black;
+			this->Oblicz_btn->ForeColor = System::Drawing::Color::White;
 			this->Oblicz_btn->Location = System::Drawing::Point(159, 148);
 			this->Oblicz_btn->Name = L"Oblicz_btn";
 			this->Oblicz_btn->Size = System::Drawing::Size(100, 34);
@@ -371,12 +371,12 @@ namespace Kalkulator {
 			// 
 			// reset_btn
 			// 
-			this->reset_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(190)), static_cast<System::Int32>(static_cast<System::Byte>(190)),
-				static_cast<System::Int32>(static_cast<System::Byte>(190)));
+			this->reset_btn->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(30)));
 			this->reset_btn->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->reset_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->reset_btn->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->reset_btn->ForeColor = System::Drawing::Color::Black;
+			this->reset_btn->ForeColor = System::Drawing::Color::White;
 			this->reset_btn->Location = System::Drawing::Point(159, 327);
 			this->reset_btn->Name = L"reset_btn";
 			this->reset_btn->Size = System::Drawing::Size(100, 34);
@@ -390,8 +390,7 @@ namespace Kalkulator {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(35)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
-				static_cast<System::Int32>(static_cast<System::Byte>(35)));
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(419, 395);
 			this->Controls->Add(this->reset_btn);
 			this->Controls->Add(this->dl_wekt);
